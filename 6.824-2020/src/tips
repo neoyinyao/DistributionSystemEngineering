@@ -1,0 +1,6 @@
+1.做好日志
+2.把哪些work放在一个单独的goroutine里，哪些work放在同一个goroutine里设计好，即设计workload的原子性操作
+3.设计好锁的使用，避免出现死锁，channel相当于是一种特殊的锁，都会导致阻塞
+4.before do ds design,think what circumstance can appear,and think details
+5.线程由操作系统调度，是不可控的
+6.理清逻辑,函数功能清晰,kv layer和 rf layer 各自的field, 数据的pipeline

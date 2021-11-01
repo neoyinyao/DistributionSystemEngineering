@@ -1,0 +1,4 @@
+requestVote RPC 和 AppendedEntries RPC都会通过交换term信息在term上达成一致,进而更快的产生新的leader
+
+to deal with rpc delay,maybe new appendRpc arrived before old appendRpc,so the follower only deal its logEntry when conflict happen,if no conflict,
+dont delete

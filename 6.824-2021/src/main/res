@@ -1,0 +1,111 @@
+*** Starting wc test.
+true
+true
+true
+symbol 1 of 1symbol 2 of 1symbol 1 of 3symbol 1 of 2symbol 2 of 3map 1 is finishedtrue
+symbol 2 of 2symbol 1 of 4symbol 2 of 4map 3 is finishedtrue
+map 2 is finishedtrue
+symbol 1 of 6symbol 2 of 6symbol 1 of 5map 6 is finishedtrue
+symbol 2 of 5map 4 is finishedtrue
+symbol 1 of 7symbol 2 of 7symbol 1 of 8symbol 2 of 8map 5 is finishedtrue
+map 8 is finishedtrue
+map 7 is finishedtrue
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+mr-wc-all mr-correct-wc.txt differ: byte 1, line 1
+--- wc output is not the same as mr-correct-wc.txt
+--- wc test: FAIL
+*** Starting indexer test.
+true
+true
+symbol 1 of 1symbol 2 of 1map 1 is finishedtrue
+symbol 1 of 2symbol 2 of 2symbol 1 of 3symbol 2 of 3map 2 is finishedtrue
+map 3 is finishedtrue
+symbol 1 of 4symbol 2 of 4map 4 is finishedtrue
+symbol 1 of 5symbol 2 of 5symbol 1 of 6symbol 2 of 6map 6 is finishedtrue
+map 5 is finishedtrue
+symbol 1 of 7symbol 2 of 7symbol 1 of 8symbol 2 of 8map 7 is finishedtrue
+map 8 is finishedtrue
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true

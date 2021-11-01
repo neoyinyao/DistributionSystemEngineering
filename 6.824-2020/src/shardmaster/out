@@ -1,0 +1,1165 @@
+Test: Basic leave/join ...
+2021/01/01 21:06:28.247887 sm [2] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  0, Num  : -1 
+2021/01/01 21:06:28.248304 applyMsg op Id  : 3858311008689790666,Seq :  0
+2021/01/01 21:06:28.313320 applyMsg op Id  : 3858311008689790666,Seq :  0
+2021/01/01 21:06:28.313332 applyMsg op Id  : 3858311008689790666,Seq :  0
+2021/01/01 21:06:28.348089 sm [2] Query: QueryArgs Id  : 3858311008689790666,Seq :  0, Num  : -1  shardsMap:map[0:[0 1 2 3 4 5 6 7 8 9]] Groups :map[]
+2021/01/01 21:06:28.348118 sm [2] end Query: QueryArgs Id  : 3858311008689790666,Seq :  0, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:28.348312 sm [2] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  1, Num  : -1 
+2021/01/01 21:06:28.348553 applyMsg op Id  : 3858311008689790666,Seq :  1
+2021/01/01 21:06:28.348807 applyMsg op Id  : 3858311008689790666,Seq :  1
+2021/01/01 21:06:28.433332 applyMsg op Id  : 3858311008689790666,Seq :  1
+2021/01/01 21:06:28.448381 sm [2] Query: QueryArgs Id  : 3858311008689790666,Seq :  1, Num  : -1  shardsMap:map[0:[0 1 2 3 4 5 6 7 8 9]] Groups :map[]
+2021/01/01 21:06:28.448402 sm [2] end Query: QueryArgs Id  : 3858311008689790666,Seq :  1, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:28.448699 sm [2] begin Join: JoinArgs Id : 3858311008689790666,Seq  : 2, Servers  : map[1:[x y z]]
+2021/01/01 21:06:28.448949 applyMsg op Id  : 3858311008689790666,Seq :  2
+2021/01/01 21:06:28.448985 sm [2] Join: JoinArgs Id : 3858311008689790666,Seq  : 2, Servers  : map[1:[x y z]] shardsMap:map[1:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[1:[x y z]]
+2021/01/01 21:06:28.449201 applyMsg op Id  : 3858311008689790666,Seq :  2
+2021/01/01 21:06:28.449233 sm [0] Join: JoinArgs Id : 3858311008689790666,Seq  : 2, Servers  : map[1:[x y z]] shardsMap:map[1:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[1:[x y z]]
+2021/01/01 21:06:28.548778 sm [2] end Join: JoinArgs Id : 3858311008689790666,Seq  : 2, Servers  : map[1:[x y z]] ,reply.WrongLeader false
+2021/01/01 21:06:28.548989 sm [2] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  3, Num  : -1 
+2021/01/01 21:06:28.549274 applyMsg op Id  : 3858311008689790666,Seq :  3
+2021/01/01 21:06:28.549281 applyMsg op Id  : 3858311008689790666,Seq :  2
+2021/01/01 21:06:28.549333 sm [1] Join: JoinArgs Id : 3858311008689790666,Seq  : 2, Servers  : map[1:[x y z]] shardsMap:map[1:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[1:[x y z]]
+2021/01/01 21:06:28.649089 sm [2] Query: QueryArgs Id  : 3858311008689790666,Seq :  3, Num  : -1  shardsMap:map[1:[0 1 2 3 4 5 6 7 8 9]] Groups :map[1:[x y z]]
+2021/01/01 21:06:28.649113 sm [2] end Query: QueryArgs Id  : 3858311008689790666,Seq :  3, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:28.649315 sm [2] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  4, Num  : -1 
+2021/01/01 21:06:28.649593 applyMsg op Id  : 3858311008689790666,Seq :  4
+2021/01/01 21:06:28.649608 applyMsg op Id  : 3858311008689790666,Seq :  3
+2021/01/01 21:06:28.649621 applyMsg op Id  : 3858311008689790666,Seq :  3
+2021/01/01 21:06:28.649798 applyMsg op Id  : 3858311008689790666,Seq :  4
+2021/01/01 21:06:28.749498 sm [2] Query: QueryArgs Id  : 3858311008689790666,Seq :  4, Num  : -1  shardsMap:map[1:[0 1 2 3 4 5 6 7 8 9]] Groups :map[1:[x y z]]
+2021/01/01 21:06:28.749527 sm [2] end Query: QueryArgs Id  : 3858311008689790666,Seq :  4, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:28.749768 sm [2] begin Join: JoinArgs Id : 3858311008689790666,Seq  : 5, Servers  : map[2:[a b c]]
+2021/01/01 21:06:28.750069 applyMsg op Id  : 3858311008689790666,Seq :  5
+2021/01/01 21:06:28.750101 sm [2] Join: JoinArgs Id : 3858311008689790666,Seq  : 5, Servers  : map[2:[a b c]] shardsMap:map[1:[5 6 7 8 9] 2:[0 1 2 3 4]] newGroups :map[1:[x y z] 2:[a b c]]
+2021/01/01 21:06:28.750145 applyMsg op Id  : 3858311008689790666,Seq :  4
+2021/01/01 21:06:28.750310 applyMsg op Id  : 3858311008689790666,Seq :  5
+2021/01/01 21:06:28.750344 sm [1] Join: JoinArgs Id : 3858311008689790666,Seq  : 5, Servers  : map[2:[a b c]] shardsMap:map[1:[5 6 7 8 9] 2:[0 1 2 3 4]] newGroups :map[1:[x y z] 2:[a b c]]
+2021/01/01 21:06:28.849868 sm [2] end Join: JoinArgs Id : 3858311008689790666,Seq  : 5, Servers  : map[2:[a b c]] ,reply.WrongLeader false
+2021/01/01 21:06:28.850059 sm [2] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  6, Num  : -1 
+2021/01/01 21:06:28.850408 applyMsg op Id  : 3858311008689790666,Seq :  5
+2021/01/01 21:06:28.850432 applyMsg op Id  : 3858311008689790666,Seq :  6
+2021/01/01 21:06:28.850459 sm [0] Join: JoinArgs Id : 3858311008689790666,Seq  : 5, Servers  : map[2:[a b c]] shardsMap:map[1:[5 6 7 8 9] 2:[0 1 2 3 4]] newGroups :map[1:[x y z] 2:[a b c]]
+2021/01/01 21:06:28.913962 applyMsg op Id  : 3858311008689790666,Seq :  6
+2021/01/01 21:06:28.913963 applyMsg op Id  : 3858311008689790666,Seq :  6
+2021/01/01 21:06:28.950271 sm [2] Query: QueryArgs Id  : 3858311008689790666,Seq :  6, Num  : -1  shardsMap:map[1:[5 6 7 8 9] 2:[0 1 2 3 4]] Groups :map[1:[x y z] 2:[a b c]]
+2021/01/01 21:06:28.950296 sm [2] end Query: QueryArgs Id  : 3858311008689790666,Seq :  6, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:28.950493 sm [2] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  7, Num  : -1 
+2021/01/01 21:06:28.950819 applyMsg op Id  : 3858311008689790666,Seq :  7
+2021/01/01 21:06:28.951047 applyMsg op Id  : 3858311008689790666,Seq :  7
+2021/01/01 21:06:29.034079 applyMsg op Id  : 3858311008689790666,Seq :  7
+2021/01/01 21:06:29.050587 sm [2] Query: QueryArgs Id  : 3858311008689790666,Seq :  7, Num  : -1  shardsMap:map[1:[5 6 7 8 9] 2:[0 1 2 3 4]] Groups :map[1:[x y z] 2:[a b c]]
+2021/01/01 21:06:29.050620 sm [2] end Query: QueryArgs Id  : 3858311008689790666,Seq :  7, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:29.050820 sm [2] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  8, Num  : -1 
+2021/01/01 21:06:29.051131 applyMsg op Id  : 3858311008689790666,Seq :  8
+2021/01/01 21:06:29.051363 applyMsg op Id  : 3858311008689790666,Seq :  8
+2021/01/01 21:06:29.150982 sm [2] Query: QueryArgs Id  : 3858311008689790666,Seq :  8, Num  : -1  shardsMap:map[1:[5 6 7 8 9] 2:[0 1 2 3 4]] Groups :map[1:[x y z] 2:[a b c]]
+2021/01/01 21:06:29.151005 sm [2] end Query: QueryArgs Id  : 3858311008689790666,Seq :  8, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:29.151263 sm [2] begin Leave: LeaveArgs Id :  3858311008689790666,Seq  : 9, GIDs  : [1]
+2021/01/01 21:06:29.151543 applyMsg op Id  : 3858311008689790666,Seq :  9
+2021/01/01 21:06:29.151558 applyMsg op Id  : 3858311008689790666,Seq :  8
+2021/01/01 21:06:29.151561 sm [2] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 9, GIDs  : [1] shardsMap:map[2:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[2:[a b c]]
+2021/01/01 21:06:29.151835 applyMsg op Id  : 3858311008689790666,Seq :  9
+2021/01/01 21:06:29.151859 sm [0] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 9, GIDs  : [1] shardsMap:map[2:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[2:[a b c]]
+2021/01/01 21:06:29.251350 sm [2] end Leave: LeaveArgs Id :  3858311008689790666,Seq  : 9, GIDs  : [1] reply.WrongLeader false
+2021/01/01 21:06:29.251582 sm [2] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  10, Num  : -1 
+2021/01/01 21:06:29.251854 applyMsg op Id  : 3858311008689790666,Seq :  9
+2021/01/01 21:06:29.251883 sm [1] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 9, GIDs  : [1] shardsMap:map[2:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[2:[a b c]]
+2021/01/01 21:06:29.251948 applyMsg op Id  : 3858311008689790666,Seq :  10
+2021/01/01 21:06:29.252095 applyMsg op Id  : 3858311008689790666,Seq :  10
+2021/01/01 21:06:29.351798 sm [2] Query: QueryArgs Id  : 3858311008689790666,Seq :  10, Num  : -1  shardsMap:map[2:[0 1 2 3 4 5 6 7 8 9]] Groups :map[2:[a b c]]
+2021/01/01 21:06:29.351824 sm [2] end Query: QueryArgs Id  : 3858311008689790666,Seq :  10, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:29.352022 sm [2] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  11, Num  : -1 
+2021/01/01 21:06:29.352329 applyMsg op Id  : 3858311008689790666,Seq :  11
+2021/01/01 21:06:29.352356 applyMsg op Id  : 3858311008689790666,Seq :  10
+2021/01/01 21:06:29.352551 applyMsg op Id  : 3858311008689790666,Seq :  11
+2021/01/01 21:06:29.452127 sm [2] Query: QueryArgs Id  : 3858311008689790666,Seq :  11, Num  : -1  shardsMap:map[2:[0 1 2 3 4 5 6 7 8 9]] Groups :map[2:[a b c]]
+2021/01/01 21:06:29.452154 sm [2] end Query: QueryArgs Id  : 3858311008689790666,Seq :  11, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:29.452347 sm [2] begin Leave: LeaveArgs Id :  3858311008689790666,Seq  : 12, GIDs  : [2]
+2021/01/01 21:06:29.452619 applyMsg op Id  : 3858311008689790666,Seq :  11
+2021/01/01 21:06:29.452636 applyMsg op Id  : 3858311008689790666,Seq :  12
+2021/01/01 21:06:29.452659 sm [2] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 12, GIDs  : [2] shardsMap:map[0:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[]
+2021/01/01 21:06:29.514634 applyMsg op Id  : 3858311008689790666,Seq :  12
+2021/01/01 21:06:29.514671 applyMsg op Id  : 3858311008689790666,Seq :  12
+2021/01/01 21:06:29.514707 sm [0] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 12, GIDs  : [2] shardsMap:map[0:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[]
+2021/01/01 21:06:29.514718 sm [1] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 12, GIDs  : [2] shardsMap:map[0:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[]
+2021/01/01 21:06:29.552509 sm [2] end Leave: LeaveArgs Id :  3858311008689790666,Seq  : 12, GIDs  : [2] reply.WrongLeader false
+2021/01/01 21:06:29.552711 sm [2] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  13, Num  : -1 
+2021/01/01 21:06:29.552994 applyMsg op Id  : 3858311008689790666,Seq :  13
+2021/01/01 21:06:29.553339 applyMsg op Id  : 3858311008689790666,Seq :  13
+2021/01/01 21:06:29.634812 applyMsg op Id  : 3858311008689790666,Seq :  13
+2021/01/01 21:06:29.652831 sm [2] Query: QueryArgs Id  : 3858311008689790666,Seq :  13, Num  : -1  shardsMap:map[0:[0 1 2 3 4 5 6 7 8 9]] Groups :map[]
+2021/01/01 21:06:29.652852 sm [2] end Query: QueryArgs Id  : 3858311008689790666,Seq :  13, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+  ... Passed
+Test: Historical queries ...
+2021/01/01 21:06:29.653071 sm [2] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  14, Num  : 0 
+2021/01/01 21:06:29.653377 applyMsg op Id  : 3858311008689790666,Seq :  14
+2021/01/01 21:06:29.753177 sm [2] Query: QueryArgs Id  : 3858311008689790666,Seq :  14, Num  : 0  shardsMap:map[0:[0 1 2 3 4 5 6 7 8 9]] Groups :map[]
+2021/01/01 21:06:29.753206 sm [2] end Query: QueryArgs Id  : 3858311008689790666,Seq :  14, Num  : 0  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:29.753418 sm [2] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  15, Num  : 1 
+2021/01/01 21:06:29.753731 applyMsg op Id  : 3858311008689790666,Seq :  14
+2021/01/01 21:06:29.753732 applyMsg op Id  : 3858311008689790666,Seq :  15
+2021/01/01 21:06:29.853528 sm [2] Query: QueryArgs Id  : 3858311008689790666,Seq :  15, Num  : 1  shardsMap:map[1:[0 1 2 3 4 5 6 7 8 9]] Groups :map[1:[x y z]]
+2021/01/01 21:06:29.853554 sm [2] end Query: QueryArgs Id  : 3858311008689790666,Seq :  15, Num  : 1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:29.853768 sm [2] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  16, Num  : 2 
+2021/01/01 21:06:29.854060 applyMsg op Id  : 3858311008689790666,Seq :  16
+2021/01/01 21:06:29.854072 applyMsg op Id  : 3858311008689790666,Seq :  15
+2021/01/01 21:06:29.953916 sm [2] Query: QueryArgs Id  : 3858311008689790666,Seq :  16, Num  : 2  shardsMap:map[1:[5 6 7 8 9] 2:[0 1 2 3 4]] Groups :map[1:[x y z] 2:[a b c]]
+2021/01/01 21:06:29.953941 sm [2] end Query: QueryArgs Id  : 3858311008689790666,Seq :  16, Num  : 2  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:29.954178 sm [2] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  17, Num  : 0 
+2021/01/01 21:06:29.954461 applyMsg op Id  : 3858311008689790666,Seq :  16
+2021/01/01 21:06:29.954482 applyMsg op Id  : 3858311008689790666,Seq :  17
+2021/01/01 21:06:30.054289 sm [2] Query: QueryArgs Id  : 3858311008689790666,Seq :  17, Num  : 0  shardsMap:map[0:[0 1 2 3 4 5 6 7 8 9]] Groups :map[]
+2021/01/01 21:06:30.054326 sm [2] end Query: QueryArgs Id  : 3858311008689790666,Seq :  17, Num  : 0  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:30.054520 sm [2] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  18, Num  : 3 
+2021/01/01 21:06:30.054841 applyMsg op Id  : 3858311008689790666,Seq :  18
+2021/01/01 21:06:30.054857 applyMsg op Id  : 3858311008689790666,Seq :  17
+2021/01/01 21:06:30.115299 applyMsg op Id  : 3858311008689790666,Seq :  18
+2021/01/01 21:06:30.154627 sm [2] Query: QueryArgs Id  : 3858311008689790666,Seq :  18, Num  : 3  shardsMap:map[2:[0 1 2 3 4 5 6 7 8 9]] Groups :map[2:[a b c]]
+2021/01/01 21:06:30.154646 sm [2] end Query: QueryArgs Id  : 3858311008689790666,Seq :  18, Num  : 3  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:30.154843 sm [2] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  19, Num  : 4 
+2021/01/01 21:06:30.155172 applyMsg op Id  : 3858311008689790666,Seq :  19
+2021/01/01 21:06:30.235495 applyMsg op Id  : 3858311008689790666,Seq :  19
+2021/01/01 21:06:30.255066 sm [2] Query: QueryArgs Id  : 3858311008689790666,Seq :  19, Num  : 4  shardsMap:map[0:[0 1 2 3 4 5 6 7 8 9]] Groups :map[]
+2021/01/01 21:06:30.255089 sm [2] end Query: QueryArgs Id  : 3858311008689790666,Seq :  19, Num  : 4  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:30.255427 sm [2] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  20, Num  : 0 
+2021/01/01 21:06:30.255779 applyMsg op Id  : 3858311008689790666,Seq :  0
+2021/01/01 21:06:30.255817 applyMsg op Id  : 3858311008689790666,Seq :  20
+2021/01/01 21:06:30.256186 applyMsg op Id  : 3858311008689790666,Seq :  1
+2021/01/01 21:06:30.256201 applyMsg op Id  : 3858311008689790666,Seq :  2
+2021/01/01 21:06:30.256246 sm [0] Join: JoinArgs Id : 3858311008689790666,Seq  : 2, Servers  : map[1:[x y z]] shardsMap:map[1:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[1:[x y z]]
+2021/01/01 21:06:30.256252 applyMsg op Id  : 3858311008689790666,Seq :  3
+2021/01/01 21:06:30.256258 applyMsg op Id  : 3858311008689790666,Seq :  4
+2021/01/01 21:06:30.256528 applyMsg op Id  : 3858311008689790666,Seq :  5
+2021/01/01 21:06:30.256551 sm [0] Join: JoinArgs Id : 3858311008689790666,Seq  : 5, Servers  : map[2:[a b c]] shardsMap:map[1:[5 6 7 8 9] 2:[0 1 2 3 4]] newGroups :map[1:[x y z] 2:[a b c]]
+2021/01/01 21:06:30.256557 applyMsg op Id  : 3858311008689790666,Seq :  6
+2021/01/01 21:06:30.256561 applyMsg op Id  : 3858311008689790666,Seq :  7
+2021/01/01 21:06:30.256565 applyMsg op Id  : 3858311008689790666,Seq :  8
+2021/01/01 21:06:30.256568 applyMsg op Id  : 3858311008689790666,Seq :  9
+2021/01/01 21:06:30.256587 sm [0] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 9, GIDs  : [1] shardsMap:map[2:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[2:[a b c]]
+2021/01/01 21:06:30.256594 applyMsg op Id  : 3858311008689790666,Seq :  10
+2021/01/01 21:06:30.256604 applyMsg op Id  : 3858311008689790666,Seq :  11
+2021/01/01 21:06:30.256623 applyMsg op Id  : 3858311008689790666,Seq :  12
+2021/01/01 21:06:30.256645 sm [0] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 12, GIDs  : [2] shardsMap:map[0:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[]
+2021/01/01 21:06:30.256653 applyMsg op Id  : 3858311008689790666,Seq :  13
+2021/01/01 21:06:30.256658 applyMsg op Id  : 3858311008689790666,Seq :  14
+2021/01/01 21:06:30.256666 applyMsg op Id  : 3858311008689790666,Seq :  15
+2021/01/01 21:06:30.256672 applyMsg op Id  : 3858311008689790666,Seq :  16
+2021/01/01 21:06:30.256678 applyMsg op Id  : 3858311008689790666,Seq :  17
+2021/01/01 21:06:30.256683 applyMsg op Id  : 3858311008689790666,Seq :  18
+2021/01/01 21:06:30.256697 applyMsg op Id  : 3858311008689790666,Seq :  19
+2021/01/01 21:06:30.355542 sm [2] Query: QueryArgs Id  : 3858311008689790666,Seq :  20, Num  : 0  shardsMap:map[0:[0 1 2 3 4 5 6 7 8 9]] Groups :map[]
+2021/01/01 21:06:30.355568 sm [2] end Query: QueryArgs Id  : 3858311008689790666,Seq :  20, Num  : 0  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:30.355729 applyMsg op Id  : 3858311008689790666,Seq :  20
+2021/01/01 21:06:30.355803 sm [2] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  21, Num  : 1 
+2021/01/01 21:06:30.475872 applyMsg op Id  : 3858311008689790666,Seq :  21
+2021/01/01 21:06:30.556070 sm [2] Query: QueryArgs Id  : 3858311008689790666,Seq :  21, Num  : 1  shardsMap:map[1:[0 1 2 3 4 5 6 7 8 9]] Groups :map[1:[x y z]]
+2021/01/01 21:06:30.556092 sm [2] end Query: QueryArgs Id  : 3858311008689790666,Seq :  21, Num  : 1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:30.556307 sm [2] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  22, Num  : 2 
+2021/01/01 21:06:30.556652 applyMsg op Id  : 3858311008689790666,Seq :  21
+2021/01/01 21:06:30.556683 applyMsg op Id  : 3858311008689790666,Seq :  22
+2021/01/01 21:06:30.656427 sm [2] Query: QueryArgs Id  : 3858311008689790666,Seq :  22, Num  : 2  shardsMap:map[1:[5 6 7 8 9] 2:[0 1 2 3 4]] Groups :map[1:[x y z] 2:[a b c]]
+2021/01/01 21:06:30.656458 sm [2] end Query: QueryArgs Id  : 3858311008689790666,Seq :  22, Num  : 2  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:30.656670 sm [2] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  23, Num  : 0 
+2021/01/01 21:06:30.657001 applyMsg op Id  : 3858311008689790666,Seq :  23
+2021/01/01 21:06:30.657013 applyMsg op Id  : 3858311008689790666,Seq :  22
+2021/01/01 21:06:30.756795 sm [2] Query: QueryArgs Id  : 3858311008689790666,Seq :  23, Num  : 0  shardsMap:map[0:[0 1 2 3 4 5 6 7 8 9]] Groups :map[]
+2021/01/01 21:06:30.756821 sm [2] end Query: QueryArgs Id  : 3858311008689790666,Seq :  23, Num  : 0  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:30.757046 sm [2] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  24, Num  : 3 
+2021/01/01 21:06:30.757479 applyMsg op Id  : 3858311008689790666,Seq :  23
+2021/01/01 21:06:30.757514 applyMsg op Id  : 3858311008689790666,Seq :  24
+2021/01/01 21:06:30.836156 applyMsg op Id  : 3858311008689790666,Seq :  24
+2021/01/01 21:06:30.857254 sm [2] Query: QueryArgs Id  : 3858311008689790666,Seq :  24, Num  : 3  shardsMap:map[2:[0 1 2 3 4 5 6 7 8 9]] Groups :map[2:[a b c]]
+2021/01/01 21:06:30.857276 sm [2] end Query: QueryArgs Id  : 3858311008689790666,Seq :  24, Num  : 3  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:30.857448 sm [2] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  25, Num  : 4 
+2021/01/01 21:06:30.857808 applyMsg op Id  : 3858311008689790666,Seq :  25
+2021/01/01 21:06:30.956151 applyMsg op Id  : 3858311008689790666,Seq :  25
+2021/01/01 21:06:30.957586 sm [2] Query: QueryArgs Id  : 3858311008689790666,Seq :  25, Num  : 4  shardsMap:map[0:[0 1 2 3 4 5 6 7 8 9]] Groups :map[]
+2021/01/01 21:06:30.957600 sm [2] end Query: QueryArgs Id  : 3858311008689790666,Seq :  25, Num  : 4  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:31.618767 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  26, Num  : 0 
+2021/01/01 21:06:31.619090 applyMsg op Id  : 3858311008689790666,Seq :  26
+2021/01/01 21:06:31.619099 applyMsg op Id  : 3858311008689790666,Seq :  0
+2021/01/01 21:06:31.620974 applyMsg op Id  : 3858311008689790666,Seq :  1
+2021/01/01 21:06:31.620983 applyMsg op Id  : 3858311008689790666,Seq :  2
+2021/01/01 21:06:31.621019 sm [1] Join: JoinArgs Id : 3858311008689790666,Seq  : 2, Servers  : map[1:[x y z]] shardsMap:map[1:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[1:[x y z]]
+2021/01/01 21:06:31.621027 applyMsg op Id  : 3858311008689790666,Seq :  3
+2021/01/01 21:06:31.621033 applyMsg op Id  : 3858311008689790666,Seq :  4
+2021/01/01 21:06:31.621037 applyMsg op Id  : 3858311008689790666,Seq :  5
+2021/01/01 21:06:31.621060 sm [1] Join: JoinArgs Id : 3858311008689790666,Seq  : 5, Servers  : map[2:[a b c]] shardsMap:map[1:[5 6 7 8 9] 2:[0 1 2 3 4]] newGroups :map[1:[x y z] 2:[a b c]]
+2021/01/01 21:06:31.621066 applyMsg op Id  : 3858311008689790666,Seq :  6
+2021/01/01 21:06:31.621070 applyMsg op Id  : 3858311008689790666,Seq :  7
+2021/01/01 21:06:31.621075 applyMsg op Id  : 3858311008689790666,Seq :  8
+2021/01/01 21:06:31.621079 applyMsg op Id  : 3858311008689790666,Seq :  9
+2021/01/01 21:06:31.621095 sm [1] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 9, GIDs  : [1] shardsMap:map[2:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[2:[a b c]]
+2021/01/01 21:06:31.621108 applyMsg op Id  : 3858311008689790666,Seq :  10
+2021/01/01 21:06:31.621112 applyMsg op Id  : 3858311008689790666,Seq :  11
+2021/01/01 21:06:31.621117 applyMsg op Id  : 3858311008689790666,Seq :  12
+2021/01/01 21:06:31.621135 sm [1] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 12, GIDs  : [2] shardsMap:map[0:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[]
+2021/01/01 21:06:31.621140 applyMsg op Id  : 3858311008689790666,Seq :  13
+2021/01/01 21:06:31.621145 applyMsg op Id  : 3858311008689790666,Seq :  14
+2021/01/01 21:06:31.621153 applyMsg op Id  : 3858311008689790666,Seq :  15
+2021/01/01 21:06:31.621163 applyMsg op Id  : 3858311008689790666,Seq :  16
+2021/01/01 21:06:31.621173 applyMsg op Id  : 3858311008689790666,Seq :  17
+2021/01/01 21:06:31.621178 applyMsg op Id  : 3858311008689790666,Seq :  18
+2021/01/01 21:06:31.621181 applyMsg op Id  : 3858311008689790666,Seq :  19
+2021/01/01 21:06:31.621184 applyMsg op Id  : 3858311008689790666,Seq :  20
+2021/01/01 21:06:31.621187 applyMsg op Id  : 3858311008689790666,Seq :  21
+2021/01/01 21:06:31.621190 applyMsg op Id  : 3858311008689790666,Seq :  22
+2021/01/01 21:06:31.621193 applyMsg op Id  : 3858311008689790666,Seq :  23
+2021/01/01 21:06:31.621196 applyMsg op Id  : 3858311008689790666,Seq :  24
+2021/01/01 21:06:31.621199 applyMsg op Id  : 3858311008689790666,Seq :  25
+2021/01/01 21:06:31.621261 applyMsg op Id  : 3858311008689790666,Seq :  26
+2021/01/01 21:06:31.718927 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  26, Num  : 0  shardsMap:map[0:[0 1 2 3 4 5 6 7 8 9]] Groups :map[]
+2021/01/01 21:06:31.718950 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  26, Num  : 0  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:31.719173 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  27, Num  : 1 
+2021/01/01 21:06:31.719501 applyMsg op Id  : 3858311008689790666,Seq :  27
+2021/01/01 21:06:31.819283 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  27, Num  : 1  shardsMap:map[1:[0 1 2 3 4 5 6 7 8 9]] Groups :map[1:[x y z]]
+2021/01/01 21:06:31.819304 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  27, Num  : 1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:31.819473 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  28, Num  : 2 
+2021/01/01 21:06:31.819798 applyMsg op Id  : 3858311008689790666,Seq :  28
+2021/01/01 21:06:31.819808 applyMsg op Id  : 3858311008689790666,Seq :  27
+2021/01/01 21:06:31.881658 applyMsg op Id  : 3858311008689790666,Seq :  28
+2021/01/01 21:06:31.919573 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  28, Num  : 2  shardsMap:map[1:[5 6 7 8 9] 2:[0 1 2 3 4]] Groups :map[1:[x y z] 2:[a b c]]
+2021/01/01 21:06:31.919593 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  28, Num  : 2  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:31.919776 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  29, Num  : 0 
+2021/01/01 21:06:31.920087 applyMsg op Id  : 3858311008689790666,Seq :  29
+2021/01/01 21:06:32.001833 applyMsg op Id  : 3858311008689790666,Seq :  29
+2021/01/01 21:06:32.019890 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  29, Num  : 0  shardsMap:map[0:[0 1 2 3 4 5 6 7 8 9]] Groups :map[]
+2021/01/01 21:06:32.019909 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  29, Num  : 0  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:32.020068 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  30, Num  : 3 
+2021/01/01 21:06:32.020366 applyMsg op Id  : 3858311008689790666,Seq :  30
+2021/01/01 21:06:32.120169 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  30, Num  : 3  shardsMap:map[2:[0 1 2 3 4 5 6 7 8 9]] Groups :map[2:[a b c]]
+2021/01/01 21:06:32.120188 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  30, Num  : 3  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:32.120358 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  31, Num  : 4 
+2021/01/01 21:06:32.120714 applyMsg op Id  : 3858311008689790666,Seq :  31
+2021/01/01 21:06:32.120731 applyMsg op Id  : 3858311008689790666,Seq :  30
+2021/01/01 21:06:32.220484 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  31, Num  : 4  shardsMap:map[0:[0 1 2 3 4 5 6 7 8 9]] Groups :map[]
+2021/01/01 21:06:32.220514 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  31, Num  : 4  reply.WrongLeader false reply.Config.Num 0
+  ... Passed
+Test: Move ...
+2021/01/01 21:06:32.221025 sm [0] begin Join: JoinArgs Id : 3858311008689790666,Seq  : 32, Servers  : map[503:[3a 3b 3c]]
+2021/01/01 21:06:32.221525 applyMsg op Id  : 3858311008689790666,Seq :  32
+2021/01/01 21:06:32.221557 sm [0] Join: JoinArgs Id : 3858311008689790666,Seq  : 32, Servers  : map[503:[3a 3b 3c]] shardsMap:map[503:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[503:[3a 3b 3c]]
+2021/01/01 21:06:32.221568 applyMsg op Id  : 3858311008689790666,Seq :  31
+2021/01/01 21:06:32.221645 applyMsg op Id  : 3858311008689790666,Seq :  0
+2021/01/01 21:06:32.221659 applyMsg op Id  : 3858311008689790666,Seq :  1
+2021/01/01 21:06:32.221667 applyMsg op Id  : 3858311008689790666,Seq :  2
+2021/01/01 21:06:32.221699 sm [2] Join: JoinArgs Id : 3858311008689790666,Seq  : 2, Servers  : map[1:[x y z]] shardsMap:map[1:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[1:[x y z]]
+2021/01/01 21:06:32.221706 applyMsg op Id  : 3858311008689790666,Seq :  3
+2021/01/01 21:06:32.221713 applyMsg op Id  : 3858311008689790666,Seq :  4
+2021/01/01 21:06:32.221718 applyMsg op Id  : 3858311008689790666,Seq :  5
+2021/01/01 21:06:32.221742 sm [2] Join: JoinArgs Id : 3858311008689790666,Seq  : 5, Servers  : map[2:[a b c]] shardsMap:map[1:[5 6 7 8 9] 2:[0 1 2 3 4]] newGroups :map[1:[x y z] 2:[a b c]]
+2021/01/01 21:06:32.221750 applyMsg op Id  : 3858311008689790666,Seq :  6
+2021/01/01 21:06:32.221755 applyMsg op Id  : 3858311008689790666,Seq :  7
+2021/01/01 21:06:32.221761 applyMsg op Id  : 3858311008689790666,Seq :  8
+2021/01/01 21:06:32.221766 applyMsg op Id  : 3858311008689790666,Seq :  9
+2021/01/01 21:06:32.221786 sm [2] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 9, GIDs  : [1] shardsMap:map[2:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[2:[a b c]]
+2021/01/01 21:06:32.221794 applyMsg op Id  : 3858311008689790666,Seq :  10
+2021/01/01 21:06:32.221799 applyMsg op Id  : 3858311008689790666,Seq :  11
+2021/01/01 21:06:32.221805 applyMsg op Id  : 3858311008689790666,Seq :  12
+2021/01/01 21:06:32.221820 sm [2] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 12, GIDs  : [2] shardsMap:map[0:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[]
+2021/01/01 21:06:32.221826 applyMsg op Id  : 3858311008689790666,Seq :  13
+2021/01/01 21:06:32.221832 applyMsg op Id  : 3858311008689790666,Seq :  14
+2021/01/01 21:06:32.221837 applyMsg op Id  : 3858311008689790666,Seq :  15
+2021/01/01 21:06:32.221843 applyMsg op Id  : 3858311008689790666,Seq :  16
+2021/01/01 21:06:32.221848 applyMsg op Id  : 3858311008689790666,Seq :  17
+2021/01/01 21:06:32.221854 applyMsg op Id  : 3858311008689790666,Seq :  18
+2021/01/01 21:06:32.221859 applyMsg op Id  : 3858311008689790666,Seq :  19
+2021/01/01 21:06:32.221865 applyMsg op Id  : 3858311008689790666,Seq :  20
+2021/01/01 21:06:32.221870 applyMsg op Id  : 3858311008689790666,Seq :  21
+2021/01/01 21:06:32.221876 applyMsg op Id  : 3858311008689790666,Seq :  22
+2021/01/01 21:06:32.221881 applyMsg op Id  : 3858311008689790666,Seq :  23
+2021/01/01 21:06:32.221887 applyMsg op Id  : 3858311008689790666,Seq :  24
+2021/01/01 21:06:32.221892 applyMsg op Id  : 3858311008689790666,Seq :  25
+2021/01/01 21:06:32.221898 applyMsg op Id  : 3858311008689790666,Seq :  26
+2021/01/01 21:06:32.221907 applyMsg op Id  : 3858311008689790666,Seq :  27
+2021/01/01 21:06:32.221914 applyMsg op Id  : 3858311008689790666,Seq :  28
+2021/01/01 21:06:32.221922 applyMsg op Id  : 3858311008689790666,Seq :  29
+2021/01/01 21:06:32.221939 applyMsg op Id  : 3858311008689790666,Seq :  30
+2021/01/01 21:06:32.221954 applyMsg op Id  : 3858311008689790666,Seq :  31
+2021/01/01 21:06:32.222145 applyMsg op Id  : 3858311008689790666,Seq :  32
+2021/01/01 21:06:32.222195 sm [2] Join: JoinArgs Id : 3858311008689790666,Seq  : 32, Servers  : map[503:[3a 3b 3c]] shardsMap:map[503:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[503:[3a 3b 3c]]
+2021/01/01 21:06:32.321275 sm [0] end Join: JoinArgs Id : 3858311008689790666,Seq  : 32, Servers  : map[503:[3a 3b 3c]] ,reply.WrongLeader false
+2021/01/01 21:06:32.321462 sm [0] begin Join: JoinArgs Id : 3858311008689790666,Seq  : 33, Servers  : map[504:[4a 4b 4c]]
+2021/01/01 21:06:32.321761 applyMsg op Id  : 3858311008689790666,Seq :  33
+2021/01/01 21:06:32.321780 sm [0] Join: JoinArgs Id : 3858311008689790666,Seq  : 33, Servers  : map[504:[4a 4b 4c]] shardsMap:map[503:[5 6 7 8 9] 504:[0 1 2 3 4]] newGroups :map[503:[3a 3b 3c] 504:[4a 4b 4c]]
+2021/01/01 21:06:32.321887 applyMsg op Id  : 3858311008689790666,Seq :  32
+2021/01/01 21:06:32.321910 sm [1] Join: JoinArgs Id : 3858311008689790666,Seq  : 32, Servers  : map[503:[3a 3b 3c]] shardsMap:map[503:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[503:[3a 3b 3c]]
+2021/01/01 21:06:32.322026 applyMsg op Id  : 3858311008689790666,Seq :  33
+2021/01/01 21:06:32.322049 sm [1] Join: JoinArgs Id : 3858311008689790666,Seq  : 33, Servers  : map[504:[4a 4b 4c]] shardsMap:map[503:[5 6 7 8 9] 504:[0 1 2 3 4]] newGroups :map[503:[3a 3b 3c] 504:[4a 4b 4c]]
+2021/01/01 21:06:32.421578 sm [0] end Join: JoinArgs Id : 3858311008689790666,Seq  : 33, Servers  : map[504:[4a 4b 4c]] ,reply.WrongLeader false
+2021/01/01 21:06:32.421763 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  34, Num  : -1 
+2021/01/01 21:06:32.422027 applyMsg op Id  : 3858311008689790666,Seq :  34
+2021/01/01 21:06:32.422035 applyMsg op Id  : 3858311008689790666,Seq :  33
+2021/01/01 21:06:32.422053 sm [2] Join: JoinArgs Id : 3858311008689790666,Seq  : 33, Servers  : map[504:[4a 4b 4c]] shardsMap:map[503:[5 6 7 8 9] 504:[0 1 2 3 4]] newGroups :map[503:[3a 3b 3c] 504:[4a 4b 4c]]
+2021/01/01 21:06:32.422294 applyMsg op Id  : 3858311008689790666,Seq :  34
+2021/01/01 21:06:32.482284 applyMsg op Id  : 3858311008689790666,Seq :  34
+2021/01/01 21:06:32.521889 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  34, Num  : -1  shardsMap:map[503:[5 6 7 8 9] 504:[0 1 2 3 4]] Groups :map[503:[3a 3b 3c] 504:[4a 4b 4c]]
+2021/01/01 21:06:32.521910 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  34, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:32.522217 sm [0] begin Move: MoveArgs Id  : 3858311008689790666,Seq :  35, Shard  : 0 GID  : 503
+2021/01/01 21:06:32.522725 applyMsg op Id  : 3858311008689790666,Seq :  35
+2021/01/01 21:06:32.522753 sm [0] Move: MoveArgs Id  : 3858311008689790666,Seq :  35, Shard  : 0 GID  : 503 shardsMap:map[503:[0 5 6 7 8 9] 504:[1 2 3 4]] newGroups :map[503:[3a 3b 3c] 504:[4a 4b 4c]]
+2021/01/01 21:06:32.602441 applyMsg op Id  : 3858311008689790666,Seq :  35
+2021/01/01 21:06:32.602482 sm [2] Move: MoveArgs Id  : 3858311008689790666,Seq :  35, Shard  : 0 GID  : 503 shardsMap:map[503:[0 5 6 7 8 9] 504:[1 2 3 4]] newGroups :map[503:[3a 3b 3c] 504:[4a 4b 4c]]
+2021/01/01 21:06:32.602490 applyMsg op Id  : 3858311008689790666,Seq :  35
+2021/01/01 21:06:32.602502 sm [1] Move: MoveArgs Id  : 3858311008689790666,Seq :  35, Shard  : 0 GID  : 503 shardsMap:map[503:[0 5 6 7 8 9] 504:[1 2 3 4]] newGroups :map[503:[3a 3b 3c] 504:[4a 4b 4c]]
+2021/01/01 21:06:32.622446 sm [0] end Move: MoveArgs Id  : 3858311008689790666,Seq :  35, Shard  : 0 GID  : 503 reply.WrongLeader false
+2021/01/01 21:06:32.622647 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  36, Num  : -1 
+2021/01/01 21:06:32.622938 applyMsg op Id  : 3858311008689790666,Seq :  36
+2021/01/01 21:06:32.623206 applyMsg op Id  : 3858311008689790666,Seq :  36
+2021/01/01 21:06:32.722620 applyMsg op Id  : 3858311008689790666,Seq :  36
+2021/01/01 21:06:32.722803 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  36, Num  : -1  shardsMap:map[503:[0 5 6 7 8 9] 504:[1 2 3 4]] Groups :map[503:[3a 3b 3c] 504:[4a 4b 4c]]
+2021/01/01 21:06:32.722816 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  36, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:32.723036 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  37, Num  : -1 
+2021/01/01 21:06:32.843580 applyMsg op Id  : 3858311008689790666,Seq :  37
+2021/01/01 21:06:32.843950 applyMsg op Id  : 3858311008689790666,Seq :  37
+2021/01/01 21:06:32.923368 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  37, Num  : -1  shardsMap:map[503:[0 5 6 7 8 9] 504:[1 2 3 4]] Groups :map[503:[3a 3b 3c] 504:[4a 4b 4c]]
+2021/01/01 21:06:32.923393 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  37, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:32.923584 sm [0] begin Move: MoveArgs Id  : 3858311008689790666,Seq :  38, Shard  : 1 GID  : 503
+2021/01/01 21:06:32.923911 applyMsg op Id  : 3858311008689790666,Seq :  38
+2021/01/01 21:06:32.923930 applyMsg op Id  : 3858311008689790666,Seq :  37
+2021/01/01 21:06:32.923933 sm [0] Move: MoveArgs Id  : 3858311008689790666,Seq :  38, Shard  : 1 GID  : 503 shardsMap:map[503:[0 1 5 6 7 8 9] 504:[2 3 4]] newGroups :map[503:[3a 3b 3c] 504:[4a 4b 4c]]
+2021/01/01 21:06:32.924228 applyMsg op Id  : 3858311008689790666,Seq :  38
+2021/01/01 21:06:32.924261 sm [1] Move: MoveArgs Id  : 3858311008689790666,Seq :  38, Shard  : 1 GID  : 503 shardsMap:map[503:[0 1 5 6 7 8 9] 504:[2 3 4]] newGroups :map[503:[3a 3b 3c] 504:[4a 4b 4c]]
+2021/01/01 21:06:33.023679 sm [0] end Move: MoveArgs Id  : 3858311008689790666,Seq :  38, Shard  : 1 GID  : 503 reply.WrongLeader false
+2021/01/01 21:06:33.023845 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  39, Num  : -1 
+2021/01/01 21:06:33.024150 applyMsg op Id  : 3858311008689790666,Seq :  39
+2021/01/01 21:06:33.024159 applyMsg op Id  : 3858311008689790666,Seq :  38
+2021/01/01 21:06:33.024183 sm [2] Move: MoveArgs Id  : 3858311008689790666,Seq :  38, Shard  : 1 GID  : 503 shardsMap:map[503:[0 1 5 6 7 8 9] 504:[2 3 4]] newGroups :map[503:[3a 3b 3c] 504:[4a 4b 4c]]
+2021/01/01 21:06:33.024529 applyMsg op Id  : 3858311008689790666,Seq :  39
+2021/01/01 21:06:33.124026 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  39, Num  : -1  shardsMap:map[503:[0 1 5 6 7 8 9] 504:[2 3 4]] Groups :map[503:[3a 3b 3c] 504:[4a 4b 4c]]
+2021/01/01 21:06:33.124056 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  39, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:33.124306 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  40, Num  : -1 
+2021/01/01 21:06:33.124939 applyMsg op Id  : 3858311008689790666,Seq :  39
+2021/01/01 21:06:33.124977 applyMsg op Id  : 3858311008689790666,Seq :  40
+2021/01/01 21:06:33.125560 applyMsg op Id  : 3858311008689790666,Seq :  40
+2021/01/01 21:06:33.203705 applyMsg op Id  : 3858311008689790666,Seq :  40
+2021/01/01 21:06:33.224503 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  40, Num  : -1  shardsMap:map[503:[0 1 5 6 7 8 9] 504:[2 3 4]] Groups :map[503:[3a 3b 3c] 504:[4a 4b 4c]]
+2021/01/01 21:06:33.224526 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  40, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:33.224738 sm [0] begin Move: MoveArgs Id  : 3858311008689790666,Seq :  41, Shard  : 2 GID  : 503
+2021/01/01 21:06:33.225189 applyMsg op Id  : 3858311008689790666,Seq :  41
+2021/01/01 21:06:33.225216 sm [0] Move: MoveArgs Id  : 3858311008689790666,Seq :  41, Shard  : 2 GID  : 503 shardsMap:map[503:[0 1 2 5 6 7 8 9] 504:[3 4]] newGroups :map[503:[3a 3b 3c] 504:[4a 4b 4c]]
+2021/01/01 21:06:33.323853 applyMsg op Id  : 3858311008689790666,Seq :  41
+2021/01/01 21:06:33.323853 applyMsg op Id  : 3858311008689790666,Seq :  41
+2021/01/01 21:06:33.323905 sm [2] Move: MoveArgs Id  : 3858311008689790666,Seq :  41, Shard  : 2 GID  : 503 shardsMap:map[503:[0 1 2 5 6 7 8 9] 504:[3 4]] newGroups :map[503:[3a 3b 3c] 504:[4a 4b 4c]]
+2021/01/01 21:06:33.323923 sm [1] Move: MoveArgs Id  : 3858311008689790666,Seq :  41, Shard  : 2 GID  : 503 shardsMap:map[503:[0 1 2 5 6 7 8 9] 504:[3 4]] newGroups :map[503:[3a 3b 3c] 504:[4a 4b 4c]]
+2021/01/01 21:06:33.324838 sm [0] end Move: MoveArgs Id  : 3858311008689790666,Seq :  41, Shard  : 2 GID  : 503 reply.WrongLeader false
+2021/01/01 21:06:33.324989 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  42, Num  : -1 
+2021/01/01 21:06:33.325297 applyMsg op Id  : 3858311008689790666,Seq :  42
+2021/01/01 21:06:33.325586 applyMsg op Id  : 3858311008689790666,Seq :  42
+2021/01/01 21:06:33.425207 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  42, Num  : -1  shardsMap:map[503:[0 1 2 5 6 7 8 9] 504:[3 4]] Groups :map[503:[3a 3b 3c] 504:[4a 4b 4c]]
+2021/01/01 21:06:33.425231 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  42, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:33.425439 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  43, Num  : -1 
+2021/01/01 21:06:33.425862 applyMsg op Id  : 3858311008689790666,Seq :  42
+2021/01/01 21:06:33.425882 applyMsg op Id  : 3858311008689790666,Seq :  43
+2021/01/01 21:06:33.426126 applyMsg op Id  : 3858311008689790666,Seq :  43
+2021/01/01 21:06:33.525644 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  43, Num  : -1  shardsMap:map[503:[0 1 2 5 6 7 8 9] 504:[3 4]] Groups :map[503:[3a 3b 3c] 504:[4a 4b 4c]]
+2021/01/01 21:06:33.525667 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  43, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:33.525862 sm [0] begin Move: MoveArgs Id  : 3858311008689790666,Seq :  44, Shard  : 3 GID  : 503
+2021/01/01 21:06:33.526172 applyMsg op Id  : 3858311008689790666,Seq :  44
+2021/01/01 21:06:33.526188 sm [0] Move: MoveArgs Id  : 3858311008689790666,Seq :  44, Shard  : 3 GID  : 503 shardsMap:map[503:[0 1 2 3 5 6 7 8 9] 504:[4]] newGroups :map[503:[3a 3b 3c] 504:[4a 4b 4c]]
+2021/01/01 21:06:33.526196 applyMsg op Id  : 3858311008689790666,Seq :  43
+2021/01/01 21:06:33.526555 applyMsg op Id  : 3858311008689790666,Seq :  44
+2021/01/01 21:06:33.526576 sm [1] Move: MoveArgs Id  : 3858311008689790666,Seq :  44, Shard  : 3 GID  : 503 shardsMap:map[503:[0 1 2 3 5 6 7 8 9] 504:[4]] newGroups :map[503:[3a 3b 3c] 504:[4a 4b 4c]]
+2021/01/01 21:06:33.626060 sm [0] end Move: MoveArgs Id  : 3858311008689790666,Seq :  44, Shard  : 3 GID  : 503 reply.WrongLeader false
+2021/01/01 21:06:33.626248 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  45, Num  : -1 
+2021/01/01 21:06:33.626525 applyMsg op Id  : 3858311008689790666,Seq :  44
+2021/01/01 21:06:33.626555 sm [2] Move: MoveArgs Id  : 3858311008689790666,Seq :  44, Shard  : 3 GID  : 503 shardsMap:map[503:[0 1 2 3 5 6 7 8 9] 504:[4]] newGroups :map[503:[3a 3b 3c] 504:[4a 4b 4c]]
+2021/01/01 21:06:33.626589 applyMsg op Id  : 3858311008689790666,Seq :  45
+2021/01/01 21:06:33.626869 applyMsg op Id  : 3858311008689790666,Seq :  45
+2021/01/01 21:06:33.726412 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  45, Num  : -1  shardsMap:map[503:[0 1 2 3 5 6 7 8 9] 504:[4]] Groups :map[503:[3a 3b 3c] 504:[4a 4b 4c]]
+2021/01/01 21:06:33.726434 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  45, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:33.726627 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  46, Num  : -1 
+2021/01/01 21:06:33.726972 applyMsg op Id  : 3858311008689790666,Seq :  46
+2021/01/01 21:06:33.726989 applyMsg op Id  : 3858311008689790666,Seq :  45
+2021/01/01 21:06:33.727232 applyMsg op Id  : 3858311008689790666,Seq :  46
+2021/01/01 21:06:33.804342 applyMsg op Id  : 3858311008689790666,Seq :  46
+2021/01/01 21:06:33.826859 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  46, Num  : -1  shardsMap:map[503:[0 1 2 3 5 6 7 8 9] 504:[4]] Groups :map[503:[3a 3b 3c] 504:[4a 4b 4c]]
+2021/01/01 21:06:33.826877 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  46, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:33.827052 sm [0] begin Move: MoveArgs Id  : 3858311008689790666,Seq :  47, Shard  : 4 GID  : 503
+2021/01/01 21:06:33.827386 applyMsg op Id  : 3858311008689790666,Seq :  47
+2021/01/01 21:06:33.827404 sm [0] Move: MoveArgs Id  : 3858311008689790666,Seq :  47, Shard  : 4 GID  : 503 shardsMap:map[503:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[503:[3a 3b 3c]]
+2021/01/01 21:06:33.827608 applyMsg op Id  : 3858311008689790666,Seq :  47
+2021/01/01 21:06:33.827628 sm [1] Move: MoveArgs Id  : 3858311008689790666,Seq :  47, Shard  : 4 GID  : 503 shardsMap:map[503:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[503:[3a 3b 3c]]
+2021/01/01 21:06:33.924502 applyMsg op Id  : 3858311008689790666,Seq :  47
+2021/01/01 21:06:33.924555 sm [2] Move: MoveArgs Id  : 3858311008689790666,Seq :  47, Shard  : 4 GID  : 503 shardsMap:map[503:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[503:[3a 3b 3c]]
+2021/01/01 21:06:33.927254 sm [0] end Move: MoveArgs Id  : 3858311008689790666,Seq :  47, Shard  : 4 GID  : 503 reply.WrongLeader false
+2021/01/01 21:06:33.927400 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  48, Num  : -1 
+2021/01/01 21:06:33.927853 applyMsg op Id  : 3858311008689790666,Seq :  48
+2021/01/01 21:06:34.027618 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  48, Num  : -1  shardsMap:map[503:[0 1 2 3 4 5 6 7 8 9]] Groups :map[503:[3a 3b 3c]]
+2021/01/01 21:06:34.027644 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  48, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:34.027818 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  49, Num  : -1 
+2021/01/01 21:06:34.028135 applyMsg op Id  : 3858311008689790666,Seq :  49
+2021/01/01 21:06:34.028151 applyMsg op Id  : 3858311008689790666,Seq :  48
+2021/01/01 21:06:34.028166 applyMsg op Id  : 3858311008689790666,Seq :  48
+2021/01/01 21:06:34.028349 applyMsg op Id  : 3858311008689790666,Seq :  49
+2021/01/01 21:06:34.127932 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  49, Num  : -1  shardsMap:map[503:[0 1 2 3 4 5 6 7 8 9]] Groups :map[503:[3a 3b 3c]]
+2021/01/01 21:06:34.127963 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  49, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:34.128244 sm [0] begin Move: MoveArgs Id  : 3858311008689790666,Seq :  50, Shard  : 5 GID  : 504
+2021/01/01 21:06:34.128727 applyMsg op Id  : 3858311008689790666,Seq :  49
+2021/01/01 21:06:34.128758 applyMsg op Id  : 3858311008689790666,Seq :  50
+2021/01/01 21:06:34.128789 sm [0] Move: MoveArgs Id  : 3858311008689790666,Seq :  50, Shard  : 5 GID  : 504 shardsMap:map[503:[0 1 2 3 4 6 7 8 9] 504:[5]] newGroups :map[503:[3a 3b 3c] 504:[]]
+2021/01/01 21:06:34.228411 sm [0] end Move: MoveArgs Id  : 3858311008689790666,Seq :  50, Shard  : 5 GID  : 504 reply.WrongLeader false
+2021/01/01 21:06:34.228680 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  51, Num  : -1 
+2021/01/01 21:06:34.229188 applyMsg op Id  : 3858311008689790666,Seq :  51
+2021/01/01 21:06:34.229192 applyMsg op Id  : 3858311008689790666,Seq :  50
+2021/01/01 21:06:34.229258 sm [2] Move: MoveArgs Id  : 3858311008689790666,Seq :  50, Shard  : 5 GID  : 504 shardsMap:map[503:[0 1 2 3 4 6 7 8 9] 504:[5]] newGroups :map[503:[3a 3b 3c] 504:[]]
+2021/01/01 21:06:34.229314 applyMsg op Id  : 3858311008689790666,Seq :  50
+2021/01/01 21:06:34.229371 sm [1] Move: MoveArgs Id  : 3858311008689790666,Seq :  50, Shard  : 5 GID  : 504 shardsMap:map[503:[0 1 2 3 4 6 7 8 9] 504:[5]] newGroups :map[503:[3a 3b 3c] 504:[]]
+2021/01/01 21:06:34.229716 applyMsg op Id  : 3858311008689790666,Seq :  51
+2021/01/01 21:06:34.328966 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  51, Num  : -1  shardsMap:map[503:[0 1 2 3 4 6 7 8 9] 504:[5]] Groups :map[503:[3a 3b 3c] 504:[]]
+2021/01/01 21:06:34.328995 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  51, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:34.329269 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  52, Num  : -1 
+2021/01/01 21:06:34.329823 applyMsg op Id  : 3858311008689790666,Seq :  51
+2021/01/01 21:06:34.329851 applyMsg op Id  : 3858311008689790666,Seq :  52
+2021/01/01 21:06:34.330370 applyMsg op Id  : 3858311008689790666,Seq :  52
+2021/01/01 21:06:34.405233 applyMsg op Id  : 3858311008689790666,Seq :  52
+2021/01/01 21:06:34.429519 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  52, Num  : -1  shardsMap:map[503:[0 1 2 3 4 6 7 8 9] 504:[5]] Groups :map[503:[3a 3b 3c] 504:[]]
+2021/01/01 21:06:34.429554 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  52, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:34.429847 sm [0] begin Move: MoveArgs Id  : 3858311008689790666,Seq :  53, Shard  : 6 GID  : 504
+2021/01/01 21:06:34.430332 applyMsg op Id  : 3858311008689790666,Seq :  53
+2021/01/01 21:06:34.430364 sm [0] Move: MoveArgs Id  : 3858311008689790666,Seq :  53, Shard  : 6 GID  : 504 shardsMap:map[503:[0 1 2 3 4 7 8 9] 504:[5 6]] newGroups :map[503:[3a 3b 3c] 504:[]]
+2021/01/01 21:06:34.430757 applyMsg op Id  : 3858311008689790666,Seq :  53
+2021/01/01 21:06:34.430799 sm [1] Move: MoveArgs Id  : 3858311008689790666,Seq :  53, Shard  : 6 GID  : 504 shardsMap:map[503:[0 1 2 3 4 7 8 9] 504:[5 6]] newGroups :map[503:[3a 3b 3c] 504:[]]
+2021/01/01 21:06:34.525372 applyMsg op Id  : 3858311008689790666,Seq :  53
+2021/01/01 21:06:34.525418 sm [2] Move: MoveArgs Id  : 3858311008689790666,Seq :  53, Shard  : 6 GID  : 504 shardsMap:map[503:[0 1 2 3 4 7 8 9] 504:[5 6]] newGroups :map[503:[3a 3b 3c] 504:[]]
+2021/01/01 21:06:34.530051 sm [0] end Move: MoveArgs Id  : 3858311008689790666,Seq :  53, Shard  : 6 GID  : 504 reply.WrongLeader false
+2021/01/01 21:06:34.530298 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  54, Num  : -1 
+2021/01/01 21:06:34.530957 applyMsg op Id  : 3858311008689790666,Seq :  54
+2021/01/01 21:06:34.531319 applyMsg op Id  : 3858311008689790666,Seq :  54
+2021/01/01 21:06:34.630658 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  54, Num  : -1  shardsMap:map[503:[0 1 2 3 4 7 8 9] 504:[5 6]] Groups :map[503:[3a 3b 3c] 504:[]]
+2021/01/01 21:06:34.630683 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  54, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:34.630917 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  55, Num  : -1 
+2021/01/01 21:06:34.631400 applyMsg op Id  : 3858311008689790666,Seq :  55
+2021/01/01 21:06:34.631543 applyMsg op Id  : 3858311008689790666,Seq :  54
+2021/01/01 21:06:34.631783 applyMsg op Id  : 3858311008689790666,Seq :  55
+2021/01/01 21:06:34.731112 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  55, Num  : -1  shardsMap:map[503:[0 1 2 3 4 7 8 9] 504:[5 6]] Groups :map[503:[3a 3b 3c] 504:[]]
+2021/01/01 21:06:34.731141 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  55, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:34.731413 sm [0] begin Move: MoveArgs Id  : 3858311008689790666,Seq :  56, Shard  : 7 GID  : 504
+2021/01/01 21:06:34.731962 applyMsg op Id  : 3858311008689790666,Seq :  55
+2021/01/01 21:06:34.731994 applyMsg op Id  : 3858311008689790666,Seq :  56
+2021/01/01 21:06:34.732019 sm [0] Move: MoveArgs Id  : 3858311008689790666,Seq :  56, Shard  : 7 GID  : 504 shardsMap:map[503:[0 1 2 3 4 8 9] 504:[5 6 7]] newGroups :map[503:[3a 3b 3c] 504:[]]
+2021/01/01 21:06:34.732442 applyMsg op Id  : 3858311008689790666,Seq :  56
+2021/01/01 21:06:34.732481 sm [1] Move: MoveArgs Id  : 3858311008689790666,Seq :  56, Shard  : 7 GID  : 504 shardsMap:map[503:[0 1 2 3 4 8 9] 504:[5 6 7]] newGroups :map[503:[3a 3b 3c] 504:[]]
+2021/01/01 21:06:34.831593 sm [0] end Move: MoveArgs Id  : 3858311008689790666,Seq :  56, Shard  : 7 GID  : 504 reply.WrongLeader false
+2021/01/01 21:06:34.831855 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  57, Num  : -1 
+2021/01/01 21:06:34.832367 applyMsg op Id  : 3858311008689790666,Seq :  56
+2021/01/01 21:06:34.832412 sm [2] Move: MoveArgs Id  : 3858311008689790666,Seq :  56, Shard  : 7 GID  : 504 shardsMap:map[503:[0 1 2 3 4 8 9] 504:[5 6 7]] newGroups :map[503:[3a 3b 3c] 504:[]]
+2021/01/01 21:06:34.832436 applyMsg op Id  : 3858311008689790666,Seq :  57
+2021/01/01 21:06:34.932164 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  57, Num  : -1  shardsMap:map[503:[0 1 2 3 4 8 9] 504:[5 6 7]] Groups :map[503:[3a 3b 3c] 504:[]]
+2021/01/01 21:06:34.932257 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  57, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:34.932778 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  58, Num  : -1 
+2021/01/01 21:06:34.934685 applyMsg op Id  : 3858311008689790666,Seq :  57
+2021/01/01 21:06:34.934971 applyMsg op Id  : 3858311008689790666,Seq :  58
+2021/01/01 21:06:34.935516 applyMsg op Id  : 3858311008689790666,Seq :  57
+2021/01/01 21:06:34.936369 applyMsg op Id  : 3858311008689790666,Seq :  58
+2021/01/01 21:06:35.006392 applyMsg op Id  : 3858311008689790666,Seq :  58
+2021/01/01 21:06:35.033127 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  58, Num  : -1  shardsMap:map[503:[0 1 2 3 4 8 9] 504:[5 6 7]] Groups :map[503:[3a 3b 3c] 504:[]]
+2021/01/01 21:06:35.033172 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  58, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:35.033753 sm [0] begin Move: MoveArgs Id  : 3858311008689790666,Seq :  59, Shard  : 8 GID  : 504
+2021/01/01 21:06:35.034906 applyMsg op Id  : 3858311008689790666,Seq :  59
+2021/01/01 21:06:35.035015 sm [0] Move: MoveArgs Id  : 3858311008689790666,Seq :  59, Shard  : 8 GID  : 504 shardsMap:map[503:[0 1 2 3 4 9] 504:[5 6 7 8]] newGroups :map[503:[3a 3b 3c] 504:[]]
+2021/01/01 21:06:35.035887 applyMsg op Id  : 3858311008689790666,Seq :  59
+2021/01/01 21:06:35.036016 sm [1] Move: MoveArgs Id  : 3858311008689790666,Seq :  59, Shard  : 8 GID  : 504 shardsMap:map[503:[0 1 2 3 4 9] 504:[5 6 7 8]] newGroups :map[503:[3a 3b 3c] 504:[]]
+2021/01/01 21:06:35.126554 applyMsg op Id  : 3858311008689790666,Seq :  59
+2021/01/01 21:06:35.126780 sm [2] Move: MoveArgs Id  : 3858311008689790666,Seq :  59, Shard  : 8 GID  : 504 shardsMap:map[503:[0 1 2 3 4 9] 504:[5 6 7 8]] newGroups :map[503:[3a 3b 3c] 504:[]]
+2021/01/01 21:06:35.134268 sm [0] end Move: MoveArgs Id  : 3858311008689790666,Seq :  59, Shard  : 8 GID  : 504 reply.WrongLeader false
+2021/01/01 21:06:35.134757 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  60, Num  : -1 
+2021/01/01 21:06:35.135917 applyMsg op Id  : 3858311008689790666,Seq :  60
+2021/01/01 21:06:35.136687 applyMsg op Id  : 3858311008689790666,Seq :  60
+2021/01/01 21:06:35.235114 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  60, Num  : -1  shardsMap:map[503:[0 1 2 3 4 9] 504:[5 6 7 8]] Groups :map[503:[3a 3b 3c] 504:[]]
+2021/01/01 21:06:35.235170 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  60, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:35.235683 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  61, Num  : -1 
+2021/01/01 21:06:35.236726 applyMsg op Id  : 3858311008689790666,Seq :  60
+2021/01/01 21:06:35.236844 applyMsg op Id  : 3858311008689790666,Seq :  61
+2021/01/01 21:06:35.238046 applyMsg op Id  : 3858311008689790666,Seq :  61
+2021/01/01 21:06:35.336208 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  61, Num  : -1  shardsMap:map[503:[0 1 2 3 4 9] 504:[5 6 7 8]] Groups :map[503:[3a 3b 3c] 504:[]]
+2021/01/01 21:06:35.336279 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  61, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:35.336855 sm [0] begin Move: MoveArgs Id  : 3858311008689790666,Seq :  62, Shard  : 9 GID  : 504
+2021/01/01 21:06:35.338022 applyMsg op Id  : 3858311008689790666,Seq :  61
+2021/01/01 21:06:35.338101 applyMsg op Id  : 3858311008689790666,Seq :  62
+2021/01/01 21:06:35.338208 sm [0] Move: MoveArgs Id  : 3858311008689790666,Seq :  62, Shard  : 9 GID  : 504 shardsMap:map[503:[0 1 2 3 4] 504:[5 6 7 8 9]] newGroups :map[503:[3a 3b 3c] 504:[]]
+2021/01/01 21:06:35.339206 applyMsg op Id  : 3858311008689790666,Seq :  62
+2021/01/01 21:06:35.339317 sm [1] Move: MoveArgs Id  : 3858311008689790666,Seq :  62, Shard  : 9 GID  : 504 shardsMap:map[503:[0 1 2 3 4] 504:[5 6 7 8 9]] newGroups :map[503:[3a 3b 3c] 504:[]]
+2021/01/01 21:06:35.437410 sm [0] end Move: MoveArgs Id  : 3858311008689790666,Seq :  62, Shard  : 9 GID  : 504 reply.WrongLeader false
+2021/01/01 21:06:35.437964 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  63, Num  : -1 
+2021/01/01 21:06:35.439116 applyMsg op Id  : 3858311008689790666,Seq :  62
+2021/01/01 21:06:35.439192 applyMsg op Id  : 3858311008689790666,Seq :  63
+2021/01/01 21:06:35.439266 sm [2] Move: MoveArgs Id  : 3858311008689790666,Seq :  62, Shard  : 9 GID  : 504 shardsMap:map[503:[0 1 2 3 4] 504:[5 6 7 8 9]] newGroups :map[503:[3a 3b 3c] 504:[]]
+2021/01/01 21:06:35.439898 applyMsg op Id  : 3858311008689790666,Seq :  63
+2021/01/01 21:06:35.538574 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  63, Num  : -1  shardsMap:map[503:[0 1 2 3 4] 504:[5 6 7 8 9]] Groups :map[503:[3a 3b 3c] 504:[]]
+2021/01/01 21:06:35.538690 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  63, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:35.539304 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  64, Num  : -1 
+2021/01/01 21:06:35.540388 applyMsg op Id  : 3858311008689790666,Seq :  63
+2021/01/01 21:06:35.540542 applyMsg op Id  : 3858311008689790666,Seq :  64
+2021/01/01 21:06:35.541474 applyMsg op Id  : 3858311008689790666,Seq :  64
+2021/01/01 21:06:35.607345 applyMsg op Id  : 3858311008689790666,Seq :  64
+2021/01/01 21:06:35.639921 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  64, Num  : -1  shardsMap:map[503:[0 1 2 3 4] 504:[5 6 7 8 9]] Groups :map[503:[3a 3b 3c] 504:[]]
+2021/01/01 21:06:35.639993 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  64, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:35.640907 sm [0] begin Leave: LeaveArgs Id :  3858311008689790666,Seq  : 65, GIDs  : [503]
+2021/01/01 21:06:35.642886 applyMsg op Id  : 3858311008689790666,Seq :  65
+2021/01/01 21:06:35.642991 sm [0] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 65, GIDs  : [503] shardsMap:map[504:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[504:[]]
+2021/01/01 21:06:35.727353 applyMsg op Id  : 3858311008689790666,Seq :  65
+2021/01/01 21:06:35.727436 applyMsg op Id  : 3858311008689790666,Seq :  65
+2021/01/01 21:06:35.727466 sm [2] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 65, GIDs  : [503] shardsMap:map[504:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[504:[]]
+2021/01/01 21:06:35.727516 sm [1] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 65, GIDs  : [503] shardsMap:map[504:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[504:[]]
+2021/01/01 21:06:35.741675 sm [0] end Leave: LeaveArgs Id :  3858311008689790666,Seq  : 65, GIDs  : [503] reply.WrongLeader false
+2021/01/01 21:06:35.742213 sm [0] begin Leave: LeaveArgs Id :  3858311008689790666,Seq  : 66, GIDs  : [504]
+2021/01/01 21:06:35.743350 applyMsg op Id  : 3858311008689790666,Seq :  66
+2021/01/01 21:06:35.743410 sm [0] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 66, GIDs  : [504] shardsMap:map[0:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[]
+2021/01/01 21:06:35.744078 applyMsg op Id  : 3858311008689790666,Seq :  66
+2021/01/01 21:06:35.744151 sm [1] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 66, GIDs  : [504] shardsMap:map[0:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[]
+2021/01/01 21:06:35.842684 sm [0] end Leave: LeaveArgs Id :  3858311008689790666,Seq  : 66, GIDs  : [504] reply.WrongLeader false
+  ... Passed
+Test: Concurrent leave/join ...
+2021/01/01 21:06:35.844335 sm [0] begin Join: JoinArgs Id : 1555200915632050519,Seq  : 0, Servers  : map[1160:[s160a]]
+2021/01/01 21:06:35.844435 sm [0] begin Join: JoinArgs Id : 4219824177386683707,Seq  : 0, Servers  : map[1190:[s190a]]
+2021/01/01 21:06:35.844895 sm [0] begin Join: JoinArgs Id : 869788597794535869,Seq  : 0, Servers  : map[1140:[s140a]]
+2021/01/01 21:06:35.845110 sm [0] begin Join: JoinArgs Id : 4406157192947090333,Seq  : 0, Servers  : map[1170:[s170a]]
+2021/01/01 21:06:35.845218 sm [0] begin Join: JoinArgs Id : 1796033131328922066,Seq  : 0, Servers  : map[1120:[s120a]]
+2021/01/01 21:06:35.845419 sm [0] begin Join: JoinArgs Id : 3671242379456651874,Seq  : 0, Servers  : map[1180:[s180a]]
+2021/01/01 21:06:35.845514 sm [0] begin Join: JoinArgs Id : 894180952275707457,Seq  : 0, Servers  : map[1110:[s110a]]
+2021/01/01 21:06:35.845606 sm [0] begin Join: JoinArgs Id : 2298304764259725748,Seq  : 0, Servers  : map[1130:[s130a]]
+2021/01/01 21:06:35.846124 sm [0] begin Join: JoinArgs Id : 511641210771867756,Seq  : 0, Servers  : map[1150:[s150a]]
+2021/01/01 21:06:35.846597 sm [0] begin Join: JoinArgs Id : 848644491423293621,Seq  : 0, Servers  : map[1100:[s100a]]
+2021/01/01 21:06:35.848984 applyMsg op Id  : 1555200915632050519,Seq :  0
+2021/01/01 21:06:35.849062 sm [0] Join: JoinArgs Id : 1555200915632050519,Seq  : 0, Servers  : map[1160:[s160a]] shardsMap:map[1160:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[1160:[s160a]]
+2021/01/01 21:06:35.849082 applyMsg op Id  : 4219824177386683707,Seq :  0
+2021/01/01 21:06:35.849128 sm [0] Join: JoinArgs Id : 4219824177386683707,Seq  : 0, Servers  : map[1190:[s190a]] shardsMap:map[1160:[5 6 7 8 9] 1190:[0 1 2 3 4]] newGroups :map[1160:[s160a] 1190:[s190a]]
+2021/01/01 21:06:35.849148 applyMsg op Id  : 3858311008689790666,Seq :  66
+2021/01/01 21:06:35.849182 sm [2] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 66, GIDs  : [504] shardsMap:map[0:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[]
+2021/01/01 21:06:35.849339 applyMsg op Id  : 869788597794535869,Seq :  0
+2021/01/01 21:06:35.849467 sm [0] Join: JoinArgs Id : 869788597794535869,Seq  : 0, Servers  : map[1140:[s140a]] shardsMap:map[1140:[0 5 6] 1160:[7 8 9] 1190:[1 2 3 4]] newGroups :map[1140:[s140a] 1160:[s160a] 1190:[s190a]]
+2021/01/01 21:06:35.849502 applyMsg op Id  : 4406157192947090333,Seq :  0
+2021/01/01 21:06:35.849601 sm [0] Join: JoinArgs Id : 4406157192947090333,Seq  : 0, Servers  : map[1170:[s170a]] shardsMap:map[1140:[5 6] 1160:[8 9] 1170:[0 7] 1190:[1 2 3 4]] newGroups :map[1140:[s140a] 1160:[s160a] 1170:[s170a] 1190:[s190a]]
+2021/01/01 21:06:35.849640 applyMsg op Id  : 1796033131328922066,Seq :  0
+2021/01/01 21:06:35.849740 sm [0] Join: JoinArgs Id : 1796033131328922066,Seq  : 0, Servers  : map[1120:[s120a]] shardsMap:map[1120:[1 2] 1140:[5 6] 1160:[8 9] 1170:[0 7] 1190:[3 4]] newGroups :map[1120:[s120a] 1140:[s140a] 1160:[s160a] 1170:[s170a] 1190:[s190a]]
+2021/01/01 21:06:35.849781 applyMsg op Id  : 3671242379456651874,Seq :  0
+2021/01/01 21:06:35.849866 sm [0] Join: JoinArgs Id : 3671242379456651874,Seq  : 0, Servers  : map[1180:[s180a]] shardsMap:map[1120:[2] 1140:[5 6] 1160:[8 9] 1170:[0 7] 1180:[1] 1190:[3 4]] newGroups :map[1120:[s120a] 1140:[s140a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.849890 applyMsg op Id  : 894180952275707457,Seq :  0
+2021/01/01 21:06:35.849970 sm [0] Join: JoinArgs Id : 894180952275707457,Seq  : 0, Servers  : map[1110:[s110a]] shardsMap:map[1110:[5] 1120:[2] 1140:[6] 1160:[8 9] 1170:[0 7] 1180:[1] 1190:[3 4]] newGroups :map[1110:[s110a] 1120:[s120a] 1140:[s140a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.850005 applyMsg op Id  : 2298304764259725748,Seq :  0
+2021/01/01 21:06:35.850120 sm [0] Join: JoinArgs Id : 2298304764259725748,Seq  : 0, Servers  : map[1130:[s130a]] shardsMap:map[1110:[5] 1120:[2] 1130:[8] 1140:[6] 1160:[9] 1170:[0 7] 1180:[1] 1190:[3 4]] newGroups :map[1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.852336 applyMsg op Id  : 511641210771867756,Seq :  0
+2021/01/01 21:06:35.852608 sm [0] Join: JoinArgs Id : 511641210771867756,Seq  : 0, Servers  : map[1150:[s150a]] shardsMap:map[1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[3 4]] newGroups :map[1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.854390 applyMsg op Id  : 1555200915632050519,Seq :  0
+2021/01/01 21:06:35.854523 sm [1] Join: JoinArgs Id : 1555200915632050519,Seq  : 0, Servers  : map[1160:[s160a]] shardsMap:map[1160:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[1160:[s160a]]
+2021/01/01 21:06:35.854561 applyMsg op Id  : 4219824177386683707,Seq :  0
+2021/01/01 21:06:35.854660 sm [1] Join: JoinArgs Id : 4219824177386683707,Seq  : 0, Servers  : map[1190:[s190a]] shardsMap:map[1160:[5 6 7 8 9] 1190:[0 1 2 3 4]] newGroups :map[1160:[s160a] 1190:[s190a]]
+2021/01/01 21:06:35.854711 applyMsg op Id  : 869788597794535869,Seq :  0
+2021/01/01 21:06:35.854786 sm [1] Join: JoinArgs Id : 869788597794535869,Seq  : 0, Servers  : map[1140:[s140a]] shardsMap:map[1140:[0 5 6] 1160:[7 8 9] 1190:[1 2 3 4]] newGroups :map[1140:[s140a] 1160:[s160a] 1190:[s190a]]
+2021/01/01 21:06:35.854833 applyMsg op Id  : 4406157192947090333,Seq :  0
+2021/01/01 21:06:35.854927 sm [1] Join: JoinArgs Id : 4406157192947090333,Seq  : 0, Servers  : map[1170:[s170a]] shardsMap:map[1140:[5 6] 1160:[8 9] 1170:[0 7] 1190:[1 2 3 4]] newGroups :map[1140:[s140a] 1160:[s160a] 1170:[s170a] 1190:[s190a]]
+2021/01/01 21:06:35.854955 applyMsg op Id  : 1796033131328922066,Seq :  0
+2021/01/01 21:06:35.855019 sm [1] Join: JoinArgs Id : 1796033131328922066,Seq  : 0, Servers  : map[1120:[s120a]] shardsMap:map[1120:[1 2] 1140:[5 6] 1160:[8 9] 1170:[0 7] 1190:[3 4]] newGroups :map[1120:[s120a] 1140:[s140a] 1160:[s160a] 1170:[s170a] 1190:[s190a]]
+2021/01/01 21:06:35.855041 applyMsg op Id  : 3671242379456651874,Seq :  0
+2021/01/01 21:06:35.855099 sm [1] Join: JoinArgs Id : 3671242379456651874,Seq  : 0, Servers  : map[1180:[s180a]] shardsMap:map[1120:[2] 1140:[5 6] 1160:[8 9] 1170:[0 7] 1180:[1] 1190:[3 4]] newGroups :map[1120:[s120a] 1140:[s140a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.855120 applyMsg op Id  : 894180952275707457,Seq :  0
+2021/01/01 21:06:35.855185 sm [1] Join: JoinArgs Id : 894180952275707457,Seq  : 0, Servers  : map[1110:[s110a]] shardsMap:map[1110:[5] 1120:[2] 1140:[6] 1160:[8 9] 1170:[0 7] 1180:[1] 1190:[3 4]] newGroups :map[1110:[s110a] 1120:[s120a] 1140:[s140a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.855206 applyMsg op Id  : 2298304764259725748,Seq :  0
+2021/01/01 21:06:35.855274 sm [1] Join: JoinArgs Id : 2298304764259725748,Seq  : 0, Servers  : map[1130:[s130a]] shardsMap:map[1110:[5] 1120:[2] 1130:[8] 1140:[6] 1160:[9] 1170:[0 7] 1180:[1] 1190:[3 4]] newGroups :map[1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.856383 applyMsg op Id  : 848644491423293621,Seq :  0
+2021/01/01 21:06:35.856526 sm [0] Join: JoinArgs Id : 848644491423293621,Seq  : 0, Servers  : map[1100:[s100a]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.856806 applyMsg op Id  : 511641210771867756,Seq :  0
+2021/01/01 21:06:35.856949 sm [1] Join: JoinArgs Id : 511641210771867756,Seq  : 0, Servers  : map[1150:[s150a]] shardsMap:map[1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[3 4]] newGroups :map[1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.857341 applyMsg op Id  : 1555200915632050519,Seq :  0
+2021/01/01 21:06:35.857465 sm [2] Join: JoinArgs Id : 1555200915632050519,Seq  : 0, Servers  : map[1160:[s160a]] shardsMap:map[1160:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[1160:[s160a]]
+2021/01/01 21:06:35.857495 applyMsg op Id  : 4219824177386683707,Seq :  0
+2021/01/01 21:06:35.857546 sm [2] Join: JoinArgs Id : 4219824177386683707,Seq  : 0, Servers  : map[1190:[s190a]] shardsMap:map[1160:[5 6 7 8 9] 1190:[0 1 2 3 4]] newGroups :map[1160:[s160a] 1190:[s190a]]
+2021/01/01 21:06:35.857561 applyMsg op Id  : 869788597794535869,Seq :  0
+2021/01/01 21:06:35.857613 sm [2] Join: JoinArgs Id : 869788597794535869,Seq  : 0, Servers  : map[1140:[s140a]] shardsMap:map[1140:[0 5 6] 1160:[7 8 9] 1190:[1 2 3 4]] newGroups :map[1140:[s140a] 1160:[s160a] 1190:[s190a]]
+2021/01/01 21:06:35.857635 applyMsg op Id  : 4406157192947090333,Seq :  0
+2021/01/01 21:06:35.857686 sm [2] Join: JoinArgs Id : 4406157192947090333,Seq  : 0, Servers  : map[1170:[s170a]] shardsMap:map[1140:[5 6] 1160:[8 9] 1170:[0 7] 1190:[1 2 3 4]] newGroups :map[1140:[s140a] 1160:[s160a] 1170:[s170a] 1190:[s190a]]
+2021/01/01 21:06:35.857720 applyMsg op Id  : 1796033131328922066,Seq :  0
+2021/01/01 21:06:35.857780 sm [2] Join: JoinArgs Id : 1796033131328922066,Seq  : 0, Servers  : map[1120:[s120a]] shardsMap:map[1120:[1 2] 1140:[5 6] 1160:[8 9] 1170:[0 7] 1190:[3 4]] newGroups :map[1120:[s120a] 1140:[s140a] 1160:[s160a] 1170:[s170a] 1190:[s190a]]
+2021/01/01 21:06:35.857799 applyMsg op Id  : 3671242379456651874,Seq :  0
+2021/01/01 21:06:35.857857 sm [2] Join: JoinArgs Id : 3671242379456651874,Seq  : 0, Servers  : map[1180:[s180a]] shardsMap:map[1120:[2] 1140:[5 6] 1160:[8 9] 1170:[0 7] 1180:[1] 1190:[3 4]] newGroups :map[1120:[s120a] 1140:[s140a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.857880 applyMsg op Id  : 894180952275707457,Seq :  0
+2021/01/01 21:06:35.857945 sm [2] Join: JoinArgs Id : 894180952275707457,Seq  : 0, Servers  : map[1110:[s110a]] shardsMap:map[1110:[5] 1120:[2] 1140:[6] 1160:[8 9] 1170:[0 7] 1180:[1] 1190:[3 4]] newGroups :map[1110:[s110a] 1120:[s120a] 1140:[s140a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.857966 applyMsg op Id  : 2298304764259725748,Seq :  0
+2021/01/01 21:06:35.858041 sm [2] Join: JoinArgs Id : 2298304764259725748,Seq  : 0, Servers  : map[1130:[s130a]] shardsMap:map[1110:[5] 1120:[2] 1130:[8] 1140:[6] 1160:[9] 1170:[0 7] 1180:[1] 1190:[3 4]] newGroups :map[1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.858063 applyMsg op Id  : 511641210771867756,Seq :  0
+2021/01/01 21:06:35.858140 sm [2] Join: JoinArgs Id : 511641210771867756,Seq  : 0, Servers  : map[1150:[s150a]] shardsMap:map[1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[3 4]] newGroups :map[1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.858161 applyMsg op Id  : 848644491423293621,Seq :  0
+2021/01/01 21:06:35.858240 sm [2] Join: JoinArgs Id : 848644491423293621,Seq  : 0, Servers  : map[1100:[s100a]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.945037 sm [0] end Join: JoinArgs Id : 1555200915632050519,Seq  : 0, Servers  : map[1160:[s160a]] ,reply.WrongLeader false
+2021/01/01 21:06:35.945350 sm [0] begin Join: JoinArgs Id : 1555200915632050519,Seq  : 1, Servers  : map[160:[s160b]]
+2021/01/01 21:06:35.945911 applyMsg op Id  : 1555200915632050519,Seq :  1
+2021/01/01 21:06:35.945989 sm [0] Join: JoinArgs Id : 1555200915632050519,Seq  : 1, Servers  : map[160:[s160b]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[160:[s160b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.946150 applyMsg op Id  : 848644491423293621,Seq :  0
+2021/01/01 21:06:35.946233 sm [1] Join: JoinArgs Id : 848644491423293621,Seq  : 0, Servers  : map[1100:[s100a]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.946158 sm [0] end Join: JoinArgs Id : 4219824177386683707,Seq  : 0, Servers  : map[1190:[s190a]] ,reply.WrongLeader false
+2021/01/01 21:06:35.946287 sm [0] end Join: JoinArgs Id : 869788597794535869,Seq  : 0, Servers  : map[1140:[s140a]] ,reply.WrongLeader false
+2021/01/01 21:06:35.946484 applyMsg op Id  : 1555200915632050519,Seq :  1
+2021/01/01 21:06:35.946515 sm [0] begin Join: JoinArgs Id : 4219824177386683707,Seq  : 1, Servers  : map[190:[s190b]]
+2021/01/01 21:06:35.946570 sm [1] Join: JoinArgs Id : 1555200915632050519,Seq  : 1, Servers  : map[160:[s160b]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[160:[s160b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.946614 sm [0] begin Join: JoinArgs Id : 869788597794535869,Seq  : 1, Servers  : map[140:[s140b]]
+2021/01/01 21:06:35.946615 sm [0] end Join: JoinArgs Id : 4406157192947090333,Seq  : 0, Servers  : map[1170:[s170a]] ,reply.WrongLeader false
+2021/01/01 21:06:35.946863 sm [0] end Join: JoinArgs Id : 1796033131328922066,Seq  : 0, Servers  : map[1120:[s120a]] ,reply.WrongLeader false
+2021/01/01 21:06:35.946943 sm [0] begin Join: JoinArgs Id : 4406157192947090333,Seq  : 1, Servers  : map[170:[s170b]]
+2021/01/01 21:06:35.947114 sm [0] begin Join: JoinArgs Id : 1796033131328922066,Seq  : 1, Servers  : map[120:[s120b]]
+2021/01/01 21:06:35.947145 sm [0] end Join: JoinArgs Id : 3671242379456651874,Seq  : 0, Servers  : map[1180:[s180a]] ,reply.WrongLeader false
+2021/01/01 21:06:35.947413 sm [0] begin Join: JoinArgs Id : 3671242379456651874,Seq  : 1, Servers  : map[180:[s180b]]
+2021/01/01 21:06:35.947473 sm [0] end Join: JoinArgs Id : 894180952275707457,Seq  : 0, Servers  : map[1110:[s110a]] ,reply.WrongLeader false
+2021/01/01 21:06:35.947727 sm [0] begin Join: JoinArgs Id : 894180952275707457,Seq  : 1, Servers  : map[110:[s110b]]
+2021/01/01 21:06:35.947817 sm [0] end Join: JoinArgs Id : 2298304764259725748,Seq  : 0, Servers  : map[1130:[s130a]] ,reply.WrongLeader false
+2021/01/01 21:06:35.948114 sm [0] begin Join: JoinArgs Id : 2298304764259725748,Seq  : 1, Servers  : map[130:[s130b]]
+2021/01/01 21:06:35.948374 applyMsg op Id  : 1555200915632050519,Seq :  1
+2021/01/01 21:06:35.948456 sm [2] Join: JoinArgs Id : 1555200915632050519,Seq  : 1, Servers  : map[160:[s160b]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[160:[s160b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.948556 applyMsg op Id  : 4219824177386683707,Seq :  1
+2021/01/01 21:06:35.948629 sm [0] Join: JoinArgs Id : 4219824177386683707,Seq  : 1, Servers  : map[190:[s190b]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[160:[s160b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.948644 applyMsg op Id  : 869788597794535869,Seq :  1
+2021/01/01 21:06:35.948706 sm [0] Join: JoinArgs Id : 869788597794535869,Seq  : 1, Servers  : map[140:[s140b]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[140:[s140b] 160:[s160b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.948722 applyMsg op Id  : 4406157192947090333,Seq :  1
+2021/01/01 21:06:35.948795 sm [0] Join: JoinArgs Id : 4406157192947090333,Seq  : 1, Servers  : map[170:[s170b]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[140:[s140b] 160:[s160b] 170:[s170b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.948808 applyMsg op Id  : 1796033131328922066,Seq :  1
+2021/01/01 21:06:35.948886 sm [0] Join: JoinArgs Id : 1796033131328922066,Seq  : 1, Servers  : map[120:[s120b]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[120:[s120b] 140:[s140b] 160:[s160b] 170:[s170b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.949008 sm [0] end Join: JoinArgs Id : 511641210771867756,Seq  : 0, Servers  : map[1150:[s150a]] ,reply.WrongLeader false
+2021/01/01 21:06:35.949057 applyMsg op Id  : 894180952275707457,Seq :  1
+2021/01/01 21:06:35.949133 sm [0] Join: JoinArgs Id : 894180952275707457,Seq  : 1, Servers  : map[110:[s110b]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[110:[s110b] 120:[s120b] 140:[s140b] 160:[s160b] 170:[s170b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.949150 applyMsg op Id  : 3671242379456651874,Seq :  1
+2021/01/01 21:06:35.949206 applyMsg op Id  : 4219824177386683707,Seq :  1
+2021/01/01 21:06:35.949226 sm [0] Join: JoinArgs Id : 3671242379456651874,Seq  : 1, Servers  : map[180:[s180b]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[110:[s110b] 120:[s120b] 140:[s140b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.949274 sm [0] begin Join: JoinArgs Id : 511641210771867756,Seq  : 1, Servers  : map[150:[s150b]]
+2021/01/01 21:06:35.949285 sm [1] Join: JoinArgs Id : 4219824177386683707,Seq  : 1, Servers  : map[190:[s190b]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[160:[s160b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.949305 applyMsg op Id  : 869788597794535869,Seq :  1
+2021/01/01 21:06:35.949375 sm [1] Join: JoinArgs Id : 869788597794535869,Seq  : 1, Servers  : map[140:[s140b]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[140:[s140b] 160:[s160b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.949514 applyMsg op Id  : 2298304764259725748,Seq :  1
+2021/01/01 21:06:35.949580 sm [0] Join: JoinArgs Id : 2298304764259725748,Seq  : 1, Servers  : map[130:[s130b]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.949599 applyMsg op Id  : 4406157192947090333,Seq :  1
+2021/01/01 21:06:35.949674 sm [1] Join: JoinArgs Id : 4406157192947090333,Seq  : 1, Servers  : map[170:[s170b]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[140:[s140b] 160:[s160b] 170:[s170b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.949689 applyMsg op Id  : 1796033131328922066,Seq :  1
+2021/01/01 21:06:35.949750 sm [1] Join: JoinArgs Id : 1796033131328922066,Seq  : 1, Servers  : map[120:[s120b]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[120:[s120b] 140:[s140b] 160:[s160b] 170:[s170b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.950044 applyMsg op Id  : 4219824177386683707,Seq :  1
+2021/01/01 21:06:35.950117 sm [2] Join: JoinArgs Id : 4219824177386683707,Seq  : 1, Servers  : map[190:[s190b]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[160:[s160b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.950150 applyMsg op Id  : 869788597794535869,Seq :  1
+2021/01/01 21:06:35.950170 applyMsg op Id  : 511641210771867756,Seq :  1
+2021/01/01 21:06:35.950223 sm [2] Join: JoinArgs Id : 869788597794535869,Seq  : 1, Servers  : map[140:[s140b]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[140:[s140b] 160:[s160b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.950239 applyMsg op Id  : 4406157192947090333,Seq :  1
+2021/01/01 21:06:35.950256 sm [0] Join: JoinArgs Id : 511641210771867756,Seq  : 1, Servers  : map[150:[s150b]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.950297 sm [2] Join: JoinArgs Id : 4406157192947090333,Seq  : 1, Servers  : map[170:[s170b]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[140:[s140b] 160:[s160b] 170:[s170b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.950311 applyMsg op Id  : 1796033131328922066,Seq :  1
+2021/01/01 21:06:35.950357 sm [2] Join: JoinArgs Id : 1796033131328922066,Seq  : 1, Servers  : map[120:[s120b]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[120:[s120b] 140:[s140b] 160:[s160b] 170:[s170b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.950368 applyMsg op Id  : 894180952275707457,Seq :  1
+2021/01/01 21:06:35.950411 sm [2] Join: JoinArgs Id : 894180952275707457,Seq  : 1, Servers  : map[110:[s110b]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[110:[s110b] 120:[s120b] 140:[s140b] 160:[s160b] 170:[s170b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.950421 applyMsg op Id  : 3671242379456651874,Seq :  1
+2021/01/01 21:06:35.950464 sm [2] Join: JoinArgs Id : 3671242379456651874,Seq  : 1, Servers  : map[180:[s180b]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[110:[s110b] 120:[s120b] 140:[s140b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.950474 applyMsg op Id  : 2298304764259725748,Seq :  1
+2021/01/01 21:06:35.950516 sm [2] Join: JoinArgs Id : 2298304764259725748,Seq  : 1, Servers  : map[130:[s130b]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.954120 sm [0] end Join: JoinArgs Id : 848644491423293621,Seq  : 0, Servers  : map[1100:[s100a]] ,reply.WrongLeader false
+2021/01/01 21:06:35.954429 sm [0] begin Join: JoinArgs Id : 848644491423293621,Seq  : 1, Servers  : map[100:[s100b]]
+2021/01/01 21:06:35.955081 applyMsg op Id  : 894180952275707457,Seq :  1
+2021/01/01 21:06:35.955081 applyMsg op Id  : 848644491423293621,Seq :  1
+2021/01/01 21:06:35.955156 sm [1] Join: JoinArgs Id : 894180952275707457,Seq  : 1, Servers  : map[110:[s110b]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[110:[s110b] 120:[s120b] 140:[s140b] 160:[s160b] 170:[s170b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.955176 applyMsg op Id  : 3671242379456651874,Seq :  1
+2021/01/01 21:06:35.955184 applyMsg op Id  : 511641210771867756,Seq :  1
+2021/01/01 21:06:35.955193 sm [0] Join: JoinArgs Id : 848644491423293621,Seq  : 1, Servers  : map[100:[s100b]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.955238 sm [2] Join: JoinArgs Id : 511641210771867756,Seq  : 1, Servers  : map[150:[s150b]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.955242 sm [1] Join: JoinArgs Id : 3671242379456651874,Seq  : 1, Servers  : map[180:[s180b]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[110:[s110b] 120:[s120b] 140:[s140b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.955249 applyMsg op Id  : 2298304764259725748,Seq :  1
+2021/01/01 21:06:35.955288 sm [1] Join: JoinArgs Id : 2298304764259725748,Seq  : 1, Servers  : map[130:[s130b]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.955294 applyMsg op Id  : 511641210771867756,Seq :  1
+2021/01/01 21:06:35.955347 sm [1] Join: JoinArgs Id : 511641210771867756,Seq  : 1, Servers  : map[150:[s150b]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:35.955613 applyMsg op Id  : 848644491423293621,Seq :  1
+2021/01/01 21:06:35.955666 sm [2] Join: JoinArgs Id : 848644491423293621,Seq  : 1, Servers  : map[100:[s100b]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:36.045732 sm [0] end Join: JoinArgs Id : 1555200915632050519,Seq  : 1, Servers  : map[160:[s160b]] ,reply.WrongLeader false
+2021/01/01 21:06:36.046396 sm [0] begin Leave: LeaveArgs Id :  1555200915632050519,Seq  : 2, GIDs  : [1160]
+2021/01/01 21:06:36.046932 sm [0] end Join: JoinArgs Id : 4219824177386683707,Seq  : 1, Servers  : map[190:[s190b]] ,reply.WrongLeader false
+2021/01/01 21:06:36.047022 sm [0] end Join: JoinArgs Id : 869788597794535869,Seq  : 1, Servers  : map[140:[s140b]] ,reply.WrongLeader false
+2021/01/01 21:06:36.047260 sm [0] end Join: JoinArgs Id : 4406157192947090333,Seq  : 1, Servers  : map[170:[s170b]] ,reply.WrongLeader false
+2021/01/01 21:06:36.047592 sm [0] begin Leave: LeaveArgs Id :  869788597794535869,Seq  : 2, GIDs  : [1140]
+2021/01/01 21:06:36.047734 sm [0] end Join: JoinArgs Id : 1796033131328922066,Seq  : 1, Servers  : map[120:[s120b]] ,reply.WrongLeader false
+2021/01/01 21:06:36.048654 sm [0] end Join: JoinArgs Id : 3671242379456651874,Seq  : 1, Servers  : map[180:[s180b]] ,reply.WrongLeader false
+2021/01/01 21:06:36.049088 sm [0] end Join: JoinArgs Id : 2298304764259725748,Seq  : 1, Servers  : map[130:[s130b]] ,reply.WrongLeader false
+2021/01/01 21:06:36.050364 sm [0] begin Leave: LeaveArgs Id :  1796033131328922066,Seq  : 2, GIDs  : [1120]
+2021/01/01 21:06:36.050405 sm [0] begin Leave: LeaveArgs Id :  4219824177386683707,Seq  : 2, GIDs  : [1190]
+2021/01/01 21:06:36.050422 sm [0] begin Leave: LeaveArgs Id :  4406157192947090333,Seq  : 2, GIDs  : [1170]
+2021/01/01 21:06:36.050438 sm [0] begin Leave: LeaveArgs Id :  3671242379456651874,Seq  : 2, GIDs  : [1180]
+2021/01/01 21:06:36.050461 sm [0] end Join: JoinArgs Id : 511641210771867756,Seq  : 1, Servers  : map[150:[s150b]] ,reply.WrongLeader false
+2021/01/01 21:06:36.050504 sm [0] end Join: JoinArgs Id : 894180952275707457,Seq  : 1, Servers  : map[110:[s110b]] ,reply.WrongLeader false
+2021/01/01 21:06:36.050736 sm [0] begin Leave: LeaveArgs Id :  2298304764259725748,Seq  : 2, GIDs  : [1130]
+2021/01/01 21:06:36.050912 sm [0] begin Leave: LeaveArgs Id :  894180952275707457,Seq  : 2, GIDs  : [1110]
+2021/01/01 21:06:36.050959 applyMsg op Id  : 848644491423293621,Seq :  1
+2021/01/01 21:06:36.051177 sm [1] Join: JoinArgs Id : 848644491423293621,Seq  : 1, Servers  : map[100:[s100b]] shardsMap:map[1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1160:[9] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1160:[s160a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:36.051243 sm [0] begin Leave: LeaveArgs Id :  511641210771867756,Seq  : 2, GIDs  : [1150]
+2021/01/01 21:06:36.053807 applyMsg op Id  : 1555200915632050519,Seq :  2
+2021/01/01 21:06:36.054076 sm [0] Leave: LeaveArgs Id :  1555200915632050519,Seq  : 2, GIDs  : [1160] shardsMap:map[100:[9] 1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:36.054111 applyMsg op Id  : 869788597794535869,Seq :  2
+2021/01/01 21:06:36.054288 sm [0] Leave: LeaveArgs Id :  869788597794535869,Seq  : 2, GIDs  : [1140] shardsMap:map[100:[9] 110:[6] 1100:[3] 1110:[5] 1120:[2] 1130:[8] 1150:[0] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1150:[s150a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:36.054327 applyMsg op Id  : 2298304764259725748,Seq :  2
+2021/01/01 21:06:36.054464 sm [0] Leave: LeaveArgs Id :  2298304764259725748,Seq  : 2, GIDs  : [1130] shardsMap:map[100:[9] 110:[6] 120:[8] 1100:[3] 1110:[5] 1120:[2] 1150:[0] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1150:[s150a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:36.054505 applyMsg op Id  : 1796033131328922066,Seq :  2
+2021/01/01 21:06:36.054696 sm [0] Leave: LeaveArgs Id :  1796033131328922066,Seq  : 2, GIDs  : [1120] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 1100:[3] 1110:[5] 1150:[0] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1150:[s150a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:36.054759 applyMsg op Id  : 4219824177386683707,Seq :  2
+2021/01/01 21:06:36.054888 sm [0] end Join: JoinArgs Id : 848644491423293621,Seq  : 1, Servers  : map[100:[s100b]] ,reply.WrongLeader false
+2021/01/01 21:06:36.054978 sm [0] Leave: LeaveArgs Id :  4219824177386683707,Seq  : 2, GIDs  : [1190] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 1100:[3] 1110:[5] 1150:[0] 1170:[7] 1180:[1]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1150:[s150a] 1170:[s170a] 1180:[s180a]]
+2021/01/01 21:06:36.055015 applyMsg op Id  : 4406157192947090333,Seq :  2
+2021/01/01 21:06:36.055177 sm [0] Leave: LeaveArgs Id :  4406157192947090333,Seq  : 2, GIDs  : [1170] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 1100:[3] 1110:[5] 1150:[0] 1180:[1]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1150:[s150a] 1180:[s180a]]
+2021/01/01 21:06:36.055210 applyMsg op Id  : 3671242379456651874,Seq :  2
+2021/01/01 21:06:36.055379 sm [0] Leave: LeaveArgs Id :  3671242379456651874,Seq  : 2, GIDs  : [1180] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 1100:[3] 1110:[5] 1150:[0]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1150:[s150a]]
+2021/01/01 21:06:36.055409 sm [0] begin Leave: LeaveArgs Id :  848644491423293621,Seq  : 2, GIDs  : [1100]
+2021/01/01 21:06:36.055747 applyMsg op Id  : 1555200915632050519,Seq :  2
+2021/01/01 21:06:36.055953 sm [2] Leave: LeaveArgs Id :  1555200915632050519,Seq  : 2, GIDs  : [1160] shardsMap:map[100:[9] 1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:36.057047 applyMsg op Id  : 894180952275707457,Seq :  2
+2021/01/01 21:06:36.057189 sm [0] Leave: LeaveArgs Id :  894180952275707457,Seq  : 2, GIDs  : [1110] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 1100:[3] 1150:[0]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1150:[s150a]]
+2021/01/01 21:06:36.057212 applyMsg op Id  : 511641210771867756,Seq :  2
+2021/01/01 21:06:36.057304 sm [0] Leave: LeaveArgs Id :  511641210771867756,Seq  : 2, GIDs  : [1150] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 1100:[3]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a]]
+2021/01/01 21:06:36.057322 applyMsg op Id  : 848644491423293621,Seq :  2
+2021/01/01 21:06:36.057402 sm [0] Leave: LeaveArgs Id :  848644491423293621,Seq  : 2, GIDs  : [1100] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:36.058086 applyMsg op Id  : 1555200915632050519,Seq :  2
+2021/01/01 21:06:36.058262 sm [1] Leave: LeaveArgs Id :  1555200915632050519,Seq  : 2, GIDs  : [1160] shardsMap:map[100:[9] 1100:[3] 1110:[5] 1120:[2] 1130:[8] 1140:[6] 1150:[0] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1140:[s140a] 1150:[s150a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:36.058308 applyMsg op Id  : 869788597794535869,Seq :  2
+2021/01/01 21:06:36.058362 applyMsg op Id  : 869788597794535869,Seq :  2
+2021/01/01 21:06:36.058425 sm [1] Leave: LeaveArgs Id :  869788597794535869,Seq  : 2, GIDs  : [1140] shardsMap:map[100:[9] 110:[6] 1100:[3] 1110:[5] 1120:[2] 1130:[8] 1150:[0] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1150:[s150a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:36.058448 applyMsg op Id  : 2298304764259725748,Seq :  2
+2021/01/01 21:06:36.058569 sm [1] Leave: LeaveArgs Id :  2298304764259725748,Seq  : 2, GIDs  : [1130] shardsMap:map[100:[9] 110:[6] 120:[8] 1100:[3] 1110:[5] 1120:[2] 1150:[0] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1150:[s150a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:36.058596 sm [2] Leave: LeaveArgs Id :  869788597794535869,Seq  : 2, GIDs  : [1140] shardsMap:map[100:[9] 110:[6] 1100:[3] 1110:[5] 1120:[2] 1130:[8] 1150:[0] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1130:[s130a] 1150:[s150a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:36.058660 applyMsg op Id  : 2298304764259725748,Seq :  2
+2021/01/01 21:06:36.058597 applyMsg op Id  : 1796033131328922066,Seq :  2
+2021/01/01 21:06:36.058808 sm [1] Leave: LeaveArgs Id :  1796033131328922066,Seq  : 2, GIDs  : [1120] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 1100:[3] 1110:[5] 1150:[0] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1150:[s150a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:36.058834 applyMsg op Id  : 4219824177386683707,Seq :  2
+2021/01/01 21:06:36.058842 sm [2] Leave: LeaveArgs Id :  2298304764259725748,Seq  : 2, GIDs  : [1130] shardsMap:map[100:[9] 110:[6] 120:[8] 1100:[3] 1110:[5] 1120:[2] 1150:[0] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1120:[s120a] 1150:[s150a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:36.058869 applyMsg op Id  : 1796033131328922066,Seq :  2
+2021/01/01 21:06:36.058945 sm [1] Leave: LeaveArgs Id :  4219824177386683707,Seq  : 2, GIDs  : [1190] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 1100:[3] 1110:[5] 1150:[0] 1170:[7] 1180:[1]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1150:[s150a] 1170:[s170a] 1180:[s180a]]
+2021/01/01 21:06:36.058969 applyMsg op Id  : 4406157192947090333,Seq :  2
+2021/01/01 21:06:36.059028 sm [2] Leave: LeaveArgs Id :  1796033131328922066,Seq  : 2, GIDs  : [1120] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 1100:[3] 1110:[5] 1150:[0] 1170:[7] 1180:[1] 1190:[4]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1150:[s150a] 1170:[s170a] 1180:[s180a] 1190:[s190a]]
+2021/01/01 21:06:36.059053 applyMsg op Id  : 4219824177386683707,Seq :  2
+2021/01/01 21:06:36.059058 sm [1] Leave: LeaveArgs Id :  4406157192947090333,Seq  : 2, GIDs  : [1170] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 1100:[3] 1110:[5] 1150:[0] 1180:[1]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1150:[s150a] 1180:[s180a]]
+2021/01/01 21:06:36.059107 applyMsg op Id  : 3671242379456651874,Seq :  2
+2021/01/01 21:06:36.059205 sm [1] Leave: LeaveArgs Id :  3671242379456651874,Seq  : 2, GIDs  : [1180] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 1100:[3] 1110:[5] 1150:[0]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1150:[s150a]]
+2021/01/01 21:06:36.059224 sm [2] Leave: LeaveArgs Id :  4219824177386683707,Seq  : 2, GIDs  : [1190] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 1100:[3] 1110:[5] 1150:[0] 1170:[7] 1180:[1]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1150:[s150a] 1170:[s170a] 1180:[s180a]]
+2021/01/01 21:06:36.059266 applyMsg op Id  : 4406157192947090333,Seq :  2
+2021/01/01 21:06:36.059418 sm [2] Leave: LeaveArgs Id :  4406157192947090333,Seq  : 2, GIDs  : [1170] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 1100:[3] 1110:[5] 1150:[0] 1180:[1]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1150:[s150a] 1180:[s180a]]
+2021/01/01 21:06:36.059452 applyMsg op Id  : 3671242379456651874,Seq :  2
+2021/01/01 21:06:36.059602 sm [2] Leave: LeaveArgs Id :  3671242379456651874,Seq  : 2, GIDs  : [1180] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 1100:[3] 1110:[5] 1150:[0]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1110:[s110a] 1150:[s150a]]
+2021/01/01 21:06:36.059625 applyMsg op Id  : 894180952275707457,Seq :  2
+2021/01/01 21:06:36.059763 sm [2] Leave: LeaveArgs Id :  894180952275707457,Seq  : 2, GIDs  : [1110] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 1100:[3] 1150:[0]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1150:[s150a]]
+2021/01/01 21:06:36.059801 applyMsg op Id  : 511641210771867756,Seq :  2
+2021/01/01 21:06:36.059939 sm [2] Leave: LeaveArgs Id :  511641210771867756,Seq  : 2, GIDs  : [1150] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 1100:[3]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a]]
+2021/01/01 21:06:36.059971 applyMsg op Id  : 848644491423293621,Seq :  2
+2021/01/01 21:06:36.060053 sm [2] Leave: LeaveArgs Id :  848644491423293621,Seq  : 2, GIDs  : [1100] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:36.147077 sm [0] end Leave: LeaveArgs Id :  1555200915632050519,Seq  : 2, GIDs  : [1160] reply.WrongLeader false
+2021/01/01 21:06:36.150885 sm [0] end Leave: LeaveArgs Id :  869788597794535869,Seq  : 2, GIDs  : [1140] reply.WrongLeader false
+2021/01/01 21:06:36.151519 sm [0] end Leave: LeaveArgs Id :  2298304764259725748,Seq  : 2, GIDs  : [1130] reply.WrongLeader false
+2021/01/01 21:06:36.151826 sm [0] end Leave: LeaveArgs Id :  1796033131328922066,Seq  : 2, GIDs  : [1120] reply.WrongLeader false
+2021/01/01 21:06:36.152087 sm [0] end Leave: LeaveArgs Id :  4219824177386683707,Seq  : 2, GIDs  : [1190] reply.WrongLeader false
+2021/01/01 21:06:36.152442 sm [0] end Leave: LeaveArgs Id :  4406157192947090333,Seq  : 2, GIDs  : [1170] reply.WrongLeader false
+2021/01/01 21:06:36.152884 sm [0] end Leave: LeaveArgs Id :  3671242379456651874,Seq  : 2, GIDs  : [1180] reply.WrongLeader false
+2021/01/01 21:06:36.153260 sm [0] end Leave: LeaveArgs Id :  894180952275707457,Seq  : 2, GIDs  : [1110] reply.WrongLeader false
+2021/01/01 21:06:36.153606 sm [0] end Leave: LeaveArgs Id :  511641210771867756,Seq  : 2, GIDs  : [1150] reply.WrongLeader false
+2021/01/01 21:06:36.157337 sm [0] end Leave: LeaveArgs Id :  848644491423293621,Seq  : 2, GIDs  : [1100] reply.WrongLeader false
+2021/01/01 21:06:36.157863 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  67, Num  : -1 
+2021/01/01 21:06:36.159402 applyMsg op Id  : 3858311008689790666,Seq :  67
+2021/01/01 21:06:36.159451 applyMsg op Id  : 894180952275707457,Seq :  2
+2021/01/01 21:06:36.159589 sm [1] Leave: LeaveArgs Id :  894180952275707457,Seq  : 2, GIDs  : [1110] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 1100:[3] 1150:[0]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a] 1150:[s150a]]
+2021/01/01 21:06:36.159615 applyMsg op Id  : 511641210771867756,Seq :  2
+2021/01/01 21:06:36.159730 sm [1] Leave: LeaveArgs Id :  511641210771867756,Seq  : 2, GIDs  : [1150] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 1100:[3]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b] 1100:[s100a]]
+2021/01/01 21:06:36.159754 applyMsg op Id  : 848644491423293621,Seq :  2
+2021/01/01 21:06:36.159831 sm [1] Leave: LeaveArgs Id :  848644491423293621,Seq  : 2, GIDs  : [1100] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:36.160291 applyMsg op Id  : 3858311008689790666,Seq :  67
+2021/01/01 21:06:36.258701 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  67, Num  : -1  shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] Groups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:36.258772 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  67, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+  ... Passed
+Test: Minimal transfers after joins ...
+2021/01/01 21:06:36.259507 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  68, Num  : -1 
+2021/01/01 21:06:36.261081 applyMsg op Id  : 3858311008689790666,Seq :  67
+2021/01/01 21:06:36.261198 applyMsg op Id  : 3858311008689790666,Seq :  68
+2021/01/01 21:06:36.328232 applyMsg op Id  : 3858311008689790666,Seq :  68
+2021/01/01 21:06:36.328299 applyMsg op Id  : 3858311008689790666,Seq :  68
+2021/01/01 21:06:36.360407 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  68, Num  : -1  shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] Groups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:36.360459 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  68, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:36.361065 sm [0] begin Join: JoinArgs Id : 3858311008689790666,Seq  : 69, Servers  : map[11:[11a 11b 11b]]
+2021/01/01 21:06:36.362537 applyMsg op Id  : 3858311008689790666,Seq :  69
+2021/01/01 21:06:36.362725 sm [0] Join: JoinArgs Id : 3858311008689790666,Seq  : 69, Servers  : map[11:[11a 11b 11b]] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[11:[11a 11b 11b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:36.363763 applyMsg op Id  : 3858311008689790666,Seq :  69
+2021/01/01 21:06:36.363900 sm [1] Join: JoinArgs Id : 3858311008689790666,Seq  : 69, Servers  : map[11:[11a 11b 11b]] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[11:[11a 11b 11b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:36.448540 applyMsg op Id  : 3858311008689790666,Seq :  69
+2021/01/01 21:06:36.449669 sm [2] Join: JoinArgs Id : 3858311008689790666,Seq  : 69, Servers  : map[11:[11a 11b 11b]] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[11:[11a 11b 11b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:36.461671 sm [0] end Join: JoinArgs Id : 3858311008689790666,Seq  : 69, Servers  : map[11:[11a 11b 11b]] ,reply.WrongLeader false
+2021/01/01 21:06:36.462312 sm [0] begin Join: JoinArgs Id : 3858311008689790666,Seq  : 70, Servers  : map[12:[12a 12b 12b]]
+2021/01/01 21:06:36.464326 applyMsg op Id  : 3858311008689790666,Seq :  70
+2021/01/01 21:06:36.464576 sm [0] Join: JoinArgs Id : 3858311008689790666,Seq  : 70, Servers  : map[12:[12a 12b 12b]] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[11:[11a 11b 11b] 12:[12a 12b 12b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:36.465537 applyMsg op Id  : 3858311008689790666,Seq :  70
+2021/01/01 21:06:36.465759 sm [1] Join: JoinArgs Id : 3858311008689790666,Seq  : 70, Servers  : map[12:[12a 12b 12b]] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[11:[11a 11b 11b] 12:[12a 12b 12b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:36.563190 sm [0] end Join: JoinArgs Id : 3858311008689790666,Seq  : 70, Servers  : map[12:[12a 12b 12b]] ,reply.WrongLeader false
+2021/01/01 21:06:36.563955 sm [0] begin Join: JoinArgs Id : 3858311008689790666,Seq  : 71, Servers  : map[13:[13a 13b 13b]]
+2021/01/01 21:06:36.565366 applyMsg op Id  : 3858311008689790666,Seq :  70
+2021/01/01 21:06:36.565487 applyMsg op Id  : 3858311008689790666,Seq :  71
+2021/01/01 21:06:36.565566 sm [2] Join: JoinArgs Id : 3858311008689790666,Seq  : 70, Servers  : map[12:[12a 12b 12b]] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[11:[11a 11b 11b] 12:[12a 12b 12b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:36.565674 sm [0] Join: JoinArgs Id : 3858311008689790666,Seq  : 71, Servers  : map[13:[13a 13b 13b]] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[11:[11a 11b 11b] 12:[12a 12b 12b] 13:[13a 13b 13b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:36.566492 applyMsg op Id  : 3858311008689790666,Seq :  71
+2021/01/01 21:06:36.566633 sm [1] Join: JoinArgs Id : 3858311008689790666,Seq  : 71, Servers  : map[13:[13a 13b 13b]] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[11:[11a 11b 11b] 12:[12a 12b 12b] 13:[13a 13b 13b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:36.664618 sm [0] end Join: JoinArgs Id : 3858311008689790666,Seq  : 71, Servers  : map[13:[13a 13b 13b]] ,reply.WrongLeader false
+2021/01/01 21:06:36.811992 applyMsg op Id  : 3858311008689790666,Seq :  71
+2021/01/01 21:06:36.812135 sm [0] begin Join: JoinArgs Id : 3858311008689790666,Seq  : 72, Servers  : map[14:[14a 14b 14b]]
+2021/01/01 21:06:36.812231 sm [2] Join: JoinArgs Id : 3858311008689790666,Seq  : 71, Servers  : map[13:[13a 13b 13b]] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[11:[11a 11b 11b] 12:[12a 12b 12b] 13:[13a 13b 13b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:36.932477 applyMsg op Id  : 3858311008689790666,Seq :  72
+2021/01/01 21:06:36.932604 sm [0] Join: JoinArgs Id : 3858311008689790666,Seq  : 72, Servers  : map[14:[14a 14b 14b]] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[11:[11a 11b 11b] 12:[12a 12b 12b] 13:[13a 13b 13b] 14:[14a 14b 14b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:36.933183 applyMsg op Id  : 3858311008689790666,Seq :  72
+2021/01/01 21:06:36.933281 sm [1] Join: JoinArgs Id : 3858311008689790666,Seq  : 72, Servers  : map[14:[14a 14b 14b]] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[11:[11a 11b 11b] 12:[12a 12b 12b] 13:[13a 13b 13b] 14:[14a 14b 14b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:37.013007 sm [0] end Join: JoinArgs Id : 3858311008689790666,Seq  : 72, Servers  : map[14:[14a 14b 14b]] ,reply.WrongLeader false
+2021/01/01 21:06:37.013655 sm [0] begin Join: JoinArgs Id : 3858311008689790666,Seq  : 73, Servers  : map[15:[15a 15b 15b]]
+2021/01/01 21:06:37.015150 applyMsg op Id  : 3858311008689790666,Seq :  72
+2021/01/01 21:06:37.015259 applyMsg op Id  : 3858311008689790666,Seq :  73
+2021/01/01 21:06:37.015331 sm [2] Join: JoinArgs Id : 3858311008689790666,Seq  : 72, Servers  : map[14:[14a 14b 14b]] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[11:[11a 11b 11b] 12:[12a 12b 12b] 13:[13a 13b 13b] 14:[14a 14b 14b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:37.015429 sm [0] Join: JoinArgs Id : 3858311008689790666,Seq  : 73, Servers  : map[15:[15a 15b 15b]] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[11:[11a 11b 11b] 12:[12a 12b 12b] 13:[13a 13b 13b] 14:[14a 14b 14b] 15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:37.016356 applyMsg op Id  : 3858311008689790666,Seq :  73
+2021/01/01 21:06:37.016524 sm [1] Join: JoinArgs Id : 3858311008689790666,Seq  : 73, Servers  : map[15:[15a 15b 15b]] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[11:[11a 11b 11b] 12:[12a 12b 12b] 13:[13a 13b 13b] 14:[14a 14b 14b] 15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:37.114431 sm [0] end Join: JoinArgs Id : 3858311008689790666,Seq  : 73, Servers  : map[15:[15a 15b 15b]] ,reply.WrongLeader false
+2021/01/01 21:06:37.115085 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  74, Num  : -1 
+2021/01/01 21:06:37.116569 applyMsg op Id  : 3858311008689790666,Seq :  73
+2021/01/01 21:06:37.116692 applyMsg op Id  : 3858311008689790666,Seq :  74
+2021/01/01 21:06:37.116745 sm [2] Join: JoinArgs Id : 3858311008689790666,Seq  : 73, Servers  : map[15:[15a 15b 15b]] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[11:[11a 11b 11b] 12:[12a 12b 12b] 13:[13a 13b 13b] 14:[14a 14b 14b] 15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:37.117655 applyMsg op Id  : 3858311008689790666,Seq :  74
+2021/01/01 21:06:37.215944 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  74, Num  : -1  shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] Groups :map[11:[11a 11b 11b] 12:[12a 12b 12b] 13:[13a 13b 13b] 14:[14a 14b 14b] 15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:37.216041 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  74, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+  ... Passed
+Test: Minimal transfers after leaves ...
+2021/01/01 21:06:37.216828 sm [0] begin Leave: LeaveArgs Id :  3858311008689790666,Seq  : 75, GIDs  : [11]
+2021/01/01 21:06:37.218534 applyMsg op Id  : 3858311008689790666,Seq :  74
+2021/01/01 21:06:37.218669 applyMsg op Id  : 3858311008689790666,Seq :  75
+2021/01/01 21:06:37.218846 sm [0] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 75, GIDs  : [11] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[12:[12a 12b 12b] 13:[13a 13b 13b] 14:[14a 14b 14b] 15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:37.219869 applyMsg op Id  : 3858311008689790666,Seq :  75
+2021/01/01 21:06:37.220105 sm [1] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 75, GIDs  : [11] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[12:[12a 12b 12b] 13:[13a 13b 13b] 14:[14a 14b 14b] 15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:37.292319 applyMsg op Id  : 3858311008689790666,Seq :  75
+2021/01/01 21:06:37.292374 sm [2] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 75, GIDs  : [11] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[12:[12a 12b 12b] 13:[13a 13b 13b] 14:[14a 14b 14b] 15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:37.317626 sm [0] end Leave: LeaveArgs Id :  3858311008689790666,Seq  : 75, GIDs  : [11] reply.WrongLeader false
+2021/01/01 21:06:37.318212 sm [0] begin Leave: LeaveArgs Id :  3858311008689790666,Seq  : 76, GIDs  : [12]
+2021/01/01 21:06:37.319870 applyMsg op Id  : 3858311008689790666,Seq :  76
+2021/01/01 21:06:37.320009 sm [0] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 76, GIDs  : [12] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[13:[13a 13b 13b] 14:[14a 14b 14b] 15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:37.321068 applyMsg op Id  : 3858311008689790666,Seq :  76
+2021/01/01 21:06:37.321231 sm [1] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 76, GIDs  : [12] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[13:[13a 13b 13b] 14:[14a 14b 14b] 15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:37.413084 applyMsg op Id  : 3858311008689790666,Seq :  76
+2021/01/01 21:06:37.413261 sm [2] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 76, GIDs  : [12] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[13:[13a 13b 13b] 14:[14a 14b 14b] 15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:37.418915 sm [0] end Leave: LeaveArgs Id :  3858311008689790666,Seq  : 76, GIDs  : [12] reply.WrongLeader false
+2021/01/01 21:06:37.419531 sm [0] begin Leave: LeaveArgs Id :  3858311008689790666,Seq  : 77, GIDs  : [13]
+2021/01/01 21:06:37.421410 applyMsg op Id  : 3858311008689790666,Seq :  77
+2021/01/01 21:06:37.421559 sm [0] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 77, GIDs  : [13] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[14:[14a 14b 14b] 15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:37.520325 sm [0] end Leave: LeaveArgs Id :  3858311008689790666,Seq  : 77, GIDs  : [13] reply.WrongLeader false
+2021/01/01 21:06:37.520928 sm [0] begin Leave: LeaveArgs Id :  3858311008689790666,Seq  : 78, GIDs  : [14]
+2021/01/01 21:06:37.522390 applyMsg op Id  : 3858311008689790666,Seq :  77
+2021/01/01 21:06:37.522484 applyMsg op Id  : 3858311008689790666,Seq :  78
+2021/01/01 21:06:37.522549 applyMsg op Id  : 3858311008689790666,Seq :  77
+2021/01/01 21:06:37.522642 sm [0] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 78, GIDs  : [14] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:37.522553 sm [2] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 77, GIDs  : [13] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[14:[14a 14b 14b] 15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:37.522781 sm [1] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 77, GIDs  : [13] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[14:[14a 14b 14b] 15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:37.523660 applyMsg op Id  : 3858311008689790666,Seq :  78
+2021/01/01 21:06:37.523832 sm [1] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 78, GIDs  : [14] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:37.621814 sm [0] end Leave: LeaveArgs Id :  3858311008689790666,Seq  : 78, GIDs  : [14] reply.WrongLeader false
+2021/01/01 21:06:37.622239 sm [0] begin Leave: LeaveArgs Id :  3858311008689790666,Seq  : 79, GIDs  : [15]
+2021/01/01 21:06:37.623371 applyMsg op Id  : 3858311008689790666,Seq :  79
+2021/01/01 21:06:37.623454 sm [0] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 79, GIDs  : [15] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:37.625615 applyMsg op Id  : 3858311008689790666,Seq :  78
+2021/01/01 21:06:37.625797 sm [2] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 78, GIDs  : [14] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[15:[15a 15b 15b] 100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:37.625831 applyMsg op Id  : 3858311008689790666,Seq :  79
+2021/01/01 21:06:37.625997 sm [1] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 79, GIDs  : [15] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:37.626068 applyMsg op Id  : 3858311008689790666,Seq :  79
+2021/01/01 21:06:37.626198 sm [2] Leave: LeaveArgs Id :  3858311008689790666,Seq  : 79, GIDs  : [15] shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] newGroups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:37.722720 sm [0] end Leave: LeaveArgs Id :  3858311008689790666,Seq  : 79, GIDs  : [15] reply.WrongLeader false
+2021/01/01 21:06:37.723340 sm [0] begin Query: QueryArgs Id  : 3858311008689790666,Seq :  80, Num  : -1 
+2021/01/01 21:06:37.724988 applyMsg op Id  : 3858311008689790666,Seq :  80
+2021/01/01 21:06:37.726111 applyMsg op Id  : 3858311008689790666,Seq :  80
+2021/01/01 21:06:37.824216 sm [0] Query: QueryArgs Id  : 3858311008689790666,Seq :  80, Num  : -1  shardsMap:map[100:[9] 110:[6] 120:[8] 130:[2] 140:[4] 150:[7] 160:[1] 170:[5] 180:[0] 190:[3]] Groups :map[100:[s100b] 110:[s110b] 120:[s120b] 130:[s130b] 140:[s140b] 150:[s150b] 160:[s160b] 170:[s170b] 180:[s180b] 190:[s190b]]
+2021/01/01 21:06:37.824288 sm [0] end Query: QueryArgs Id  : 3858311008689790666,Seq :  80, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+  ... Passed
+Test: Multi-group join/leave ...
+2021/01/01 21:06:38.232189 sm [0] begin Query: QueryArgs Id  : 684046576414303722,Seq :  0, Num  : -1 
+2021/01/01 21:06:38.233031 applyMsg op Id  : 684046576414303722,Seq :  0
+2021/01/01 21:06:38.233788 applyMsg op Id  : 684046576414303722,Seq :  0
+2021/01/01 21:06:38.313789 applyMsg op Id  : 684046576414303722,Seq :  0
+2021/01/01 21:06:38.332501 sm [0] Query: QueryArgs Id  : 684046576414303722,Seq :  0, Num  : -1  shardsMap:map[0:[0 1 2 3 4 5 6 7 8 9]] Groups :map[]
+2021/01/01 21:06:38.332567 sm [0] end Query: QueryArgs Id  : 684046576414303722,Seq :  0, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:38.333163 sm [0] begin Query: QueryArgs Id  : 684046576414303722,Seq :  1, Num  : -1 
+2021/01/01 21:06:38.333930 applyMsg op Id  : 684046576414303722,Seq :  1
+2021/01/01 21:06:38.334600 applyMsg op Id  : 684046576414303722,Seq :  1
+2021/01/01 21:06:38.433401 sm [0] Query: QueryArgs Id  : 684046576414303722,Seq :  1, Num  : -1  shardsMap:map[0:[0 1 2 3 4 5 6 7 8 9]] Groups :map[]
+2021/01/01 21:06:38.433456 sm [0] end Query: QueryArgs Id  : 684046576414303722,Seq :  1, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:38.433787 applyMsg op Id  : 684046576414303722,Seq :  1
+2021/01/01 21:06:38.434095 sm [0] begin Join: JoinArgs Id : 684046576414303722,Seq  : 2, Servers  : map[1:[x y z] 2:[a b c]]
+2021/01/01 21:06:38.554282 applyMsg op Id  : 684046576414303722,Seq :  2
+2021/01/01 21:06:38.554425 sm [0] Join: JoinArgs Id : 684046576414303722,Seq  : 2, Servers  : map[1:[x y z] 2:[a b c]] shardsMap:map[1:[0 2 4 6 8] 2:[1 3 5 7 9]] newGroups :map[1:[x y z] 2:[a b c]]
+2021/01/01 21:06:38.555186 applyMsg op Id  : 684046576414303722,Seq :  2
+2021/01/01 21:06:38.555338 sm [1] Join: JoinArgs Id : 684046576414303722,Seq  : 2, Servers  : map[1:[x y z] 2:[a b c]] shardsMap:map[1:[0 2 4 6 8] 2:[1 3 5 7 9]] newGroups :map[1:[x y z] 2:[a b c]]
+2021/01/01 21:06:38.634595 sm [0] end Join: JoinArgs Id : 684046576414303722,Seq  : 2, Servers  : map[1:[x y z] 2:[a b c]] ,reply.WrongLeader false
+2021/01/01 21:06:38.635191 sm [0] begin Query: QueryArgs Id  : 684046576414303722,Seq :  3, Num  : -1 
+2021/01/01 21:06:38.636022 applyMsg op Id  : 684046576414303722,Seq :  2
+2021/01/01 21:06:38.636136 applyMsg op Id  : 684046576414303722,Seq :  3
+2021/01/01 21:06:38.636183 sm [2] Join: JoinArgs Id : 684046576414303722,Seq  : 2, Servers  : map[1:[x y z] 2:[a b c]] shardsMap:map[1:[0 2 4 6 8] 2:[1 3 5 7 9]] newGroups :map[1:[x y z] 2:[a b c]]
+2021/01/01 21:06:38.735483 sm [0] Query: QueryArgs Id  : 684046576414303722,Seq :  3, Num  : -1  shardsMap:map[1:[0 2 4 6 8] 2:[1 3 5 7 9]] Groups :map[1:[x y z] 2:[a b c]]
+2021/01/01 21:06:38.735513 sm [0] end Query: QueryArgs Id  : 684046576414303722,Seq :  3, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:38.735753 sm [0] begin Query: QueryArgs Id  : 684046576414303722,Seq :  4, Num  : -1 
+2021/01/01 21:06:38.736088 applyMsg op Id  : 684046576414303722,Seq :  3
+2021/01/01 21:06:38.736091 applyMsg op Id  : 684046576414303722,Seq :  4
+2021/01/01 21:06:38.736171 applyMsg op Id  : 684046576414303722,Seq :  3
+2021/01/01 21:06:38.736427 applyMsg op Id  : 684046576414303722,Seq :  4
+2021/01/01 21:06:38.835988 sm [0] Query: QueryArgs Id  : 684046576414303722,Seq :  4, Num  : -1  shardsMap:map[1:[0 2 4 6 8] 2:[1 3 5 7 9]] Groups :map[1:[x y z] 2:[a b c]]
+2021/01/01 21:06:38.836047 sm [0] end Query: QueryArgs Id  : 684046576414303722,Seq :  4, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:38.836671 sm [0] begin Join: JoinArgs Id : 684046576414303722,Seq  : 5, Servers  : map[3:[j k l]]
+2021/01/01 21:06:38.837504 applyMsg op Id  : 684046576414303722,Seq :  4
+2021/01/01 21:06:38.837600 applyMsg op Id  : 684046576414303722,Seq :  5
+2021/01/01 21:06:38.837700 sm [0] Join: JoinArgs Id : 684046576414303722,Seq  : 5, Servers  : map[3:[j k l]] shardsMap:map[1:[4 6 8] 2:[3 5 7 9] 3:[0 1 2]] newGroups :map[1:[x y z] 2:[a b c] 3:[j k l]]
+2021/01/01 21:06:38.838275 applyMsg op Id  : 684046576414303722,Seq :  5
+2021/01/01 21:06:38.838376 sm [1] Join: JoinArgs Id : 684046576414303722,Seq  : 5, Servers  : map[3:[j k l]] shardsMap:map[1:[4 6 8] 2:[3 5 7 9] 3:[0 1 2]] newGroups :map[1:[x y z] 2:[a b c] 3:[j k l]]
+2021/01/01 21:06:38.914670 applyMsg op Id  : 684046576414303722,Seq :  5
+2021/01/01 21:06:38.914829 sm [2] Join: JoinArgs Id : 684046576414303722,Seq  : 5, Servers  : map[3:[j k l]] shardsMap:map[1:[4 6 8] 2:[3 5 7 9] 3:[0 1 2]] newGroups :map[1:[x y z] 2:[a b c] 3:[j k l]]
+2021/01/01 21:06:38.937058 sm [0] end Join: JoinArgs Id : 684046576414303722,Seq  : 5, Servers  : map[3:[j k l]] ,reply.WrongLeader false
+2021/01/01 21:06:38.937637 sm [0] begin Query: QueryArgs Id  : 684046576414303722,Seq :  6, Num  : -1 
+2021/01/01 21:06:38.938504 applyMsg op Id  : 684046576414303722,Seq :  6
+2021/01/01 21:06:39.034856 applyMsg op Id  : 684046576414303722,Seq :  6
+2021/01/01 21:06:39.034936 applyMsg op Id  : 684046576414303722,Seq :  6
+2021/01/01 21:06:39.038033 sm [0] Query: QueryArgs Id  : 684046576414303722,Seq :  6, Num  : -1  shardsMap:map[1:[4 6 8] 2:[3 5 7 9] 3:[0 1 2]] Groups :map[1:[x y z] 2:[a b c] 3:[j k l]]
+2021/01/01 21:06:39.038085 sm [0] end Query: QueryArgs Id  : 684046576414303722,Seq :  6, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:39.038715 sm [0] begin Query: QueryArgs Id  : 684046576414303722,Seq :  7, Num  : -1 
+2021/01/01 21:06:39.040004 applyMsg op Id  : 684046576414303722,Seq :  7
+2021/01/01 21:06:39.139061 sm [0] Query: QueryArgs Id  : 684046576414303722,Seq :  7, Num  : -1  shardsMap:map[1:[4 6 8] 2:[3 5 7 9] 3:[0 1 2]] Groups :map[1:[x y z] 2:[a b c] 3:[j k l]]
+2021/01/01 21:06:39.139089 sm [0] end Query: QueryArgs Id  : 684046576414303722,Seq :  7, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:39.139352 sm [0] begin Query: QueryArgs Id  : 684046576414303722,Seq :  8, Num  : -1 
+2021/01/01 21:06:39.139719 applyMsg op Id  : 684046576414303722,Seq :  7
+2021/01/01 21:06:39.139744 applyMsg op Id  : 684046576414303722,Seq :  8
+2021/01/01 21:06:39.139857 applyMsg op Id  : 684046576414303722,Seq :  7
+2021/01/01 21:06:39.140091 applyMsg op Id  : 684046576414303722,Seq :  8
+2021/01/01 21:06:39.239637 sm [0] Query: QueryArgs Id  : 684046576414303722,Seq :  8, Num  : -1  shardsMap:map[1:[4 6 8] 2:[3 5 7 9] 3:[0 1 2]] Groups :map[1:[x y z] 2:[a b c] 3:[j k l]]
+2021/01/01 21:06:39.239703 sm [0] end Query: QueryArgs Id  : 684046576414303722,Seq :  8, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:39.240344 sm [0] begin Leave: LeaveArgs Id :  684046576414303722,Seq  : 9, GIDs  : [1 3]
+2021/01/01 21:06:39.241165 applyMsg op Id  : 684046576414303722,Seq :  8
+2021/01/01 21:06:39.241285 applyMsg op Id  : 684046576414303722,Seq :  9
+2021/01/01 21:06:39.241367 sm [0] Leave: LeaveArgs Id :  684046576414303722,Seq  : 9, GIDs  : [1 3] shardsMap:map[2:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[2:[a b c]]
+2021/01/01 21:06:39.242035 applyMsg op Id  : 684046576414303722,Seq :  9
+2021/01/01 21:06:39.242137 sm [1] Leave: LeaveArgs Id :  684046576414303722,Seq  : 9, GIDs  : [1 3] shardsMap:map[2:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[2:[a b c]]
+2021/01/01 21:06:39.340669 sm [0] end Leave: LeaveArgs Id :  684046576414303722,Seq  : 9, GIDs  : [1 3] reply.WrongLeader false
+2021/01/01 21:06:39.341386 sm [0] begin Query: QueryArgs Id  : 684046576414303722,Seq :  10, Num  : -1 
+2021/01/01 21:06:39.342315 applyMsg op Id  : 684046576414303722,Seq :  9
+2021/01/01 21:06:39.342478 applyMsg op Id  : 684046576414303722,Seq :  10
+2021/01/01 21:06:39.342491 sm [2] Leave: LeaveArgs Id :  684046576414303722,Seq  : 9, GIDs  : [1 3] shardsMap:map[2:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[2:[a b c]]
+2021/01/01 21:06:39.343280 applyMsg op Id  : 684046576414303722,Seq :  10
+2021/01/01 21:06:39.441856 sm [0] Query: QueryArgs Id  : 684046576414303722,Seq :  10, Num  : -1  shardsMap:map[2:[0 1 2 3 4 5 6 7 8 9]] Groups :map[2:[a b c]]
+2021/01/01 21:06:39.441930 sm [0] end Query: QueryArgs Id  : 684046576414303722,Seq :  10, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:39.442676 sm [0] begin Query: QueryArgs Id  : 684046576414303722,Seq :  11, Num  : -1 
+2021/01/01 21:06:39.444043 applyMsg op Id  : 684046576414303722,Seq :  10
+2021/01/01 21:06:39.444048 applyMsg op Id  : 684046576414303722,Seq :  11
+2021/01/01 21:06:39.515918 applyMsg op Id  : 684046576414303722,Seq :  11
+2021/01/01 21:06:39.515918 applyMsg op Id  : 684046576414303722,Seq :  11
+2021/01/01 21:06:39.543131 sm [0] Query: QueryArgs Id  : 684046576414303722,Seq :  11, Num  : -1  shardsMap:map[2:[0 1 2 3 4 5 6 7 8 9]] Groups :map[2:[a b c]]
+2021/01/01 21:06:39.543204 sm [0] end Query: QueryArgs Id  : 684046576414303722,Seq :  11, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:39.543926 sm [0] begin Query: QueryArgs Id  : 684046576414303722,Seq :  12, Num  : -1 
+2021/01/01 21:06:39.544958 applyMsg op Id  : 684046576414303722,Seq :  12
+2021/01/01 21:06:39.545864 applyMsg op Id  : 684046576414303722,Seq :  12
+2021/01/01 21:06:39.635965 applyMsg op Id  : 684046576414303722,Seq :  12
+2021/01/01 21:06:39.644402 sm [0] Query: QueryArgs Id  : 684046576414303722,Seq :  12, Num  : -1  shardsMap:map[2:[0 1 2 3 4 5 6 7 8 9]] Groups :map[2:[a b c]]
+2021/01/01 21:06:39.644450 sm [0] end Query: QueryArgs Id  : 684046576414303722,Seq :  12, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:39.645083 sm [0] begin Leave: LeaveArgs Id :  684046576414303722,Seq  : 13, GIDs  : [2]
+2021/01/01 21:06:39.646143 applyMsg op Id  : 684046576414303722,Seq :  13
+2021/01/01 21:06:39.646262 sm [0] Leave: LeaveArgs Id :  684046576414303722,Seq  : 13, GIDs  : [2] shardsMap:map[0:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[]
+2021/01/01 21:06:39.647334 applyMsg op Id  : 684046576414303722,Seq :  13
+2021/01/01 21:06:39.647445 sm [1] Leave: LeaveArgs Id :  684046576414303722,Seq  : 13, GIDs  : [2] shardsMap:map[0:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[]
+2021/01/01 21:06:39.745452 sm [0] end Leave: LeaveArgs Id :  684046576414303722,Seq  : 13, GIDs  : [2] reply.WrongLeader false
+  ... Passed
+Test: Concurrent multi leave/join ...
+2021/01/01 21:06:39.747198 sm [0] begin Join: JoinArgs Id : 4004699867947934142,Seq  : 0, Servers  : map[1001:[1001a 1001b 1001c] 2001:[2001a] 3001:[3001a]]
+2021/01/01 21:06:39.747353 sm [0] begin Join: JoinArgs Id : 4489674867693471032,Seq  : 0, Servers  : map[1000:[1000a 1000b 1000c] 2000:[2000a] 3000:[3000a]]
+2021/01/01 21:06:39.747775 sm [0] begin Join: JoinArgs Id : 2238076009746659635,Seq  : 0, Servers  : map[1007:[1007a 1007b 1007c] 2007:[2007a] 3007:[3007a]]
+2021/01/01 21:06:39.748071 sm [0] begin Join: JoinArgs Id : 1905477485423233085,Seq  : 0, Servers  : map[1003:[1003a 1003b 1003c] 2003:[2003a] 3003:[3003a]]
+2021/01/01 21:06:39.748381 applyMsg op Id  : 4004699867947934142,Seq :  0
+2021/01/01 21:06:39.748463 sm [0] Join: JoinArgs Id : 4004699867947934142,Seq  : 0, Servers  : map[1001:[1001a 1001b 1001c] 2001:[2001a] 3001:[3001a]] shardsMap:map[1001:[0 3 6 9] 2001:[1 4 7] 3001:[2 5 8]] newGroups :map[1001:[1001a 1001b 1001c] 2001:[2001a] 3001:[3001a]]
+2021/01/01 21:06:39.748483 applyMsg op Id  : 4489674867693471032,Seq :  0
+2021/01/01 21:06:39.748557 sm [0] Join: JoinArgs Id : 4489674867693471032,Seq  : 0, Servers  : map[1000:[1000a 1000b 1000c] 2000:[2000a] 3000:[3000a]] shardsMap:map[1000:[0] 1001:[9] 2000:[3] 2001:[1 4 7] 3000:[6] 3001:[2 5 8]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 2000:[2000a] 2001:[2001a] 3000:[3000a] 3001:[3001a]]
+2021/01/01 21:06:39.748965 sm [0] begin Join: JoinArgs Id : 4091449773458320856,Seq  : 0, Servers  : map[1009:[1009a 1009b 1009c] 2009:[2009a] 3009:[3009a]]
+2021/01/01 21:06:39.749069 applyMsg op Id  : 684046576414303722,Seq :  13
+2021/01/01 21:06:39.749141 sm [2] Leave: LeaveArgs Id :  684046576414303722,Seq  : 13, GIDs  : [2] shardsMap:map[0:[0 1 2 3 4 5 6 7 8 9]] newGroups :map[]
+2021/01/01 21:06:39.749200 sm [0] begin Join: JoinArgs Id : 4459683870628340317,Seq  : 0, Servers  : map[1004:[1004a 1004b 1004c] 2004:[2004a] 3004:[3004a]]
+2021/01/01 21:06:39.749259 sm [0] begin Join: JoinArgs Id : 608169469551246181,Seq  : 0, Servers  : map[1008:[1008a 1008b 1008c] 2008:[2008a] 3008:[3008a]]
+2021/01/01 21:06:39.749335 sm [0] begin Join: JoinArgs Id : 3070542324304459970,Seq  : 0, Servers  : map[1005:[1005a 1005b 1005c] 2005:[2005a] 3005:[3005a]]
+2021/01/01 21:06:39.749386 sm [0] begin Join: JoinArgs Id : 2614234948154280941,Seq  : 0, Servers  : map[1002:[1002a 1002b 1002c] 2002:[2002a] 3002:[3002a]]
+2021/01/01 21:06:39.749821 sm [0] begin Join: JoinArgs Id : 1805045824574172304,Seq  : 0, Servers  : map[1006:[1006a 1006b 1006c] 2006:[2006a] 3006:[3006a]]
+2021/01/01 21:06:39.750697 applyMsg op Id  : 2238076009746659635,Seq :  0
+2021/01/01 21:06:39.750788 applyMsg op Id  : 4004699867947934142,Seq :  0
+2021/01/01 21:06:39.750858 sm [0] Join: JoinArgs Id : 2238076009746659635,Seq  : 0, Servers  : map[1007:[1007a 1007b 1007c] 2007:[2007a] 3007:[3007a]] shardsMap:map[1000:[0] 1001:[9] 1007:[1] 2000:[3] 2001:[7] 2007:[4] 3000:[6] 3001:[5 8] 3007:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1007:[1007a 1007b 1007c] 2000:[2000a] 2001:[2001a] 2007:[2007a] 3000:[3000a] 3001:[3001a] 3007:[3007a]]
+2021/01/01 21:06:39.750877 sm [1] Join: JoinArgs Id : 4004699867947934142,Seq  : 0, Servers  : map[1001:[1001a 1001b 1001c] 2001:[2001a] 3001:[3001a]] shardsMap:map[1001:[0 3 6 9] 2001:[1 4 7] 3001:[2 5 8]] newGroups :map[1001:[1001a 1001b 1001c] 2001:[2001a] 3001:[3001a]]
+2021/01/01 21:06:39.750912 applyMsg op Id  : 4489674867693471032,Seq :  0
+2021/01/01 21:06:39.750994 sm [1] Join: JoinArgs Id : 4489674867693471032,Seq  : 0, Servers  : map[1000:[1000a 1000b 1000c] 2000:[2000a] 3000:[3000a]] shardsMap:map[1000:[0] 1001:[9] 2000:[3] 2001:[1 4 7] 3000:[6] 3001:[2 5 8]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 2000:[2000a] 2001:[2001a] 3000:[3000a] 3001:[3001a]]
+2021/01/01 21:06:39.750898 applyMsg op Id  : 1905477485423233085,Seq :  0
+2021/01/01 21:06:39.751124 sm [0] Join: JoinArgs Id : 1905477485423233085,Seq  : 0, Servers  : map[1003:[1003a 1003b 1003c] 2003:[2003a] 3003:[3003a]] shardsMap:map[1000:[0] 1001:[9] 1003:[5] 1007:[1] 2000:[3] 2001:[7] 2007:[4] 3000:[6] 3001:[8] 3007:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1003:[1003a 1003b 1003c] 1007:[1007a 1007b 1007c] 2000:[2000a] 2001:[2001a] 2003:[2003a] 2007:[2007a] 3000:[3000a] 3001:[3001a] 3003:[3003a] 3007:[3007a]]
+2021/01/01 21:06:39.751143 applyMsg op Id  : 4459683870628340317,Seq :  0
+2021/01/01 21:06:39.751213 applyMsg op Id  : 4004699867947934142,Seq :  0
+2021/01/01 21:06:39.751276 sm [0] Join: JoinArgs Id : 4459683870628340317,Seq  : 0, Servers  : map[1004:[1004a 1004b 1004c] 2004:[2004a] 3004:[3004a]] shardsMap:map[1000:[0] 1001:[9] 1003:[5] 1007:[1] 2000:[3] 2001:[7] 2007:[4] 3000:[6] 3001:[8] 3007:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1007:[1007a 1007b 1007c] 2000:[2000a] 2001:[2001a] 2003:[2003a] 2004:[2004a] 2007:[2007a] 3000:[3000a] 3001:[3001a] 3003:[3003a] 3004:[3004a] 3007:[3007a]]
+2021/01/01 21:06:39.751305 sm [2] Join: JoinArgs Id : 4004699867947934142,Seq  : 0, Servers  : map[1001:[1001a 1001b 1001c] 2001:[2001a] 3001:[3001a]] shardsMap:map[1001:[0 3 6 9] 2001:[1 4 7] 3001:[2 5 8]] newGroups :map[1001:[1001a 1001b 1001c] 2001:[2001a] 3001:[3001a]]
+2021/01/01 21:06:39.751327 applyMsg op Id  : 4489674867693471032,Seq :  0
+2021/01/01 21:06:39.751331 applyMsg op Id  : 2614234948154280941,Seq :  0
+2021/01/01 21:06:39.751502 sm [2] Join: JoinArgs Id : 4489674867693471032,Seq  : 0, Servers  : map[1000:[1000a 1000b 1000c] 2000:[2000a] 3000:[3000a]] shardsMap:map[1000:[0] 1001:[9] 2000:[3] 2001:[1 4 7] 3000:[6] 3001:[2 5 8]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 2000:[2000a] 2001:[2001a] 3000:[3000a] 3001:[3001a]]
+2021/01/01 21:06:39.751573 sm [0] Join: JoinArgs Id : 2614234948154280941,Seq  : 0, Servers  : map[1002:[1002a 1002b 1002c] 2002:[2002a] 3002:[3002a]] shardsMap:map[1000:[0] 1001:[9] 1003:[5] 1007:[1] 2000:[3] 2001:[7] 2007:[4] 3000:[6] 3001:[8] 3007:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1007:[1007a 1007b 1007c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2003:[2003a] 2004:[2004a] 2007:[2007a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3003:[3003a] 3004:[3004a] 3007:[3007a]]
+2021/01/01 21:06:39.752119 applyMsg op Id  : 2238076009746659635,Seq :  0
+2021/01/01 21:06:39.752274 sm [1] Join: JoinArgs Id : 2238076009746659635,Seq  : 0, Servers  : map[1007:[1007a 1007b 1007c] 2007:[2007a] 3007:[3007a]] shardsMap:map[1000:[0] 1001:[9] 1007:[1] 2000:[3] 2001:[7] 2007:[4] 3000:[6] 3001:[5 8] 3007:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1007:[1007a 1007b 1007c] 2000:[2000a] 2001:[2001a] 2007:[2007a] 3000:[3000a] 3001:[3001a] 3007:[3007a]]
+2021/01/01 21:06:39.752316 applyMsg op Id  : 1905477485423233085,Seq :  0
+2021/01/01 21:06:39.752546 sm [1] Join: JoinArgs Id : 1905477485423233085,Seq  : 0, Servers  : map[1003:[1003a 1003b 1003c] 2003:[2003a] 3003:[3003a]] shardsMap:map[1000:[0] 1001:[9] 1003:[5] 1007:[1] 2000:[3] 2001:[7] 2007:[4] 3000:[6] 3001:[8] 3007:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1003:[1003a 1003b 1003c] 1007:[1007a 1007b 1007c] 2000:[2000a] 2001:[2001a] 2003:[2003a] 2007:[2007a] 3000:[3000a] 3001:[3001a] 3003:[3003a] 3007:[3007a]]
+2021/01/01 21:06:39.752582 applyMsg op Id  : 4459683870628340317,Seq :  0
+2021/01/01 21:06:39.752776 sm [1] Join: JoinArgs Id : 4459683870628340317,Seq  : 0, Servers  : map[1004:[1004a 1004b 1004c] 2004:[2004a] 3004:[3004a]] shardsMap:map[1000:[0] 1001:[9] 1003:[5] 1007:[1] 2000:[3] 2001:[7] 2007:[4] 3000:[6] 3001:[8] 3007:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1007:[1007a 1007b 1007c] 2000:[2000a] 2001:[2001a] 2003:[2003a] 2004:[2004a] 2007:[2007a] 3000:[3000a] 3001:[3001a] 3003:[3003a] 3004:[3004a] 3007:[3007a]]
+2021/01/01 21:06:39.753292 applyMsg op Id  : 1805045824574172304,Seq :  0
+2021/01/01 21:06:39.753381 applyMsg op Id  : 2614234948154280941,Seq :  0
+2021/01/01 21:06:39.753622 sm [1] Join: JoinArgs Id : 2614234948154280941,Seq  : 0, Servers  : map[1002:[1002a 1002b 1002c] 2002:[2002a] 3002:[3002a]] shardsMap:map[1000:[0] 1001:[9] 1003:[5] 1007:[1] 2000:[3] 2001:[7] 2007:[4] 3000:[6] 3001:[8] 3007:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1007:[1007a 1007b 1007c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2003:[2003a] 2004:[2004a] 2007:[2007a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3003:[3003a] 3004:[3004a] 3007:[3007a]]
+2021/01/01 21:06:39.753814 sm [0] Join: JoinArgs Id : 1805045824574172304,Seq  : 0, Servers  : map[1006:[1006a 1006b 1006c] 2006:[2006a] 3006:[3006a]] shardsMap:map[1000:[0] 1001:[9] 1003:[5] 1007:[1] 2000:[3] 2001:[7] 2007:[4] 3000:[6] 3001:[8] 3007:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2003:[2003a] 2004:[2004a] 2006:[2006a] 2007:[2007a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3003:[3003a] 3004:[3004a] 3006:[3006a] 3007:[3007a]]
+2021/01/01 21:06:39.753866 applyMsg op Id  : 4091449773458320856,Seq :  0
+2021/01/01 21:06:39.754131 sm [0] Join: JoinArgs Id : 4091449773458320856,Seq  : 0, Servers  : map[1009:[1009a 1009b 1009c] 2009:[2009a] 3009:[3009a]] shardsMap:map[1000:[0] 1001:[9] 1003:[5] 1007:[1] 2000:[3] 2001:[7] 2007:[4] 3000:[6] 3001:[8] 3007:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1009:[1009a 1009b 1009c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2003:[2003a] 2004:[2004a] 2006:[2006a] 2007:[2007a] 2009:[2009a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3003:[3003a] 3004:[3004a] 3006:[3006a] 3007:[3007a] 3009:[3009a]]
+2021/01/01 21:06:39.754276 applyMsg op Id  : 608169469551246181,Seq :  0
+2021/01/01 21:06:39.754490 sm [0] Join: JoinArgs Id : 608169469551246181,Seq  : 0, Servers  : map[1008:[1008a 1008b 1008c] 2008:[2008a] 3008:[3008a]] shardsMap:map[1000:[0] 1001:[9] 1003:[5] 1007:[1] 2000:[3] 2001:[7] 2007:[4] 3000:[6] 3001:[8] 3007:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2003:[2003a] 2004:[2004a] 2006:[2006a] 2007:[2007a] 2008:[2008a] 2009:[2009a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3003:[3003a] 3004:[3004a] 3006:[3006a] 3007:[3007a] 3008:[3008a] 3009:[3009a]]
+2021/01/01 21:06:39.754512 applyMsg op Id  : 3070542324304459970,Seq :  0
+2021/01/01 21:06:39.754715 sm [0] Join: JoinArgs Id : 3070542324304459970,Seq  : 0, Servers  : map[1005:[1005a 1005b 1005c] 2005:[2005a] 3005:[3005a]] shardsMap:map[1000:[0] 1001:[9] 1003:[5] 1007:[1] 2000:[3] 2001:[7] 2007:[4] 3000:[6] 3001:[8] 3007:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2003:[2003a] 2004:[2004a] 2005:[2005a] 2006:[2006a] 2007:[2007a] 2008:[2008a] 2009:[2009a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3003:[3003a] 3004:[3004a] 3005:[3005a] 3006:[3006a] 3007:[3007a] 3008:[3008a] 3009:[3009a]]
+2021/01/01 21:06:39.755347 applyMsg op Id  : 2238076009746659635,Seq :  0
+2021/01/01 21:06:39.755482 sm [2] Join: JoinArgs Id : 2238076009746659635,Seq  : 0, Servers  : map[1007:[1007a 1007b 1007c] 2007:[2007a] 3007:[3007a]] shardsMap:map[1000:[0] 1001:[9] 1007:[1] 2000:[3] 2001:[7] 2007:[4] 3000:[6] 3001:[5 8] 3007:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1007:[1007a 1007b 1007c] 2000:[2000a] 2001:[2001a] 2007:[2007a] 3000:[3000a] 3001:[3001a] 3007:[3007a]]
+2021/01/01 21:06:39.755504 applyMsg op Id  : 1905477485423233085,Seq :  0
+2021/01/01 21:06:39.755616 sm [2] Join: JoinArgs Id : 1905477485423233085,Seq  : 0, Servers  : map[1003:[1003a 1003b 1003c] 2003:[2003a] 3003:[3003a]] shardsMap:map[1000:[0] 1001:[9] 1003:[5] 1007:[1] 2000:[3] 2001:[7] 2007:[4] 3000:[6] 3001:[8] 3007:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1003:[1003a 1003b 1003c] 1007:[1007a 1007b 1007c] 2000:[2000a] 2001:[2001a] 2003:[2003a] 2007:[2007a] 3000:[3000a] 3001:[3001a] 3003:[3003a] 3007:[3007a]]
+2021/01/01 21:06:39.755642 applyMsg op Id  : 4459683870628340317,Seq :  0
+2021/01/01 21:06:39.755721 applyMsg op Id  : 1805045824574172304,Seq :  0
+2021/01/01 21:06:39.755877 sm [2] Join: JoinArgs Id : 4459683870628340317,Seq  : 0, Servers  : map[1004:[1004a 1004b 1004c] 2004:[2004a] 3004:[3004a]] shardsMap:map[1000:[0] 1001:[9] 1003:[5] 1007:[1] 2000:[3] 2001:[7] 2007:[4] 3000:[6] 3001:[8] 3007:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1007:[1007a 1007b 1007c] 2000:[2000a] 2001:[2001a] 2003:[2003a] 2004:[2004a] 2007:[2007a] 3000:[3000a] 3001:[3001a] 3003:[3003a] 3004:[3004a] 3007:[3007a]]
+2021/01/01 21:06:39.755919 applyMsg op Id  : 2614234948154280941,Seq :  0
+2021/01/01 21:06:39.755922 sm [1] Join: JoinArgs Id : 1805045824574172304,Seq  : 0, Servers  : map[1006:[1006a 1006b 1006c] 2006:[2006a] 3006:[3006a]] shardsMap:map[1000:[0] 1001:[9] 1003:[5] 1007:[1] 2000:[3] 2001:[7] 2007:[4] 3000:[6] 3001:[8] 3007:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2003:[2003a] 2004:[2004a] 2006:[2006a] 2007:[2007a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3003:[3003a] 3004:[3004a] 3006:[3006a] 3007:[3007a]]
+2021/01/01 21:06:39.755981 applyMsg op Id  : 4091449773458320856,Seq :  0
+2021/01/01 21:06:39.756098 sm [2] Join: JoinArgs Id : 2614234948154280941,Seq  : 0, Servers  : map[1002:[1002a 1002b 1002c] 2002:[2002a] 3002:[3002a]] shardsMap:map[1000:[0] 1001:[9] 1003:[5] 1007:[1] 2000:[3] 2001:[7] 2007:[4] 3000:[6] 3001:[8] 3007:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1007:[1007a 1007b 1007c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2003:[2003a] 2004:[2004a] 2007:[2007a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3003:[3003a] 3004:[3004a] 3007:[3007a]]
+2021/01/01 21:06:39.756137 sm [1] Join: JoinArgs Id : 4091449773458320856,Seq  : 0, Servers  : map[1009:[1009a 1009b 1009c] 2009:[2009a] 3009:[3009a]] shardsMap:map[1000:[0] 1001:[9] 1003:[5] 1007:[1] 2000:[3] 2001:[7] 2007:[4] 3000:[6] 3001:[8] 3007:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1009:[1009a 1009b 1009c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2003:[2003a] 2004:[2004a] 2006:[2006a] 2007:[2007a] 2009:[2009a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3003:[3003a] 3004:[3004a] 3006:[3006a] 3007:[3007a] 3009:[3009a]]
+2021/01/01 21:06:39.756164 applyMsg op Id  : 1805045824574172304,Seq :  0
+2021/01/01 21:06:39.756203 applyMsg op Id  : 608169469551246181,Seq :  0
+2021/01/01 21:06:39.756372 sm [2] Join: JoinArgs Id : 1805045824574172304,Seq  : 0, Servers  : map[1006:[1006a 1006b 1006c] 2006:[2006a] 3006:[3006a]] shardsMap:map[1000:[0] 1001:[9] 1003:[5] 1007:[1] 2000:[3] 2001:[7] 2007:[4] 3000:[6] 3001:[8] 3007:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2003:[2003a] 2004:[2004a] 2006:[2006a] 2007:[2007a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3003:[3003a] 3004:[3004a] 3006:[3006a] 3007:[3007a]]
+2021/01/01 21:06:39.756387 sm [1] Join: JoinArgs Id : 608169469551246181,Seq  : 0, Servers  : map[1008:[1008a 1008b 1008c] 2008:[2008a] 3008:[3008a]] shardsMap:map[1000:[0] 1001:[9] 1003:[5] 1007:[1] 2000:[3] 2001:[7] 2007:[4] 3000:[6] 3001:[8] 3007:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2003:[2003a] 2004:[2004a] 2006:[2006a] 2007:[2007a] 2008:[2008a] 2009:[2009a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3003:[3003a] 3004:[3004a] 3006:[3006a] 3007:[3007a] 3008:[3008a] 3009:[3009a]]
+2021/01/01 21:06:39.756419 applyMsg op Id  : 3070542324304459970,Seq :  0
+2021/01/01 21:06:39.756421 applyMsg op Id  : 4091449773458320856,Seq :  0
+2021/01/01 21:06:39.756604 sm [1] Join: JoinArgs Id : 3070542324304459970,Seq  : 0, Servers  : map[1005:[1005a 1005b 1005c] 2005:[2005a] 3005:[3005a]] shardsMap:map[1000:[0] 1001:[9] 1003:[5] 1007:[1] 2000:[3] 2001:[7] 2007:[4] 3000:[6] 3001:[8] 3007:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2003:[2003a] 2004:[2004a] 2005:[2005a] 2006:[2006a] 2007:[2007a] 2008:[2008a] 2009:[2009a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3003:[3003a] 3004:[3004a] 3005:[3005a] 3006:[3006a] 3007:[3007a] 3008:[3008a] 3009:[3009a]]
+2021/01/01 21:06:39.756686 sm [2] Join: JoinArgs Id : 4091449773458320856,Seq  : 0, Servers  : map[1009:[1009a 1009b 1009c] 2009:[2009a] 3009:[3009a]] shardsMap:map[1000:[0] 1001:[9] 1003:[5] 1007:[1] 2000:[3] 2001:[7] 2007:[4] 3000:[6] 3001:[8] 3007:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1009:[1009a 1009b 1009c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2003:[2003a] 2004:[2004a] 2006:[2006a] 2007:[2007a] 2009:[2009a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3003:[3003a] 3004:[3004a] 3006:[3006a] 3007:[3007a] 3009:[3009a]]
+2021/01/01 21:06:39.756731 applyMsg op Id  : 608169469551246181,Seq :  0
+2021/01/01 21:06:39.756979 sm [2] Join: JoinArgs Id : 608169469551246181,Seq  : 0, Servers  : map[1008:[1008a 1008b 1008c] 2008:[2008a] 3008:[3008a]] shardsMap:map[1000:[0] 1001:[9] 1003:[5] 1007:[1] 2000:[3] 2001:[7] 2007:[4] 3000:[6] 3001:[8] 3007:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2003:[2003a] 2004:[2004a] 2006:[2006a] 2007:[2007a] 2008:[2008a] 2009:[2009a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3003:[3003a] 3004:[3004a] 3006:[3006a] 3007:[3007a] 3008:[3008a] 3009:[3009a]]
+2021/01/01 21:06:39.757027 applyMsg op Id  : 3070542324304459970,Seq :  0
+2021/01/01 21:06:39.757322 sm [2] Join: JoinArgs Id : 3070542324304459970,Seq  : 0, Servers  : map[1005:[1005a 1005b 1005c] 2005:[2005a] 3005:[3005a]] shardsMap:map[1000:[0] 1001:[9] 1003:[5] 1007:[1] 2000:[3] 2001:[7] 2007:[4] 3000:[6] 3001:[8] 3007:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2000:[2000a] 2001:[2001a] 2002:[2002a] 2003:[2003a] 2004:[2004a] 2005:[2005a] 2006:[2006a] 2007:[2007a] 2008:[2008a] 2009:[2009a] 3000:[3000a] 3001:[3001a] 3002:[3002a] 3003:[3003a] 3004:[3004a] 3005:[3005a] 3006:[3006a] 3007:[3007a] 3008:[3008a] 3009:[3009a]]
+2021/01/01 21:06:39.847570 sm [0] end Join: JoinArgs Id : 4004699867947934142,Seq  : 0, Servers  : map[1001:[1001a 1001b 1001c] 2001:[2001a] 3001:[3001a]] ,reply.WrongLeader false
+2021/01/01 21:06:39.847684 sm [0] end Join: JoinArgs Id : 4489674867693471032,Seq  : 0, Servers  : map[1000:[1000a 1000b 1000c] 2000:[2000a] 3000:[3000a]] ,reply.WrongLeader false
+2021/01/01 21:06:39.848065 sm [0] end Join: JoinArgs Id : 2238076009746659635,Seq  : 0, Servers  : map[1007:[1007a 1007b 1007c] 2007:[2007a] 3007:[3007a]] ,reply.WrongLeader false
+2021/01/01 21:06:39.848150 sm [0] begin Leave: LeaveArgs Id :  4004699867947934142,Seq  : 1, GIDs  : [2001 3001]
+2021/01/01 21:06:39.848282 sm [0] begin Leave: LeaveArgs Id :  4489674867693471032,Seq  : 1, GIDs  : [2000 3000]
+2021/01/01 21:06:39.848378 sm [0] end Join: JoinArgs Id : 1905477485423233085,Seq  : 0, Servers  : map[1003:[1003a 1003b 1003c] 2003:[2003a] 3003:[3003a]] ,reply.WrongLeader false
+2021/01/01 21:06:39.848615 sm [0] begin Leave: LeaveArgs Id :  2238076009746659635,Seq  : 1, GIDs  : [2007 3007]
+2021/01/01 21:06:39.848816 sm [0] begin Leave: LeaveArgs Id :  1905477485423233085,Seq  : 1, GIDs  : [2003 3003]
+2021/01/01 21:06:39.849440 applyMsg op Id  : 4004699867947934142,Seq :  1
+2021/01/01 21:06:39.849668 sm [0] Leave: LeaveArgs Id :  4004699867947934142,Seq  : 1, GIDs  : [2001 3001] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1007:[1] 2000:[3] 2007:[4] 3000:[6] 3007:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2000:[2000a] 2002:[2002a] 2003:[2003a] 2004:[2004a] 2005:[2005a] 2006:[2006a] 2007:[2007a] 2008:[2008a] 2009:[2009a] 3000:[3000a] 3002:[3002a] 3003:[3003a] 3004:[3004a] 3005:[3005a] 3006:[3006a] 3007:[3007a] 3008:[3008a] 3009:[3009a]]
+2021/01/01 21:06:39.849718 applyMsg op Id  : 4489674867693471032,Seq :  1
+2021/01/01 21:06:39.849900 sm [0] Leave: LeaveArgs Id :  4489674867693471032,Seq  : 1, GIDs  : [2000 3000] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 2007:[4] 3007:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2002:[2002a] 2003:[2003a] 2004:[2004a] 2005:[2005a] 2006:[2006a] 2007:[2007a] 2008:[2008a] 2009:[2009a] 3002:[3002a] 3003:[3003a] 3004:[3004a] 3005:[3005a] 3006:[3006a] 3007:[3007a] 3008:[3008a] 3009:[3009a]]
+2021/01/01 21:06:39.849938 sm [0] end Join: JoinArgs Id : 2614234948154280941,Seq  : 0, Servers  : map[1002:[1002a 1002b 1002c] 2002:[2002a] 3002:[3002a]] ,reply.WrongLeader false
+2021/01/01 21:06:39.850011 sm [0] end Join: JoinArgs Id : 4459683870628340317,Seq  : 0, Servers  : map[1004:[1004a 1004b 1004c] 2004:[2004a] 3004:[3004a]] ,reply.WrongLeader false
+2021/01/01 21:06:39.850186 sm [0] end Join: JoinArgs Id : 1805045824574172304,Seq  : 0, Servers  : map[1006:[1006a 1006b 1006c] 2006:[2006a] 3006:[3006a]] ,reply.WrongLeader false
+2021/01/01 21:06:39.850314 sm [0] begin Leave: LeaveArgs Id :  2614234948154280941,Seq  : 1, GIDs  : [2002 3002]
+2021/01/01 21:06:39.850784 sm [0] begin Leave: LeaveArgs Id :  4459683870628340317,Seq  : 1, GIDs  : [2004 3004]
+2021/01/01 21:06:39.850845 sm [0] begin Leave: LeaveArgs Id :  1805045824574172304,Seq  : 1, GIDs  : [2006 3006]
+2021/01/01 21:06:39.850949 applyMsg op Id  : 2238076009746659635,Seq :  1
+2021/01/01 21:06:39.851186 sm [0] Leave: LeaveArgs Id :  2238076009746659635,Seq  : 1, GIDs  : [2007 3007] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2002:[2002a] 2003:[2003a] 2004:[2004a] 2005:[2005a] 2006:[2006a] 2008:[2008a] 2009:[2009a] 3002:[3002a] 3003:[3003a] 3004:[3004a] 3005:[3005a] 3006:[3006a] 3008:[3008a] 3009:[3009a]]
+2021/01/01 21:06:39.851427 applyMsg op Id  : 4004699867947934142,Seq :  1
+2021/01/01 21:06:39.851776 sm [1] Leave: LeaveArgs Id :  4004699867947934142,Seq  : 1, GIDs  : [2001 3001] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1007:[1] 2000:[3] 2007:[4] 3000:[6] 3007:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2000:[2000a] 2002:[2002a] 2003:[2003a] 2004:[2004a] 2005:[2005a] 2006:[2006a] 2007:[2007a] 2008:[2008a] 2009:[2009a] 3000:[3000a] 3002:[3002a] 3003:[3003a] 3004:[3004a] 3005:[3005a] 3006:[3006a] 3007:[3007a] 3008:[3008a] 3009:[3009a]]
+2021/01/01 21:06:39.851836 applyMsg op Id  : 4489674867693471032,Seq :  1
+2021/01/01 21:06:39.851887 sm [0] end Join: JoinArgs Id : 4091449773458320856,Seq  : 0, Servers  : map[1009:[1009a 1009b 1009c] 2009:[2009a] 3009:[3009a]] ,reply.WrongLeader false
+2021/01/01 21:06:39.852124 sm [1] Leave: LeaveArgs Id :  4489674867693471032,Seq  : 1, GIDs  : [2000 3000] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 2007:[4] 3007:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2002:[2002a] 2003:[2003a] 2004:[2004a] 2005:[2005a] 2006:[2006a] 2007:[2007a] 2008:[2008a] 2009:[2009a] 3002:[3002a] 3003:[3003a] 3004:[3004a] 3005:[3005a] 3006:[3006a] 3007:[3007a] 3008:[3008a] 3009:[3009a]]
+2021/01/01 21:06:39.852224 sm [0] end Join: JoinArgs Id : 608169469551246181,Seq  : 0, Servers  : map[1008:[1008a 1008b 1008c] 2008:[2008a] 3008:[3008a]] ,reply.WrongLeader false
+2021/01/01 21:06:39.852277 sm [0] begin Leave: LeaveArgs Id :  4091449773458320856,Seq  : 1, GIDs  : [2009 3009]
+2021/01/01 21:06:39.852322 applyMsg op Id  : 2238076009746659635,Seq :  1
+2021/01/01 21:06:39.852622 sm [0] end Join: JoinArgs Id : 3070542324304459970,Seq  : 0, Servers  : map[1005:[1005a 1005b 1005c] 2005:[2005a] 3005:[3005a]] ,reply.WrongLeader false
+2021/01/01 21:06:39.852628 sm [1] Leave: LeaveArgs Id :  2238076009746659635,Seq  : 1, GIDs  : [2007 3007] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2002:[2002a] 2003:[2003a] 2004:[2004a] 2005:[2005a] 2006:[2006a] 2008:[2008a] 2009:[2009a] 3002:[3002a] 3003:[3003a] 3004:[3004a] 3005:[3005a] 3006:[3006a] 3008:[3008a] 3009:[3009a]]
+2021/01/01 21:06:39.852707 applyMsg op Id  : 2614234948154280941,Seq :  1
+2021/01/01 21:06:39.852978 sm [0] Leave: LeaveArgs Id :  2614234948154280941,Seq  : 1, GIDs  : [2002 3002] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2003:[2003a] 2004:[2004a] 2005:[2005a] 2006:[2006a] 2008:[2008a] 2009:[2009a] 3003:[3003a] 3004:[3004a] 3005:[3005a] 3006:[3006a] 3008:[3008a] 3009:[3009a]]
+2021/01/01 21:06:39.853026 applyMsg op Id  : 1905477485423233085,Seq :  1
+2021/01/01 21:06:39.853053 sm [0] begin Leave: LeaveArgs Id :  608169469551246181,Seq  : 1, GIDs  : [2008 3008]
+2021/01/01 21:06:39.853087 sm [0] begin Leave: LeaveArgs Id :  3070542324304459970,Seq  : 1, GIDs  : [2005 3005]
+2021/01/01 21:06:39.853246 sm [0] Leave: LeaveArgs Id :  1905477485423233085,Seq  : 1, GIDs  : [2003 3003] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2004:[2004a] 2005:[2005a] 2006:[2006a] 2008:[2008a] 2009:[2009a] 3004:[3004a] 3005:[3005a] 3006:[3006a] 3008:[3008a] 3009:[3009a]]
+2021/01/01 21:06:39.853277 applyMsg op Id  : 4459683870628340317,Seq :  1
+2021/01/01 21:06:39.853402 sm [0] Leave: LeaveArgs Id :  4459683870628340317,Seq  : 1, GIDs  : [2004 3004] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2005:[2005a] 2006:[2006a] 2008:[2008a] 2009:[2009a] 3005:[3005a] 3006:[3006a] 3008:[3008a] 3009:[3009a]]
+2021/01/01 21:06:39.853429 applyMsg op Id  : 1805045824574172304,Seq :  1
+2021/01/01 21:06:39.854856 sm [0] Leave: LeaveArgs Id :  1805045824574172304,Seq  : 1, GIDs  : [2006 3006] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2005:[2005a] 2008:[2008a] 2009:[2009a] 3005:[3005a] 3008:[3008a] 3009:[3009a]]
+2021/01/01 21:06:39.856592 applyMsg op Id  : 4091449773458320856,Seq :  1
+2021/01/01 21:06:39.856756 sm [0] Leave: LeaveArgs Id :  4091449773458320856,Seq  : 1, GIDs  : [2009 3009] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2005:[2005a] 2008:[2008a] 3005:[3005a] 3008:[3008a]]
+2021/01/01 21:06:39.857026 applyMsg op Id  : 608169469551246181,Seq :  1
+2021/01/01 21:06:39.857119 applyMsg op Id  : 4004699867947934142,Seq :  1
+2021/01/01 21:06:39.857182 sm [0] Leave: LeaveArgs Id :  608169469551246181,Seq  : 1, GIDs  : [2008 3008] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2005:[2005a] 3005:[3005a]]
+2021/01/01 21:06:39.857206 applyMsg op Id  : 3070542324304459970,Seq :  1
+2021/01/01 21:06:39.857307 sm [0] Leave: LeaveArgs Id :  3070542324304459970,Seq  : 1, GIDs  : [2005 3005] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c]]
+2021/01/01 21:06:39.857334 applyMsg op Id  : 2614234948154280941,Seq :  1
+2021/01/01 21:06:39.857387 sm [2] Leave: LeaveArgs Id :  4004699867947934142,Seq  : 1, GIDs  : [2001 3001] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1007:[1] 2000:[3] 2007:[4] 3000:[6] 3007:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2000:[2000a] 2002:[2002a] 2003:[2003a] 2004:[2004a] 2005:[2005a] 2006:[2006a] 2007:[2007a] 2008:[2008a] 2009:[2009a] 3000:[3000a] 3002:[3002a] 3003:[3003a] 3004:[3004a] 3005:[3005a] 3006:[3006a] 3007:[3007a] 3008:[3008a] 3009:[3009a]]
+2021/01/01 21:06:39.857413 applyMsg op Id  : 4489674867693471032,Seq :  1
+2021/01/01 21:06:39.857540 sm [1] Leave: LeaveArgs Id :  2614234948154280941,Seq  : 1, GIDs  : [2002 3002] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2003:[2003a] 2004:[2004a] 2005:[2005a] 2006:[2006a] 2008:[2008a] 2009:[2009a] 3003:[3003a] 3004:[3004a] 3005:[3005a] 3006:[3006a] 3008:[3008a] 3009:[3009a]]
+2021/01/01 21:06:39.857562 applyMsg op Id  : 1905477485423233085,Seq :  1
+2021/01/01 21:06:39.857642 sm [2] Leave: LeaveArgs Id :  4489674867693471032,Seq  : 1, GIDs  : [2000 3000] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 2007:[4] 3007:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2002:[2002a] 2003:[2003a] 2004:[2004a] 2005:[2005a] 2006:[2006a] 2007:[2007a] 2008:[2008a] 2009:[2009a] 3002:[3002a] 3003:[3003a] 3004:[3004a] 3005:[3005a] 3006:[3006a] 3007:[3007a] 3008:[3008a] 3009:[3009a]]
+2021/01/01 21:06:39.857688 sm [1] Leave: LeaveArgs Id :  1905477485423233085,Seq  : 1, GIDs  : [2003 3003] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2004:[2004a] 2005:[2005a] 2006:[2006a] 2008:[2008a] 2009:[2009a] 3004:[3004a] 3005:[3005a] 3006:[3006a] 3008:[3008a] 3009:[3009a]]
+2021/01/01 21:06:39.857714 applyMsg op Id  : 4459683870628340317,Seq :  1
+2021/01/01 21:06:39.857722 applyMsg op Id  : 2238076009746659635,Seq :  1
+2021/01/01 21:06:39.857895 sm [1] Leave: LeaveArgs Id :  4459683870628340317,Seq  : 1, GIDs  : [2004 3004] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2005:[2005a] 2006:[2006a] 2008:[2008a] 2009:[2009a] 3005:[3005a] 3006:[3006a] 3008:[3008a] 3009:[3009a]]
+2021/01/01 21:06:39.857899 sm [2] Leave: LeaveArgs Id :  2238076009746659635,Seq  : 1, GIDs  : [2007 3007] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2002:[2002a] 2003:[2003a] 2004:[2004a] 2005:[2005a] 2006:[2006a] 2008:[2008a] 2009:[2009a] 3002:[3002a] 3003:[3003a] 3004:[3004a] 3005:[3005a] 3006:[3006a] 3008:[3008a] 3009:[3009a]]
+2021/01/01 21:06:39.857938 applyMsg op Id  : 2614234948154280941,Seq :  1
+2021/01/01 21:06:39.857947 applyMsg op Id  : 1805045824574172304,Seq :  1
+2021/01/01 21:06:39.858069 sm [2] Leave: LeaveArgs Id :  2614234948154280941,Seq  : 1, GIDs  : [2002 3002] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2003:[2003a] 2004:[2004a] 2005:[2005a] 2006:[2006a] 2008:[2008a] 2009:[2009a] 3003:[3003a] 3004:[3004a] 3005:[3005a] 3006:[3006a] 3008:[3008a] 3009:[3009a]]
+2021/01/01 21:06:39.858098 applyMsg op Id  : 1905477485423233085,Seq :  1
+2021/01/01 21:06:39.858109 sm [1] Leave: LeaveArgs Id :  1805045824574172304,Seq  : 1, GIDs  : [2006 3006] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2005:[2005a] 2008:[2008a] 2009:[2009a] 3005:[3005a] 3008:[3008a] 3009:[3009a]]
+2021/01/01 21:06:39.858157 applyMsg op Id  : 4091449773458320856,Seq :  1
+2021/01/01 21:06:39.858232 sm [2] Leave: LeaveArgs Id :  1905477485423233085,Seq  : 1, GIDs  : [2003 3003] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2004:[2004a] 2005:[2005a] 2006:[2006a] 2008:[2008a] 2009:[2009a] 3004:[3004a] 3005:[3005a] 3006:[3006a] 3008:[3008a] 3009:[3009a]]
+2021/01/01 21:06:39.858273 sm [1] Leave: LeaveArgs Id :  4091449773458320856,Seq  : 1, GIDs  : [2009 3009] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2005:[2005a] 2008:[2008a] 3005:[3005a] 3008:[3008a]]
+2021/01/01 21:06:39.858276 applyMsg op Id  : 4459683870628340317,Seq :  1
+2021/01/01 21:06:39.858420 sm [2] Leave: LeaveArgs Id :  4459683870628340317,Seq  : 1, GIDs  : [2004 3004] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2005:[2005a] 2006:[2006a] 2008:[2008a] 2009:[2009a] 3005:[3005a] 3006:[3006a] 3008:[3008a] 3009:[3009a]]
+2021/01/01 21:06:39.858444 applyMsg op Id  : 1805045824574172304,Seq :  1
+2021/01/01 21:06:39.858552 sm [2] Leave: LeaveArgs Id :  1805045824574172304,Seq  : 1, GIDs  : [2006 3006] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2005:[2005a] 2008:[2008a] 2009:[2009a] 3005:[3005a] 3008:[3008a] 3009:[3009a]]
+2021/01/01 21:06:39.859383 applyMsg op Id  : 608169469551246181,Seq :  1
+2021/01/01 21:06:39.859529 sm [1] Leave: LeaveArgs Id :  608169469551246181,Seq  : 1, GIDs  : [2008 3008] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2005:[2005a] 3005:[3005a]]
+2021/01/01 21:06:39.859561 applyMsg op Id  : 3070542324304459970,Seq :  1
+2021/01/01 21:06:39.859653 sm [1] Leave: LeaveArgs Id :  3070542324304459970,Seq  : 1, GIDs  : [2005 3005] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c]]
+2021/01/01 21:06:39.948525 sm [0] end Leave: LeaveArgs Id :  4004699867947934142,Seq  : 1, GIDs  : [2001 3001] reply.WrongLeader false
+2021/01/01 21:06:39.948627 sm [0] end Leave: LeaveArgs Id :  4489674867693471032,Seq  : 1, GIDs  : [2000 3000] reply.WrongLeader false
+2021/01/01 21:06:39.948917 sm [0] end Leave: LeaveArgs Id :  2238076009746659635,Seq  : 1, GIDs  : [2007 3007] reply.WrongLeader false
+2021/01/01 21:06:39.950579 sm [0] end Leave: LeaveArgs Id :  2614234948154280941,Seq  : 1, GIDs  : [2002 3002] reply.WrongLeader false
+2021/01/01 21:06:39.950953 sm [0] end Leave: LeaveArgs Id :  1905477485423233085,Seq  : 1, GIDs  : [2003 3003] reply.WrongLeader false
+2021/01/01 21:06:39.951174 sm [0] end Leave: LeaveArgs Id :  4459683870628340317,Seq  : 1, GIDs  : [2004 3004] reply.WrongLeader false
+2021/01/01 21:06:39.951386 sm [0] end Leave: LeaveArgs Id :  1805045824574172304,Seq  : 1, GIDs  : [2006 3006] reply.WrongLeader false
+2021/01/01 21:06:39.952697 sm [0] end Leave: LeaveArgs Id :  4091449773458320856,Seq  : 1, GIDs  : [2009 3009] reply.WrongLeader false
+2021/01/01 21:06:39.955255 sm [0] end Leave: LeaveArgs Id :  608169469551246181,Seq  : 1, GIDs  : [2008 3008] reply.WrongLeader false
+2021/01/01 21:06:39.956159 sm [0] end Leave: LeaveArgs Id :  3070542324304459970,Seq  : 1, GIDs  : [2005 3005] reply.WrongLeader false
+2021/01/01 21:06:39.956362 sm [0] begin Query: QueryArgs Id  : 684046576414303722,Seq :  14, Num  : -1 
+2021/01/01 21:06:39.956765 applyMsg op Id  : 684046576414303722,Seq :  14
+2021/01/01 21:06:39.956769 applyMsg op Id  : 4091449773458320856,Seq :  1
+2021/01/01 21:06:39.956860 sm [2] Leave: LeaveArgs Id :  4091449773458320856,Seq  : 1, GIDs  : [2009 3009] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2005:[2005a] 2008:[2008a] 3005:[3005a] 3008:[3008a]]
+2021/01/01 21:06:39.956877 applyMsg op Id  : 608169469551246181,Seq :  1
+2021/01/01 21:06:39.956944 sm [2] Leave: LeaveArgs Id :  608169469551246181,Seq  : 1, GIDs  : [2008 3008] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c] 2005:[2005a] 3005:[3005a]]
+2021/01/01 21:06:39.956956 applyMsg op Id  : 3070542324304459970,Seq :  1
+2021/01/01 21:06:39.957014 sm [2] Leave: LeaveArgs Id :  3070542324304459970,Seq  : 1, GIDs  : [2005 3005] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c]]
+2021/01/01 21:06:39.957187 applyMsg op Id  : 684046576414303722,Seq :  14
+2021/01/01 21:06:40.056552 sm [0] Query: QueryArgs Id  : 684046576414303722,Seq :  14, Num  : -1  shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] Groups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c]]
+2021/01/01 21:06:40.056594 sm [0] end Query: QueryArgs Id  : 684046576414303722,Seq :  14, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+  ... Passed
+Test: Minimal transfers after multijoins ...
+2021/01/01 21:06:40.056969 sm [0] begin Query: QueryArgs Id  : 684046576414303722,Seq :  15, Num  : -1 
+2021/01/01 21:06:40.057505 applyMsg op Id  : 684046576414303722,Seq :  14
+2021/01/01 21:06:40.057543 applyMsg op Id  : 684046576414303722,Seq :  15
+2021/01/01 21:06:40.057973 applyMsg op Id  : 684046576414303722,Seq :  15
+2021/01/01 21:06:40.157314 sm [0] Query: QueryArgs Id  : 684046576414303722,Seq :  15, Num  : -1  shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] Groups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c]]
+2021/01/01 21:06:40.157355 sm [0] end Query: QueryArgs Id  : 684046576414303722,Seq :  15, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+2021/01/01 21:06:40.157769 sm [0] begin Join: JoinArgs Id : 684046576414303722,Seq  : 16, Servers  : map[11:[11a 11b] 12:[12a 12b] 13:[13a 13b] 14:[14a 14b] 15:[15a 15b]]
+2021/01/01 21:06:40.158425 applyMsg op Id  : 684046576414303722,Seq :  15
+2021/01/01 21:06:40.158462 applyMsg op Id  : 684046576414303722,Seq :  16
+2021/01/01 21:06:40.158564 sm [0] Join: JoinArgs Id : 684046576414303722,Seq  : 16, Servers  : map[11:[11a 11b] 12:[12a 12b] 13:[13a 13b] 14:[14a 14b] 15:[15a 15b]] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] newGroups :map[11:[11a 11b] 12:[12a 12b] 13:[13a 13b] 14:[14a 14b] 15:[15a 15b] 1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c]]
+2021/01/01 21:06:40.159030 applyMsg op Id  : 684046576414303722,Seq :  16
+2021/01/01 21:06:40.159148 sm [1] Join: JoinArgs Id : 684046576414303722,Seq  : 16, Servers  : map[11:[11a 11b] 12:[12a 12b] 13:[13a 13b] 14:[14a 14b] 15:[15a 15b]] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] newGroups :map[11:[11a 11b] 12:[12a 12b] 13:[13a 13b] 14:[14a 14b] 15:[15a 15b] 1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c]]
+2021/01/01 21:06:40.236658 applyMsg op Id  : 684046576414303722,Seq :  16
+2021/01/01 21:06:40.236778 sm [2] Join: JoinArgs Id : 684046576414303722,Seq  : 16, Servers  : map[11:[11a 11b] 12:[12a 12b] 13:[13a 13b] 14:[14a 14b] 15:[15a 15b]] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] newGroups :map[11:[11a 11b] 12:[12a 12b] 13:[13a 13b] 14:[14a 14b] 15:[15a 15b] 1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c]]
+2021/01/01 21:06:40.258120 sm [0] end Join: JoinArgs Id : 684046576414303722,Seq  : 16, Servers  : map[11:[11a 11b] 12:[12a 12b] 13:[13a 13b] 14:[14a 14b] 15:[15a 15b]] ,reply.WrongLeader false
+2021/01/01 21:06:40.258397 sm [0] begin Query: QueryArgs Id  : 684046576414303722,Seq :  17, Num  : -1 
+2021/01/01 21:06:40.259072 applyMsg op Id  : 684046576414303722,Seq :  17
+2021/01/01 21:06:40.259518 applyMsg op Id  : 684046576414303722,Seq :  17
+2021/01/01 21:06:40.356684 applyMsg op Id  : 684046576414303722,Seq :  17
+2021/01/01 21:06:40.358734 sm [0] Query: QueryArgs Id  : 684046576414303722,Seq :  17, Num  : -1  shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] Groups :map[11:[11a 11b] 12:[12a 12b] 13:[13a 13b] 14:[14a 14b] 15:[15a 15b] 1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c]]
+2021/01/01 21:06:40.358757 sm [0] end Query: QueryArgs Id  : 684046576414303722,Seq :  17, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+  ... Passed
+Test: Minimal transfers after multileaves ...
+2021/01/01 21:06:40.359079 sm [0] begin Leave: LeaveArgs Id :  684046576414303722,Seq  : 18, GIDs  : [11 12 13 14 15]
+2021/01/01 21:06:40.359662 applyMsg op Id  : 684046576414303722,Seq :  18
+2021/01/01 21:06:40.359732 sm [0] Leave: LeaveArgs Id :  684046576414303722,Seq  : 18, GIDs  : [11 12 13 14 15] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c]]
+2021/01/01 21:06:40.360147 applyMsg op Id  : 684046576414303722,Seq :  18
+2021/01/01 21:06:40.360238 sm [1] Leave: LeaveArgs Id :  684046576414303722,Seq  : 18, GIDs  : [11 12 13 14 15] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c]]
+2021/01/01 21:06:40.459367 sm [0] end Leave: LeaveArgs Id :  684046576414303722,Seq  : 18, GIDs  : [11 12 13 14 15] reply.WrongLeader false
+2021/01/01 21:06:40.459671 sm [0] begin Query: QueryArgs Id  : 684046576414303722,Seq :  19, Num  : -1 
+2021/01/01 21:06:40.460251 applyMsg op Id  : 684046576414303722,Seq :  18
+2021/01/01 21:06:40.460339 applyMsg op Id  : 684046576414303722,Seq :  19
+2021/01/01 21:06:40.460343 sm [2] Leave: LeaveArgs Id :  684046576414303722,Seq  : 18, GIDs  : [11 12 13 14 15] shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] newGroups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c]]
+2021/01/01 21:06:40.559973 sm [0] Query: QueryArgs Id  : 684046576414303722,Seq :  19, Num  : -1  shardsMap:map[1000:[0] 1001:[9] 1002:[7] 1003:[5] 1004:[8] 1005:[3] 1006:[6] 1007:[1] 1008:[4] 1009:[2]] Groups :map[1000:[1000a 1000b 1000c] 1001:[1001a 1001b 1001c] 1002:[1002a 1002b 1002c] 1003:[1003a 1003b 1003c] 1004:[1004a 1004b 1004c] 1005:[1005a 1005b 1005c] 1006:[1006a 1006b 1006c] 1007:[1007a 1007b 1007c] 1008:[1008a 1008b 1008c] 1009:[1009a 1009b 1009c]]
+2021/01/01 21:06:40.560012 sm [0] end Query: QueryArgs Id  : 684046576414303722,Seq :  19, Num  : -1  reply.WrongLeader false reply.Config.Num 0
+  ... Passed
+PASS
+ok  	6.824/labs/shardmaster	12.717s

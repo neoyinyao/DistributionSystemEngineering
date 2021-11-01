@@ -1,0 +1,432 @@
+Test (2C): basic persistence 
+ ...
+2020/10/24 02:21:37.096790 startElection start rf0:term 0,state 1 isdead 0 state 1
+2020/10/24 02:21:37.097584 rf:0 persist term: 1 len(log): 0 
+2020/10/24 02:21:37.097637 startElection finish rf0:term 1,state 1 isdead 0
+2020/10/24 02:21:37.098333 rf2:term 0,state 2 isdead 0 RequestVote called begin,RequestVoteArgs Term 1,CandidateId 0, LastEntryIdx -1,LastEntryTerm 0
+2020/10/24 02:21:37.098389 rf2:term 1,state 2 isdead 0 RequestVote called finish,RequestVoteArgs Term 1,CandidateId 0, LastEntryIdx -1,LastEntryTerm 0,RequestVoteReply Term 1,RequestTerm 1, IsSuccess true
+2020/10/24 02:21:37.098447 rf:2 persist term: 1 len(log): 0 
+2020/10/24 02:21:37.098452 rf1:term 0,state 2 isdead 0 RequestVote called begin,RequestVoteArgs Term 1,CandidateId 0, LastEntryIdx -1,LastEntryTerm 0
+2020/10/24 02:21:37.098532 rf1:term 1,state 2 isdead 0 RequestVote called finish,RequestVoteArgs Term 1,CandidateId 0, LastEntryIdx -1,LastEntryTerm 0,RequestVoteReply Term 1,RequestTerm 1, IsSuccess true
+2020/10/24 02:21:37.098583 rf:1 persist term: 1 len(log): 0 
+2020/10/24 02:21:37.098778 handleRequestVoteReply begin 0 requestVoteReply RequestVoteReply Term 1,RequestTerm 1, IsSuccess true
+2020/10/24 02:21:37.098810 handleRequestVoteReply finish rf0:term 1,state 1 isdead 0 requestVoteReply RequestVoteReply Term 1,RequestTerm 1, IsSuccess true
+2020/10/24 02:21:37.098821 rf2 grant vote to rf0
+2020/10/24 02:21:37.098830 handleRequestVoteReply begin 0 requestVoteReply RequestVoteReply Term 1,RequestTerm 1, IsSuccess true
+2020/10/24 02:21:37.098859 handleRequestVoteReply finish rf0:term 1,state 1 isdead 0 requestVoteReply RequestVoteReply Term 1,RequestTerm 1, IsSuccess true
+2020/10/24 02:21:37.098870 rf1 grant vote to rf0
+2020/10/24 02:21:37.099441 AppendEntries called begin rf2:term 1,state 2 isdead 0 AppendEntriesArgs PrevLogIdx -1,LeaderId 0,Term 1 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:37.099493 rf2 lastReceiveHeartBeat update to 2020-10-24 02:21:37.099471599 -0400 EDT m=+0.412973732
+2020/10/24 02:21:37.099512 AppendEntries called Finish rf2:term 1,state 2 isdead 0 AppendEntriesArgs PrevLogIdx -1,LeaderId 0,Term 1 AppendEntriesReply Term 1,RequestTerm 1,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:37.099524 AppendEntries called begin rf1:term 1,state 2 isdead 0 AppendEntriesArgs PrevLogIdx -1,LeaderId 0,Term 1 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:37.099566 rf1 lastReceiveHeartBeat update to 2020-10-24 02:21:37.099553075 -0400 EDT m=+0.413055203
+2020/10/24 02:21:37.099585 AppendEntries called Finish rf1:term 1,state 2 isdead 0 AppendEntriesArgs PrevLogIdx -1,LeaderId 0,Term 1 AppendEntriesReply Term 1,RequestTerm 1,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:37.099854 rf0 handleAppendEntriesReply rf2 begin ,AppendEntriesArgs PrevLogIdx -1,LeaderId 0,Term 1,AppendEntriesReply Term 1,RequestTerm 1,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 0
+2020/10/24 02:21:37.099871 rf0 handleAppendEntriesReply rf1 begin ,AppendEntriesArgs PrevLogIdx -1,LeaderId 0,Term 1,AppendEntriesReply Term 1,RequestTerm 1,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 0
+2020/10/24 02:21:37.099902 rf0 handleAppendEntriesReply rf1 finish ,update nextIndex0
+2020/10/24 02:21:37.099880 rf0 handleAppendEntriesReply rf2 finish ,update nextIndex0
+2020/10/24 02:21:37.139891 rf:0 persist term: 1 len(log): 1 
+2020/10/24 02:21:37.139960 start command rf0 index 0 term 1 command 11
+2020/10/24 02:21:37.219285 rf0 send entry 1 to rf2
+2020/10/24 02:21:37.219285 rf0 send entry 1 to rf1
+2020/10/24 02:21:37.220036 AppendEntries called begin rf1:term 1,state 2 isdead 0 AppendEntriesArgs PrevLogIdx -1,LeaderId 0,Term 1 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:37.220105 rf1 lastReceiveHeartBeat update to 2020-10-24 02:21:37.220089199 -0400 EDT m=+0.533591346
+2020/10/24 02:21:37.220160 AppendEntries called begin rf2:term 1,state 2 isdead 0 AppendEntriesArgs PrevLogIdx -1,LeaderId 0,Term 1 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:37.220262 rf2 lastReceiveHeartBeat update to 2020-10-24 02:21:37.220245557 -0400 EDT m=+0.533747732
+2020/10/24 02:21:37.220362 rf:2 persist term: 1 len(log): 1 
+2020/10/24 02:21:37.220389 AppendEntries called Finish rf2:term 1,state 2 isdead 0 AppendEntriesArgs PrevLogIdx -1,LeaderId 0,Term 1 AppendEntriesReply Term 1,RequestTerm 1,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:37.220421 rf:1 persist term: 1 len(log): 1 
+2020/10/24 02:21:37.220490 AppendEntries called Finish rf1:term 1,state 2 isdead 0 AppendEntriesArgs PrevLogIdx -1,LeaderId 0,Term 1 AppendEntriesReply Term 1,RequestTerm 1,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:37.220649 rf0 handleAppendEntriesReply rf2 begin ,AppendEntriesArgs PrevLogIdx -1,LeaderId 0,Term 1,AppendEntriesReply Term 1,RequestTerm 1,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 0
+2020/10/24 02:21:37.220688 rf0 handleAppendEntriesReply rf2 finish ,update nextIndex0
+2020/10/24 02:21:37.220703 leader rf0 updateLeaderCommitIndex to 0
+2020/10/24 02:21:37.220715 UpdateAppliedLast begin rf0 commitIndex0 appliedLast-1
+2020/10/24 02:21:37.220726 UpdateAppliedLast finish rf0 commitIndex0 appliedLast0
+2020/10/24 02:21:37.220915 rf0 handleAppendEntriesReply rf1 begin ,AppendEntriesArgs PrevLogIdx -1,LeaderId 0,Term 1,AppendEntriesReply Term 1,RequestTerm 1,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 0
+2020/10/24 02:21:37.220956 rf0 handleAppendEntriesReply rf1 finish ,update nextIndex0
+2020/10/24 02:21:37.340615 AppendEntries called begin rf2:term 1,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 0,LeaderId 0,Term 1 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:37.340734 rf2 lastReceiveHeartBeat update to 2020-10-24 02:21:37.340709128 -0400 EDT m=+0.654211357
+2020/10/24 02:21:37.340760 follower rf2 updateCommitIndex from -1
+2020/10/24 02:21:37.340800 follower rf2 updateCommitIndex to 0
+2020/10/24 02:21:37.340836 AppendEntries called Finish rf2:term 1,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 0,LeaderId 0,Term 1 AppendEntriesReply Term 1,RequestTerm 1,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:37.340892 AppendEntries called begin rf1:term 1,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 0,LeaderId 0,Term 1 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:37.340952 rf1 lastReceiveHeartBeat update to 2020-10-24 02:21:37.340931266 -0400 EDT m=+0.654433420
+2020/10/24 02:21:37.340976 follower rf1 updateCommitIndex from -1
+2020/10/24 02:21:37.340984 UpdateAppliedLast begin rf2 commitIndex0 appliedLast-1
+2020/10/24 02:21:37.341058 UpdateAppliedLast finish rf2 commitIndex0 appliedLast0
+2020/10/24 02:21:37.341116 follower rf1 updateCommitIndex to 0
+2020/10/24 02:21:37.341157 AppendEntries called Finish rf1:term 1,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 0,LeaderId 0,Term 1 AppendEntriesReply Term 1,RequestTerm 1,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:37.341158 UpdateAppliedLast begin rf1 commitIndex0 appliedLast-1
+2020/10/24 02:21:37.341193 UpdateAppliedLast finish rf1 commitIndex0 appliedLast0
+2020/10/24 02:21:37.341346 rf0 handleAppendEntriesReply rf2 begin ,AppendEntriesArgs PrevLogIdx 0,LeaderId 0,Term 1,AppendEntriesReply Term 1,RequestTerm 1,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 1
+2020/10/24 02:21:37.341382 rf0 handleAppendEntriesReply rf2 finish ,update nextIndex1
+2020/10/24 02:21:37.341529 rf0 handleAppendEntriesReply rf1 begin ,AppendEntriesArgs PrevLogIdx 0,LeaderId 0,Term 1,AppendEntriesReply Term 1,RequestTerm 1,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 1
+2020/10/24 02:21:37.341558 rf0 handleAppendEntriesReply rf1 finish ,update nextIndex1
+crash and re-start all 
+2020/10/24 02:21:37.646246 startElection start rf0:term 1,state 1 isdead 0 state 1
+2020/10/24 02:21:37.646522 rf:0 persist term: 2 len(log): 1 
+2020/10/24 02:21:37.646573 startElection finish rf0:term 2,state 1 isdead 0
+2020/10/24 02:21:37.646954 rf2:term 1,state 2 isdead 0 RequestVote called begin,RequestVoteArgs Term 2,CandidateId 0, LastEntryIdx 0,LastEntryTerm 1
+2020/10/24 02:21:37.647008 rf2:term 2,state 2 isdead 0 RequestVote called finish,RequestVoteArgs Term 2,CandidateId 0, LastEntryIdx 0,LastEntryTerm 1,RequestVoteReply Term 2,RequestTerm 2, IsSuccess true
+2020/10/24 02:21:37.647014 rf1:term 1,state 2 isdead 0 RequestVote called begin,RequestVoteArgs Term 2,CandidateId 0, LastEntryIdx 0,LastEntryTerm 1
+2020/10/24 02:21:37.647115 rf:2 persist term: 2 len(log): 1 
+2020/10/24 02:21:37.647150 rf1:term 2,state 2 isdead 0 RequestVote called finish,RequestVoteArgs Term 2,CandidateId 0, LastEntryIdx 0,LastEntryTerm 1,RequestVoteReply Term 2,RequestTerm 2, IsSuccess true
+2020/10/24 02:21:37.647227 rf:1 persist term: 2 len(log): 1 
+2020/10/24 02:21:37.647398 handleRequestVoteReply begin 0 requestVoteReply RequestVoteReply Term 2,RequestTerm 2, IsSuccess true
+2020/10/24 02:21:37.647427 handleRequestVoteReply finish rf0:term 2,state 1 isdead 0 requestVoteReply RequestVoteReply Term 2,RequestTerm 2, IsSuccess true
+2020/10/24 02:21:37.647438 rf2 grant vote to rf0
+2020/10/24 02:21:37.647529 handleRequestVoteReply begin 0 requestVoteReply RequestVoteReply Term 2,RequestTerm 2, IsSuccess true
+2020/10/24 02:21:37.647562 handleRequestVoteReply finish rf0:term 2,state 0 isdead 0 requestVoteReply RequestVoteReply Term 2,RequestTerm 2, IsSuccess true
+2020/10/24 02:21:37.647588 rf1 grant vote to rf0
+2020/10/24 02:21:37.647820 AppendEntries called begin rf2:term 2,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 0,LeaderId 0,Term 2 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:37.647857 rf2 lastReceiveHeartBeat update to 2020-10-24 02:21:37.647843322 -0400 EDT m=+0.961345441
+2020/10/24 02:21:37.647875 AppendEntries called Finish rf2:term 2,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 0,LeaderId 0,Term 2 AppendEntriesReply Term 2,RequestTerm 2,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:37.647921 AppendEntries called begin rf1:term 2,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 0,LeaderId 0,Term 2 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:37.647976 rf1 lastReceiveHeartBeat update to 2020-10-24 02:21:37.647962439 -0400 EDT m=+0.961464596
+2020/10/24 02:21:37.647996 AppendEntries called Finish rf1:term 2,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 0,LeaderId 0,Term 2 AppendEntriesReply Term 2,RequestTerm 2,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:37.648076 rf0 handleAppendEntriesReply rf2 begin ,AppendEntriesArgs PrevLogIdx 0,LeaderId 0,Term 2,AppendEntriesReply Term 2,RequestTerm 2,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 1
+2020/10/24 02:21:37.648098 rf0 handleAppendEntriesReply rf2 finish ,update nextIndex1
+2020/10/24 02:21:37.648249 rf0 handleAppendEntriesReply rf1 begin ,AppendEntriesArgs PrevLogIdx 0,LeaderId 0,Term 2,AppendEntriesReply Term 2,RequestTerm 2,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 1
+2020/10/24 02:21:37.648272 rf0 handleAppendEntriesReply rf1 finish ,update nextIndex1
+2020/10/24 02:21:37.696295 rf:0 persist term: 2 len(log): 2 
+2020/10/24 02:21:37.696364 start command rf0 index 1 term 2 command 12
+2020/10/24 02:21:37.768046 rf0 send entry 1 to rf2
+2020/10/24 02:21:37.768338 rf0 send entry 1 to rf1
+2020/10/24 02:21:37.768833 AppendEntries called begin rf2:term 2,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 0,LeaderId 0,Term 2 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:37.768888 rf2 lastReceiveHeartBeat update to 2020-10-24 02:21:37.768872231 -0400 EDT m=+1.082374368
+2020/10/24 02:21:37.768937 AppendEntries called begin rf1:term 2,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 0,LeaderId 0,Term 2 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:37.768998 rf:2 persist term: 2 len(log): 2 
+2020/10/24 02:21:37.769008 rf1 lastReceiveHeartBeat update to 2020-10-24 02:21:37.768993772 -0400 EDT m=+1.082495905
+2020/10/24 02:21:37.769028 AppendEntries called Finish rf2:term 2,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 0,LeaderId 0,Term 2 AppendEntriesReply Term 2,RequestTerm 2,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:37.769091 rf:1 persist term: 2 len(log): 2 
+2020/10/24 02:21:37.769116 AppendEntries called Finish rf1:term 2,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 0,LeaderId 0,Term 2 AppendEntriesReply Term 2,RequestTerm 2,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:37.769305 rf0 handleAppendEntriesReply rf2 begin ,AppendEntriesArgs PrevLogIdx 0,LeaderId 0,Term 2,AppendEntriesReply Term 2,RequestTerm 2,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 1
+2020/10/24 02:21:37.769343 rf0 handleAppendEntriesReply rf2 finish ,update nextIndex1
+2020/10/24 02:21:37.769358 leader rf0 updateLeaderCommitIndex to 1
+2020/10/24 02:21:37.769370 UpdateAppliedLast begin rf0 commitIndex1 appliedLast-1
+2020/10/24 02:21:37.769390 UpdateAppliedLast finish rf0 commitIndex1 appliedLast1
+2020/10/24 02:21:37.769408 rf0 handleAppendEntriesReply rf1 begin ,AppendEntriesArgs PrevLogIdx 0,LeaderId 0,Term 2,AppendEntriesReply Term 2,RequestTerm 2,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 1
+2020/10/24 02:21:37.769447 rf0 handleAppendEntriesReply rf1 finish ,update nextIndex1
+2020/10/24 02:21:37.888394 AppendEntries called begin rf2:term 2,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 2 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:37.888428 rf2 lastReceiveHeartBeat update to 2020-10-24 02:21:37.88842284 -0400 EDT m=+1.201924898
+2020/10/24 02:21:37.888433 follower rf2 updateCommitIndex from -1
+2020/10/24 02:21:37.888441 follower rf2 updateCommitIndex to 1
+2020/10/24 02:21:37.888445 AppendEntries called begin rf1:term 2,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 2 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:37.888460 UpdateAppliedLast begin rf2 commitIndex1 appliedLast-1
+2020/10/24 02:21:37.888462 rf1 lastReceiveHeartBeat update to 2020-10-24 02:21:37.888458314 -0400 EDT m=+1.201960381
+2020/10/24 02:21:37.888469 UpdateAppliedLast finish rf2 commitIndex1 appliedLast1
+2020/10/24 02:21:37.888470 follower rf1 updateCommitIndex from -1
+2020/10/24 02:21:37.888448 AppendEntries called Finish rf2:term 2,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 2 AppendEntriesReply Term 2,RequestTerm 2,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:37.888496 follower rf1 updateCommitIndex to 1
+2020/10/24 02:21:37.888503 AppendEntries called Finish rf1:term 2,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 2 AppendEntriesReply Term 2,RequestTerm 2,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:37.888570 rf0 handleAppendEntriesReply rf2 begin ,AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 2,AppendEntriesReply Term 2,RequestTerm 2,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 2
+2020/10/24 02:21:37.888578 rf0 handleAppendEntriesReply rf2 finish ,update nextIndex2
+2020/10/24 02:21:37.888590 rf0 handleAppendEntriesReply rf1 begin ,AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 2,AppendEntriesReply Term 2,RequestTerm 2,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 2
+2020/10/24 02:21:37.888594 rf0 handleAppendEntriesReply rf1 finish ,update nextIndex2
+2020/10/24 02:21:37.888596 UpdateAppliedLast begin rf1 commitIndex1 appliedLast-1
+2020/10/24 02:21:37.888611 UpdateAppliedLast finish rf1 commitIndex1 appliedLast1
+2020/10/24 02:21:38.009231 AppendEntries called begin rf2:term 2,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 2 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:38.009375 rf2 lastReceiveHeartBeat update to 2020-10-24 02:21:38.009349801 -0400 EDT m=+1.322851971
+2020/10/24 02:21:38.009411 AppendEntries called Finish rf2:term 2,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 2 AppendEntriesReply Term 2,RequestTerm 2,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:38.009482 AppendEntries called begin rf1:term 2,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 2 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:38.009554 rf1 lastReceiveHeartBeat update to 2020-10-24 02:21:38.009518222 -0400 EDT m=+1.323020402
+2020/10/24 02:21:38.009603 AppendEntries called Finish rf1:term 2,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 2 AppendEntriesReply Term 2,RequestTerm 2,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:38.009805 rf0 handleAppendEntriesReply rf2 begin ,AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 2,AppendEntriesReply Term 2,RequestTerm 2,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 2
+2020/10/24 02:21:38.009841 rf0 handleAppendEntriesReply rf2 finish ,update nextIndex2
+2020/10/24 02:21:38.009929 rf0 handleAppendEntriesReply rf1 begin ,AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 2,AppendEntriesReply Term 2,RequestTerm 2,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 2
+2020/10/24 02:21:38.009956 rf0 handleAppendEntriesReply rf1 finish ,update nextIndex2
+2020/10/24 02:21:38.129410 AppendEntries called begin rf1:term 2,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 2 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:38.129518 rf1 lastReceiveHeartBeat update to 2020-10-24 02:21:38.129495379 -0400 EDT m=+1.442997508
+2020/10/24 02:21:38.129422 AppendEntries called begin rf2:term 2,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 2 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:38.129625 rf2 lastReceiveHeartBeat update to 2020-10-24 02:21:38.12960628 -0400 EDT m=+1.443108438
+2020/10/24 02:21:38.129655 AppendEntries called Finish rf2:term 2,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 2 AppendEntriesReply Term 2,RequestTerm 2,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:38.129667 AppendEntries called Finish rf1:term 2,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 2 AppendEntriesReply Term 2,RequestTerm 2,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:38.129944 rf0 handleAppendEntriesReply rf2 begin ,AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 2,AppendEntriesReply Term 2,RequestTerm 2,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 2
+2020/10/24 02:21:38.129947 rf0 handleAppendEntriesReply rf1 begin ,AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 2,AppendEntriesReply Term 2,RequestTerm 2,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 2
+2020/10/24 02:21:38.129995 rf0 handleAppendEntriesReply rf1 finish ,update nextIndex2
+2020/10/24 02:21:38.129972 rf0 handleAppendEntriesReply rf2 finish ,update nextIndex2
+2020/10/24 02:21:38.249866 AppendEntries called begin rf1:term 2,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 2 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:38.249970 rf1 lastReceiveHeartBeat update to 2020-10-24 02:21:38.249952973 -0400 EDT m=+1.563455106
+2020/10/24 02:21:38.250032 AppendEntries called Finish rf1:term 2,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 2 AppendEntriesReply Term 2,RequestTerm 2,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:38.249866 AppendEntries called begin rf2:term 2,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 2 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:38.250132 rf2 lastReceiveHeartBeat update to 2020-10-24 02:21:38.25010903 -0400 EDT m=+1.563611289
+2020/10/24 02:21:38.250189 AppendEntries called Finish rf2:term 2,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 2 AppendEntriesReply Term 2,RequestTerm 2,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:38.250359 rf0 handleAppendEntriesReply rf1 begin ,AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 2,AppendEntriesReply Term 2,RequestTerm 2,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 2
+2020/10/24 02:21:38.250389 rf0 handleAppendEntriesReply rf1 finish ,update nextIndex2
+2020/10/24 02:21:38.250508 rf0 handleAppendEntriesReply rf2 begin ,AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 2,AppendEntriesReply Term 2,RequestTerm 2,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 2
+2020/10/24 02:21:38.250533 rf0 handleAppendEntriesReply rf2 finish ,update nextIndex2
+2020/10/24 02:21:38.370537 AppendEntries called begin rf2:term 2,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 2 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:38.370651 rf2 lastReceiveHeartBeat update to 2020-10-24 02:21:38.370626594 -0400 EDT m=+1.684128775
+2020/10/24 02:21:38.370653 AppendEntries called begin rf1:term 2,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 2 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:38.370796 rf1 lastReceiveHeartBeat update to 2020-10-24 02:21:38.370772999 -0400 EDT m=+1.684275179
+2020/10/24 02:21:38.370837 AppendEntries called Finish rf1:term 2,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 2 AppendEntriesReply Term 2,RequestTerm 2,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:38.370689 AppendEntries called Finish rf2:term 2,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 2 AppendEntriesReply Term 2,RequestTerm 2,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:38.371217 rf0 handleAppendEntriesReply rf1 begin ,AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 2,AppendEntriesReply Term 2,RequestTerm 2,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 2
+2020/10/24 02:21:38.371249 rf0 handleAppendEntriesReply rf1 finish ,update nextIndex2
+2020/10/24 02:21:38.371315 rf0 handleAppendEntriesReply rf2 begin ,AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 2,AppendEntriesReply Term 2,RequestTerm 2,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 2
+2020/10/24 02:21:38.371347 rf0 handleAppendEntriesReply rf2 finish ,update nextIndex2
+crash and re-start old leader 
+2020/10/24 02:21:38.704236 startElection start rf0:term 2,state 1 isdead 0 state 1
+2020/10/24 02:21:38.704498 rf:0 persist term: 3 len(log): 2 
+2020/10/24 02:21:38.704547 startElection finish rf0:term 3,state 1 isdead 0
+2020/10/24 02:21:38.705090 rf1:term 2,state 2 isdead 0 RequestVote called begin,RequestVoteArgs Term 3,CandidateId 0, LastEntryIdx 1,LastEntryTerm 2
+2020/10/24 02:21:38.705152 rf1:term 3,state 2 isdead 0 RequestVote called finish,RequestVoteArgs Term 3,CandidateId 0, LastEntryIdx 1,LastEntryTerm 2,RequestVoteReply Term 3,RequestTerm 3, IsSuccess true
+2020/10/24 02:21:38.705170 rf2:term 2,state 2 isdead 0 RequestVote called begin,RequestVoteArgs Term 3,CandidateId 0, LastEntryIdx 1,LastEntryTerm 2
+2020/10/24 02:21:38.705212 rf:1 persist term: 3 len(log): 2 
+2020/10/24 02:21:38.705223 rf2:term 3,state 2 isdead 0 RequestVote called finish,RequestVoteArgs Term 3,CandidateId 0, LastEntryIdx 1,LastEntryTerm 2,RequestVoteReply Term 3,RequestTerm 3, IsSuccess true
+2020/10/24 02:21:38.705294 rf:2 persist term: 3 len(log): 2 
+2020/10/24 02:21:38.705465 handleRequestVoteReply begin 0 requestVoteReply RequestVoteReply Term 3,RequestTerm 3, IsSuccess true
+2020/10/24 02:21:38.705492 handleRequestVoteReply finish rf0:term 3,state 1 isdead 0 requestVoteReply RequestVoteReply Term 3,RequestTerm 3, IsSuccess true
+2020/10/24 02:21:38.705503 rf1 grant vote to rf0
+2020/10/24 02:21:38.705608 handleRequestVoteReply begin 0 requestVoteReply RequestVoteReply Term 3,RequestTerm 3, IsSuccess true
+2020/10/24 02:21:38.705678 handleRequestVoteReply finish rf0:term 3,state 0 isdead 0 requestVoteReply RequestVoteReply Term 3,RequestTerm 3, IsSuccess true
+2020/10/24 02:21:38.705696 rf2 grant vote to rf0
+2020/10/24 02:21:38.705902 AppendEntries called begin rf2:term 3,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 3 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:38.705940 rf2 lastReceiveHeartBeat update to 2020-10-24 02:21:38.705925144 -0400 EDT m=+2.019427272
+2020/10/24 02:21:38.705957 AppendEntries called Finish rf2:term 3,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 3 AppendEntriesReply Term 3,RequestTerm 3,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:38.706048 AppendEntries called begin rf1:term 3,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 3 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:38.706094 rf1 lastReceiveHeartBeat update to 2020-10-24 02:21:38.706081307 -0400 EDT m=+2.019583435
+2020/10/24 02:21:38.706142 AppendEntries called Finish rf1:term 3,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 3 AppendEntriesReply Term 3,RequestTerm 3,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:38.706168 rf0 handleAppendEntriesReply rf2 begin ,AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 3,AppendEntriesReply Term 3,RequestTerm 3,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 2
+2020/10/24 02:21:38.706189 rf0 handleAppendEntriesReply rf2 finish ,update nextIndex2
+2020/10/24 02:21:38.706422 rf0 handleAppendEntriesReply rf1 begin ,AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 3,AppendEntriesReply Term 3,RequestTerm 3,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 2
+2020/10/24 02:21:38.706448 rf0 handleAppendEntriesReply rf1 finish ,update nextIndex2
+2020/10/24 02:21:38.743438 rf:0 persist term: 3 len(log): 3 
+2020/10/24 02:21:38.743496 start command rf0 index 2 term 3 command 13
+2020/10/24 02:21:38.825648 rf0 send entry 1 to rf2
+2020/10/24 02:21:38.825735 rf0 send entry 1 to rf1
+2020/10/24 02:21:38.826406 AppendEntries called begin rf1:term 3,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 3 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:38.826492 rf1 lastReceiveHeartBeat update to 2020-10-24 02:21:38.826475078 -0400 EDT m=+2.139977218
+2020/10/24 02:21:38.826564 rf:1 persist term: 3 len(log): 3 
+2020/10/24 02:21:38.826407 AppendEntries called begin rf2:term 3,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 3 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:38.826640 rf2 lastReceiveHeartBeat update to 2020-10-24 02:21:38.826623448 -0400 EDT m=+2.140125581
+2020/10/24 02:21:38.826587 AppendEntries called Finish rf1:term 3,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 3 AppendEntriesReply Term 3,RequestTerm 3,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:38.826711 rf:2 persist term: 3 len(log): 3 
+2020/10/24 02:21:38.826739 AppendEntries called Finish rf2:term 3,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 3 AppendEntriesReply Term 3,RequestTerm 3,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:38.827009 rf0 handleAppendEntriesReply rf2 begin ,AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 3,AppendEntriesReply Term 3,RequestTerm 3,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 2
+2020/10/24 02:21:38.827044 rf0 handleAppendEntriesReply rf2 finish ,update nextIndex2
+2020/10/24 02:21:38.827059 leader rf0 updateLeaderCommitIndex to 2
+2020/10/24 02:21:38.827071 UpdateAppliedLast begin rf0 commitIndex2 appliedLast-1
+2020/10/24 02:21:38.827120 UpdateAppliedLast finish rf0 commitIndex2 appliedLast2
+2020/10/24 02:21:38.827047 rf0 handleAppendEntriesReply rf1 begin ,AppendEntriesArgs PrevLogIdx 1,LeaderId 0,Term 3,AppendEntriesReply Term 3,RequestTerm 3,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 2
+2020/10/24 02:21:38.827222 rf0 handleAppendEntriesReply rf1 finish ,update nextIndex2
+2020/10/24 02:21:38.946126 AppendEntries called begin rf2:term 3,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 2,LeaderId 0,Term 3 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:38.946186 rf2 lastReceiveHeartBeat update to 2020-10-24 02:21:38.946177497 -0400 EDT m=+2.259679572
+2020/10/24 02:21:38.946201 follower rf2 updateCommitIndex from 1
+2020/10/24 02:21:38.946209 follower rf2 updateCommitIndex to 2
+2020/10/24 02:21:38.946219 AppendEntries called Finish rf2:term 3,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 2,LeaderId 0,Term 3 AppendEntriesReply Term 3,RequestTerm 3,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:38.946133 AppendEntries called begin rf1:term 3,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 2,LeaderId 0,Term 3 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:38.946358 UpdateAppliedLast begin rf2 commitIndex2 appliedLast1
+2020/10/24 02:21:38.946367 rf1 lastReceiveHeartBeat update to 2020-10-24 02:21:38.946353388 -0400 EDT m=+2.259855480
+2020/10/24 02:21:38.946389 follower rf1 updateCommitIndex from 1
+2020/10/24 02:21:38.946383 rf0 handleAppendEntriesReply rf2 begin ,AppendEntriesArgs PrevLogIdx 2,LeaderId 0,Term 3,AppendEntriesReply Term 3,RequestTerm 3,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 3
+2020/10/24 02:21:38.946412 rf0 handleAppendEntriesReply rf2 finish ,update nextIndex3
+2020/10/24 02:21:38.946420 follower rf1 updateCommitIndex to 2
+2020/10/24 02:21:38.946431 AppendEntries called Finish rf1:term 3,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 2,LeaderId 0,Term 3 AppendEntriesReply Term 3,RequestTerm 3,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:38.946442 UpdateAppliedLast begin rf1 commitIndex2 appliedLast1
+2020/10/24 02:21:38.946454 UpdateAppliedLast finish rf1 commitIndex2 appliedLast2
+2020/10/24 02:21:38.946474 UpdateAppliedLast finish rf2 commitIndex2 appliedLast2
+2020/10/24 02:21:38.946562 rf0 handleAppendEntriesReply rf1 begin ,AppendEntriesArgs PrevLogIdx 2,LeaderId 0,Term 3,AppendEntriesReply Term 3,RequestTerm 3,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 3
+2020/10/24 02:21:38.946575 rf0 handleAppendEntriesReply rf1 finish ,update nextIndex3
+2020/10/24 02:21:39.066717 AppendEntries called begin rf2:term 3,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 2,LeaderId 0,Term 3 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:39.066842 rf2 lastReceiveHeartBeat update to 2020-10-24 02:21:39.066816522 -0400 EDT m=+2.380318655
+2020/10/24 02:21:39.066880 AppendEntries called Finish rf2:term 3,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 2,LeaderId 0,Term 3 AppendEntriesReply Term 3,RequestTerm 3,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:39.066918 AppendEntries called begin rf1:term 3,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 2,LeaderId 0,Term 3 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:39.066973 rf1 lastReceiveHeartBeat update to 2020-10-24 02:21:39.06695399 -0400 EDT m=+2.380456135
+2020/10/24 02:21:39.067007 AppendEntries called Finish rf1:term 3,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 2,LeaderId 0,Term 3 AppendEntriesReply Term 3,RequestTerm 3,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:39.067292 rf0 handleAppendEntriesReply rf2 begin ,AppendEntriesArgs PrevLogIdx 2,LeaderId 0,Term 3,AppendEntriesReply Term 3,RequestTerm 3,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 3
+2020/10/24 02:21:39.067334 rf0 handleAppendEntriesReply rf2 finish ,update nextIndex3
+2020/10/24 02:21:39.067407 rf0 handleAppendEntriesReply rf1 begin ,AppendEntriesArgs PrevLogIdx 2,LeaderId 0,Term 3,AppendEntriesReply Term 3,RequestTerm 3,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 3
+2020/10/24 02:21:39.067434 rf0 handleAppendEntriesReply rf1 finish ,update nextIndex3
+2020/10/24 02:21:39.186897 AppendEntries called begin rf2:term 3,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 2,LeaderId 0,Term 3 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:39.186999 rf2 lastReceiveHeartBeat update to 2020-10-24 02:21:39.186982602 -0400 EDT m=+2.500484726
+2020/10/24 02:21:39.187030 AppendEntries called Finish rf2:term 3,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 2,LeaderId 0,Term 3 AppendEntriesReply Term 3,RequestTerm 3,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:39.186910 AppendEntries called begin rf1:term 3,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 2,LeaderId 0,Term 3 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:39.187176 rf1 lastReceiveHeartBeat update to 2020-10-24 02:21:39.187157604 -0400 EDT m=+2.500659746
+2020/10/24 02:21:39.187201 AppendEntries called Finish rf1:term 3,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 2,LeaderId 0,Term 3 AppendEntriesReply Term 3,RequestTerm 3,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:39.187345 rf0 handleAppendEntriesReply rf2 begin ,AppendEntriesArgs PrevLogIdx 2,LeaderId 0,Term 3,AppendEntriesReply Term 3,RequestTerm 3,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 3
+2020/10/24 02:21:39.187373 rf0 handleAppendEntriesReply rf2 finish ,update nextIndex3
+2020/10/24 02:21:39.187485 rf0 handleAppendEntriesReply rf1 begin ,AppendEntriesArgs PrevLogIdx 2,LeaderId 0,Term 3,AppendEntriesReply Term 3,RequestTerm 3,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 3
+2020/10/24 02:21:39.187511 rf0 handleAppendEntriesReply rf1 finish ,update nextIndex3
+2020/10/24 02:21:39.307217 AppendEntries called begin rf2:term 3,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 2,LeaderId 0,Term 3 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:39.307322 rf2 lastReceiveHeartBeat update to 2020-10-24 02:21:39.307302903 -0400 EDT m=+2.620805068
+2020/10/24 02:21:39.307347 AppendEntries called Finish rf2:term 3,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 2,LeaderId 0,Term 3 AppendEntriesReply Term 3,RequestTerm 3,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:39.307511 AppendEntries called begin rf1:term 3,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 2,LeaderId 0,Term 3 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:39.307574 rf1 lastReceiveHeartBeat update to 2020-10-24 02:21:39.307558161 -0400 EDT m=+2.621060287
+2020/10/24 02:21:39.307596 AppendEntries called Finish rf1:term 3,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 2,LeaderId 0,Term 3 AppendEntriesReply Term 3,RequestTerm 3,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:39.307701 rf0 handleAppendEntriesReply rf2 begin ,AppendEntriesArgs PrevLogIdx 2,LeaderId 0,Term 3,AppendEntriesReply Term 3,RequestTerm 3,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 3
+2020/10/24 02:21:39.307730 rf0 handleAppendEntriesReply rf2 finish ,update nextIndex3
+2020/10/24 02:21:39.307910 rf0 handleAppendEntriesReply rf1 begin ,AppendEntriesArgs PrevLogIdx 2,LeaderId 0,Term 3,AppendEntriesReply Term 3,RequestTerm 3,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 3
+2020/10/24 02:21:39.307934 rf0 handleAppendEntriesReply rf1 finish ,update nextIndex3
+2020/10/24 02:21:39.427468 AppendEntries called begin rf1:term 3,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 2,LeaderId 0,Term 3 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:39.427569 rf1 lastReceiveHeartBeat update to 2020-10-24 02:21:39.427552443 -0400 EDT m=+2.741054569
+2020/10/24 02:21:39.427594 AppendEntries called Finish rf1:term 3,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 2,LeaderId 0,Term 3 AppendEntriesReply Term 3,RequestTerm 3,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:39.427682 AppendEntries called begin rf2:term 3,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 2,LeaderId 0,Term 3 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:39.427792 rf2 lastReceiveHeartBeat update to 2020-10-24 02:21:39.427773143 -0400 EDT m=+2.741275314
+2020/10/24 02:21:39.427817 AppendEntries called Finish rf2:term 3,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 2,LeaderId 0,Term 3 AppendEntriesReply Term 3,RequestTerm 3,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:39.427838 rf0 handleAppendEntriesReply rf1 begin ,AppendEntriesArgs PrevLogIdx 2,LeaderId 0,Term 3,AppendEntriesReply Term 3,RequestTerm 3,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 3
+2020/10/24 02:21:39.427869 rf0 handleAppendEntriesReply rf1 finish ,update nextIndex3
+2020/10/24 02:21:39.428116 rf0 handleAppendEntriesReply rf2 begin ,AppendEntriesArgs PrevLogIdx 2,LeaderId 0,Term 3,AppendEntriesReply Term 3,RequestTerm 3,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 3
+2020/10/24 02:21:39.428148 rf0 handleAppendEntriesReply rf2 finish ,update nextIndex3
+crash and re-start newleader 
+2020/10/24 02:21:39.839778 startElection start rf1:term 3,state 1 isdead 0 state 1
+2020/10/24 02:21:39.839997 rf:1 persist term: 4 len(log): 3 
+2020/10/24 02:21:39.840040 startElection finish rf1:term 4,state 1 isdead 0
+2020/10/24 02:21:39.840516 rf2:term 3,state 2 isdead 0 RequestVote called begin,RequestVoteArgs Term 4,CandidateId 1, LastEntryIdx 2,LastEntryTerm 3
+2020/10/24 02:21:39.840571 rf2:term 4,state 2 isdead 0 RequestVote called finish,RequestVoteArgs Term 4,CandidateId 1, LastEntryIdx 2,LastEntryTerm 3,RequestVoteReply Term 4,RequestTerm 4, IsSuccess true
+2020/10/24 02:21:39.840634 rf:2 persist term: 4 len(log): 3 
+2020/10/24 02:21:39.840864 handleRequestVoteReply begin 1 requestVoteReply RequestVoteReply Term 4,RequestTerm 4, IsSuccess true
+2020/10/24 02:21:39.840891 handleRequestVoteReply finish rf1:term 4,state 1 isdead 0 requestVoteReply RequestVoteReply Term 4,RequestTerm 4, IsSuccess true
+2020/10/24 02:21:39.840902 rf2 grant vote to rf1
+2020/10/24 02:21:39.841298 AppendEntries called begin rf2:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 2,LeaderId 1,Term 4 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:39.841336 rf2 lastReceiveHeartBeat update to 2020-10-24 02:21:39.841321592 -0400 EDT m=+3.154823709
+2020/10/24 02:21:39.841354 AppendEntries called Finish rf2:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 2,LeaderId 1,Term 4 AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:39.841577 rf1 handleAppendEntriesReply rf2 begin ,AppendEntriesArgs PrevLogIdx 2,LeaderId 1,Term 4,AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 3
+2020/10/24 02:21:39.841598 rf1 handleAppendEntriesReply rf2 finish ,update nextIndex3
+2020/10/24 02:21:39.878281 rf:1 persist term: 4 len(log): 4 
+2020/10/24 02:21:39.878350 start command rf1 index 3 term 4 command 14
+2020/10/24 02:21:39.961080 rf1 send entry 1 to rf2
+2020/10/24 02:21:39.961080 rf1 send entry 1 to rf0
+2020/10/24 02:21:39.961384 AppendEntries called begin rf2:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 2,LeaderId 1,Term 4 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:39.961405 rf2 lastReceiveHeartBeat update to 2020-10-24 02:21:39.961398361 -0400 EDT m=+3.274900435
+2020/10/24 02:21:39.961442 rf:2 persist term: 4 len(log): 4 
+2020/10/24 02:21:39.961455 AppendEntries called Finish rf2:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 2,LeaderId 1,Term 4 AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:39.961572 rf1 handleAppendEntriesReply rf2 begin ,AppendEntriesArgs PrevLogIdx 2,LeaderId 1,Term 4,AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 3
+2020/10/24 02:21:39.961588 rf1 handleAppendEntriesReply rf2 finish ,update nextIndex3
+2020/10/24 02:21:39.961606 leader rf1 updateLeaderCommitIndex to 3
+2020/10/24 02:21:39.961611 UpdateAppliedLast begin rf1 commitIndex3 appliedLast2
+2020/10/24 02:21:39.961617 UpdateAppliedLast finish rf1 commitIndex3 appliedLast3
+2020/10/24 02:21:40.081467 rf1 send entry 1 to rf0
+2020/10/24 02:21:40.082009 AppendEntries called begin rf2:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:40.082068 rf2 lastReceiveHeartBeat update to 2020-10-24 02:21:40.082051376 -0400 EDT m=+3.395553491
+2020/10/24 02:21:40.082084 follower rf2 updateCommitIndex from 2
+2020/10/24 02:21:40.082110 follower rf2 updateCommitIndex to 3
+2020/10/24 02:21:40.082130 AppendEntries called Finish rf2:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4 AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:40.082204 UpdateAppliedLast begin rf2 commitIndex3 appliedLast2
+2020/10/24 02:21:40.082253 UpdateAppliedLast finish rf2 commitIndex3 appliedLast3
+2020/10/24 02:21:40.082380 rf1 handleAppendEntriesReply rf2 begin ,AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4,AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 4
+2020/10/24 02:21:40.082404 rf1 handleAppendEntriesReply rf2 finish ,update nextIndex4
+2020/10/24 02:21:40.201820 rf1 send entry 1 to rf0
+2020/10/24 02:21:40.202350 AppendEntries called begin rf2:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:40.202412 rf2 lastReceiveHeartBeat update to 2020-10-24 02:21:40.20239622 -0400 EDT m=+3.515898351
+2020/10/24 02:21:40.202416 AppendEntries called begin rf0:term 3,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 2,LeaderId 1,Term 4 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:40.202436 AppendEntries called Finish rf2:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4 AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:40.202543 rf:0 persist term: 4 len(log): 3 
+2020/10/24 02:21:40.202575 rf0 lastReceiveHeartBeat update to 2020-10-24 02:21:40.202561502 -0400 EDT m=+3.516063631
+2020/10/24 02:21:40.202598 follower rf0 updateCommitIndex from -1
+2020/10/24 02:21:40.202633 follower rf0 updateCommitIndex to 3
+2020/10/24 02:21:40.202681 rf:0 persist term: 4 len(log): 4 
+2020/10/24 02:21:40.202703 AppendEntries called Finish rf0:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 2,LeaderId 1,Term 4 AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:40.202732 rf1 handleAppendEntriesReply rf2 begin ,AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4,AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 4
+2020/10/24 02:21:40.202759 rf1 handleAppendEntriesReply rf2 finish ,update nextIndex4
+2020/10/24 02:21:40.202766 UpdateAppliedLast begin rf0 commitIndex3 appliedLast-1
+2020/10/24 02:21:40.202843 UpdateAppliedLast finish rf0 commitIndex3 appliedLast3
+2020/10/24 02:21:40.202928 rf1 handleAppendEntriesReply rf0 begin ,AppendEntriesArgs PrevLogIdx 2,LeaderId 1,Term 4,AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 3
+2020/10/24 02:21:40.202964 rf1 handleAppendEntriesReply rf0 finish ,update nextIndex3
+2020/10/24 02:21:40.322807 AppendEntries called begin rf0:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:40.322902 rf0 lastReceiveHeartBeat update to 2020-10-24 02:21:40.322883581 -0400 EDT m=+3.636385750
+2020/10/24 02:21:40.322907 AppendEntries called begin rf2:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:40.323043 rf2 lastReceiveHeartBeat update to 2020-10-24 02:21:40.323020057 -0400 EDT m=+3.636522213
+2020/10/24 02:21:40.323083 AppendEntries called Finish rf2:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4 AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:40.322937 AppendEntries called Finish rf0:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4 AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:40.323414 rf1 handleAppendEntriesReply rf2 begin ,AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4,AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 4
+2020/10/24 02:21:40.323442 rf1 handleAppendEntriesReply rf2 finish ,update nextIndex4
+2020/10/24 02:21:40.323483 rf1 handleAppendEntriesReply rf0 begin ,AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4,AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 4
+2020/10/24 02:21:40.323511 rf1 handleAppendEntriesReply rf0 finish ,update nextIndex4
+2020/10/24 02:21:40.443148 AppendEntries called begin rf2:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:40.443256 rf2 lastReceiveHeartBeat update to 2020-10-24 02:21:40.443236329 -0400 EDT m=+3.756738454
+2020/10/24 02:21:40.443283 AppendEntries called Finish rf2:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4 AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:40.443164 AppendEntries called begin rf0:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:40.443408 rf0 lastReceiveHeartBeat update to 2020-10-24 02:21:40.443388776 -0400 EDT m=+3.756890907
+2020/10/24 02:21:40.443433 AppendEntries called Finish rf0:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4 AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:40.443528 rf1 handleAppendEntriesReply rf2 begin ,AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4,AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 4
+2020/10/24 02:21:40.443553 rf1 handleAppendEntriesReply rf2 finish ,update nextIndex4
+2020/10/24 02:21:40.443703 rf1 handleAppendEntriesReply rf0 begin ,AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4,AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 4
+2020/10/24 02:21:40.443727 rf1 handleAppendEntriesReply rf0 finish ,update nextIndex4
+2020/10/24 02:21:40.563402 AppendEntries called begin rf0:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:40.563507 rf0 lastReceiveHeartBeat update to 2020-10-24 02:21:40.563485504 -0400 EDT m=+3.876987626
+2020/10/24 02:21:40.563539 AppendEntries called Finish rf0:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4 AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:40.563561 AppendEntries called begin rf2:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:40.563625 rf2 lastReceiveHeartBeat update to 2020-10-24 02:21:40.56360922 -0400 EDT m=+3.877111365
+2020/10/24 02:21:40.563648 AppendEntries called Finish rf2:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4 AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:40.563858 rf1 handleAppendEntriesReply rf0 begin ,AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4,AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 4
+2020/10/24 02:21:40.563888 rf1 handleAppendEntriesReply rf0 finish ,update nextIndex4
+2020/10/24 02:21:40.563960 rf1 handleAppendEntriesReply rf2 begin ,AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4,AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 4
+2020/10/24 02:21:40.563985 rf1 handleAppendEntriesReply rf2 finish ,update nextIndex4
+2020/10/24 02:21:40.683650 AppendEntries called begin rf2:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:40.683754 rf2 lastReceiveHeartBeat update to 2020-10-24 02:21:40.683736108 -0400 EDT m=+3.997238240
+2020/10/24 02:21:40.683784 AppendEntries called Finish rf2:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4 AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:40.683658 AppendEntries called begin rf0:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:40.683929 rf0 lastReceiveHeartBeat update to 2020-10-24 02:21:40.683904826 -0400 EDT m=+3.997407001
+2020/10/24 02:21:40.683962 AppendEntries called Finish rf0:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4 AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:40.684078 rf1 handleAppendEntriesReply rf2 begin ,AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4,AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 4
+2020/10/24 02:21:40.684105 rf1 handleAppendEntriesReply rf2 finish ,update nextIndex4
+2020/10/24 02:21:40.684276 rf1 handleAppendEntriesReply rf0 begin ,AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4,AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 4
+2020/10/24 02:21:40.684304 rf1 handleAppendEntriesReply rf0 finish ,update nextIndex4
+crash and re-start follower2020/10/24 02:21:40.788771 rf:1 persist term: 4 len(log): 5 
+2020/10/24 02:21:40.788799 start command rf1 index 4 term 4 command 15
+2020/10/24 02:21:40.803265 rf1 send entry 1 to rf2
+2020/10/24 02:21:40.803344 rf1 send entry 1 to rf0
+2020/10/24 02:21:40.804044 AppendEntries called begin rf0:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:40.804096 rf0 lastReceiveHeartBeat update to 2020-10-24 02:21:40.804079678 -0400 EDT m=+4.117581804
+2020/10/24 02:21:40.804159 rf:0 persist term: 4 len(log): 5 
+2020/10/24 02:21:40.804180 AppendEntries called Finish rf0:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4 AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:40.804443 rf1 handleAppendEntriesReply rf0 begin ,AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4,AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 4
+2020/10/24 02:21:40.804479 rf1 handleAppendEntriesReply rf0 finish ,update nextIndex4
+2020/10/24 02:21:40.804494 leader rf1 updateLeaderCommitIndex to 4
+2020/10/24 02:21:40.804506 UpdateAppliedLast begin rf1 commitIndex4 appliedLast3
+2020/10/24 02:21:40.804517 UpdateAppliedLast finish rf1 commitIndex4 appliedLast4
+2020/10/24 02:21:40.923383 rf1 send entry 1 to rf2
+2020/10/24 02:21:40.923695 AppendEntries called begin rf0:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 4,LeaderId 1,Term 4 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:40.923717 rf0 lastReceiveHeartBeat update to 2020-10-24 02:21:40.923709329 -0400 EDT m=+4.237211406
+2020/10/24 02:21:40.923738 follower rf0 updateCommitIndex from 3
+2020/10/24 02:21:40.923750 follower rf0 updateCommitIndex to 4
+2020/10/24 02:21:40.923759 AppendEntries called Finish rf0:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 4,LeaderId 1,Term 4 AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:40.923810 UpdateAppliedLast begin rf0 commitIndex4 appliedLast3
+2020/10/24 02:21:40.923836 UpdateAppliedLast finish rf0 commitIndex4 appliedLast4
+2020/10/24 02:21:40.923881 rf1 handleAppendEntriesReply rf0 begin ,AppendEntriesArgs PrevLogIdx 4,LeaderId 1,Term 4,AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 5
+2020/10/24 02:21:40.923891 rf1 handleAppendEntriesReply rf0 finish ,update nextIndex5
+2020/10/24 02:21:40.930961 rf:1 persist term: 4 len(log): 6 
+2020/10/24 02:21:40.930983 start command rf1 index 5 term 4 command 16
+2020/10/24 02:21:41.043710 rf1 send entry 2 to rf2
+2020/10/24 02:21:41.043775 rf1 send entry 1 to rf0
+2020/10/24 02:21:41.044035 AppendEntries called begin rf2:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:41.044041 AppendEntries called begin rf0:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 4,LeaderId 1,Term 4 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:41.044080 rf0 lastReceiveHeartBeat update to 2020-10-24 02:21:41.044073918 -0400 EDT m=+4.357576008
+2020/10/24 02:21:41.044110 rf:0 persist term: 4 len(log): 6 
+2020/10/24 02:21:41.044120 AppendEntries called Finish rf0:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 4,LeaderId 1,Term 4 AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:41.044058 rf2 lastReceiveHeartBeat update to 2020-10-24 02:21:41.044050501 -0400 EDT m=+4.357552568
+2020/10/24 02:21:41.044150 follower rf2 updateCommitIndex from -1
+2020/10/24 02:21:41.044157 follower rf2 updateCommitIndex to 4
+2020/10/24 02:21:41.044189 rf:2 persist term: 4 len(log): 6 
+2020/10/24 02:21:41.044201 AppendEntries called Finish rf2:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4 AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:41.044238 UpdateAppliedLast begin rf2 commitIndex4 appliedLast-1
+2020/10/24 02:21:41.044271 UpdateAppliedLast finish rf2 commitIndex4 appliedLast4
+2020/10/24 02:21:41.044290 rf1 handleAppendEntriesReply rf0 begin ,AppendEntriesArgs PrevLogIdx 4,LeaderId 1,Term 4,AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 5
+2020/10/24 02:21:41.044308 rf1 handleAppendEntriesReply rf0 finish ,update nextIndex5
+2020/10/24 02:21:41.044316 leader rf1 updateLeaderCommitIndex to 5
+2020/10/24 02:21:41.044322 UpdateAppliedLast begin rf1 commitIndex5 appliedLast4
+2020/10/24 02:21:41.044327 UpdateAppliedLast finish rf1 commitIndex5 appliedLast5
+2020/10/24 02:21:41.044339 rf1 handleAppendEntriesReply rf2 begin ,AppendEntriesArgs PrevLogIdx 3,LeaderId 1,Term 4,AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 4
+2020/10/24 02:21:41.044353 rf1 handleAppendEntriesReply rf2 finish ,update nextIndex4
+2020/10/24 02:21:41.164460 AppendEntries called begin rf0:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 5,LeaderId 1,Term 4 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:41.164553 rf0 lastReceiveHeartBeat update to 2020-10-24 02:21:41.164535466 -0400 EDT m=+4.478037601
+2020/10/24 02:21:41.164571 follower rf0 updateCommitIndex from 4
+2020/10/24 02:21:41.164585 follower rf0 updateCommitIndex to 5
+2020/10/24 02:21:41.164605 AppendEntries called Finish rf0:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 5,LeaderId 1,Term 4 AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:41.164677 AppendEntries called begin rf2:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 5,LeaderId 1,Term 4 AppendEntriesReply Term 0,RequestTerm 0,IsSuccess false ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:41.164748 UpdateAppliedLast begin rf0 commitIndex5 appliedLast4
+2020/10/24 02:21:41.164813 UpdateAppliedLast finish rf0 commitIndex5 appliedLast5
+2020/10/24 02:21:41.164755 rf2 lastReceiveHeartBeat update to 2020-10-24 02:21:41.164732334 -0400 EDT m=+4.478234530
+2020/10/24 02:21:41.164858 follower rf2 updateCommitIndex from 4
+2020/10/24 02:21:41.164881 follower rf2 updateCommitIndex to 5
+2020/10/24 02:21:41.164901 AppendEntries called Finish rf2:term 4,state 2 isdead 0 AppendEntriesArgs PrevLogIdx 5,LeaderId 1,Term 4 AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0
+2020/10/24 02:21:41.165000 UpdateAppliedLast begin rf2 commitIndex5 appliedLast4
+2020/10/24 02:21:41.165013 rf1 handleAppendEntriesReply rf0 begin ,AppendEntriesArgs PrevLogIdx 5,LeaderId 1,Term 4,AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 6
+2020/10/24 02:21:41.165074 rf1 handleAppendEntriesReply rf0 finish ,update nextIndex6
+2020/10/24 02:21:41.165041 UpdateAppliedLast finish rf2 commitIndex5 appliedLast5
+2020/10/24 02:21:41.165128 rf1 handleAppendEntriesReply rf2 begin ,AppendEntriesArgs PrevLogIdx 5,LeaderId 1,Term 4,AppendEntriesReply Term 4,RequestTerm 4,IsSuccess true ConflictTerm 0 ConflictIndex 0,nextIndex before 6
+2020/10/24 02:21:41.165150 rf1 handleAppendEntriesReply rf2 finish ,update nextIndex6
+  ... Passed --   4.5  3  202   45413    5
+PASS
+ok  	6.824/labs/raft	4.489s
